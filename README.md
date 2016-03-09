@@ -1,10 +1,7 @@
 # Mega's Path of Exile Loot Filter
 This is my loot filter for Path of Exile. 
 
-## Perandus League Changes
-The only change specific to the Perandus league is the addition of "Perandus Coin" as a currency. 
-
-## General Design Philosophy
+## Design Philosophy
 
 
 ## Leagues Specific Filters
