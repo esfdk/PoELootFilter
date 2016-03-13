@@ -1,0 +1,3891 @@
+﻿# Script edited with Filtration - https://github.com/ben-wallis/Filtration
+# Megajohn's item filter, v. 1.00
+# Based on Sayya's item filter, v. 1.23 (7/2/2015) and One Filter to Rule Them All v2.3.3 by Muldini
+# ##############################################################################
+# ## Overview ##################################################################
+# ##############################################################################
+# ## To navigate between filter sections, copy one of the
+# ## following lines - including "###" - and search (STRG + F) for it.
+# ## Overview
+# ## Specials
+# ## Currency
+# ## Gems
+# ## Uniques
+# ## Maps
+# ## Jewels
+# ## Divination Cards
+# ## High Itemlevel Rares
+# ## Chromatic Orb Recipe - Normal & Magic
+# ## Chance
+# ## Amulets, Rings, Belts
+# ## Chisel Recipe
+# ## Flasks
+# ## Link Exceptions
+# ## Hide Obsolete Gear
+# ## Normal & Magic Gear - Endgame
+# ## Best Rares
+# ## Chromatic Orb Recipe - Rare
+# ## Rares - CatchAll
+# ## Hiding Low Links
+# ## /Overview #################################################################
+# ##############################################################################
+
+# Section: ### Specials #######################################################
+
+# Specials - Fishing Rod
+Show
+    BaseType "Fishing Rod"
+    SetTextColor 0 255 150 # Fishing Rod
+    SetBorderColor 0 255 150 # Fishing Rod
+    SetFontSize 45
+    PlayAlertSound 5 300
+
+# Specials - Hideout Doodads & Microtransactions
+Show
+    Class "Hideout Doodads" "Microtransactions"
+
+# Specials - Labyrinth keys
+Show
+    BaseType "Treasure Key" "Golden Key" "Silver Key"
+    SetBorderColor 150 0 0 # Special drops
+    SetFontSize 42
+
+# Specials - Quest Items
+Show
+    Class "Quest"
+    SetFontSize 38
+	
+#Tabula Rasa Exception, show it as a regular unique
+Show
+	BaseType "Simple Robe"
+	Rarity Unique
+	SocketGroup WWWWWW	
+	SetBorderColor 175 96 37 # Unique
+    SetFontSize 38
+    PlayAlertSound 5 225
+
+# Specials - 6L
+Show
+    LinkedSockets = 5
+    SetBackgroundColor 0 0 0 # Contrast background
+    SetBorderColor 127 127 127 # 6S/5L/6L border
+    SetFontSize 44
+    PlayAlertSound 2 300
+
+# Specials - 5L
+Show
+    LinkedSockets = 5
+    SetBackgroundColor 0 0 0 # Contrast background
+    SetBorderColor 127 127 127 # 6S/5L/6L border
+    SetFontSize 42
+
+# Specials - 6S
+Show
+    Sockets = 6
+    SetBackgroundColor 0 0 0 # Contrast background
+    SetBorderColor 127 127 127 # 6S/5L/6L border
+    SetFontSize 42
+
+# Specials - Sacrificial Garb
+Show
+    BaseType "Sacrificial Garb"
+
+# Section: ### Currency #######################################################
+
+# Currency - Extremely Valuable
+Show
+    BaseType "Mirror of Kalandra" "Albino Rhoa Feather"
+    SetBorderColor 175 96 37 # Currency - Valuable
+    SetFontSize 45
+    PlayAlertSound 5 300
+
+# Currency - Very Valuable
+Show
+    BaseType "Divine Orb" "Eternal Orb" "Exalted Orb"
+    SetBorderColor 175 96 37 # Currency - Valuable
+    SetFontSize 43
+    PlayAlertSound 5 300
+
+# Currency - Valuable
+Show
+    BaseType "Regal Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Regret"
+    SetBorderColor 175 96 37 # Currency - Valuable
+    SetFontSize 40
+
+# Currency - Above Average
+Show
+    BaseType "Cartographer's Chisel" "Orb of Alchemy" "Orb of Fusing" "Orb of Scouring" "Vaal Orb" "Blessed Orb"
+    SetBorderColor 170 158 130 # Currency - Average
+    SetFontSize 38
+
+# Currency - Average
+Show
+    BaseType "Orb of Alteration" "Chromatic Orb" "Glassblower's Bauble" "Jeweller's Orb" "Orb of Chance"
+    SetBorderColor 170 158 130 # Currency - Average
+    SetFontSize 36
+
+# Currency - Below Average
+Show
+    BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation"
+
+# Currency - CatchAll
+Show # Currency - CatchAll
+    Class "Currency"
+    SetFontSize 30
+
+# Section: ### Gems ###########################################################
+
+# Gems - Quality
+Show
+    Quality > 0
+    Class "Gem"
+    SetBorderColor 27 162 155 # Gems - Valuable
+    SetFontSize 40
+
+# Gems - Valuable
+Show
+    Class "Gem"
+    BaseType "Portal" "Detonate Mines" "Empower" "Enhance" "Enlighten" "Added Chaos Damage"
+    SetBorderColor 27 162 155 # Gems - Valuable
+    SetFontSize 40
+
+# Gems - Vaal
+Show
+    Class "Gem"
+    BaseType "Vaal"
+    SetBorderColor 150 0 2 # Gems - Vaal
+    SetFontSize 38
+
+Show # Gems - Support
+    Class "Support Skill Gems"
+    SetFontSize 30
+
+Show # Gems - Active
+    Class "Active Skill Gems"
+    SetFontSize 28
+
+Show # Gems - Active
+    Class "Gems"
+    SetFontSize 28
+
+# Section: ### Uniques ########################################################
+
+# Uniques - Extremely Valuable Uniques
+Show
+    Rarity = Unique
+    BaseType "Occultist's Vestment" "Glorious Plate" "Prophecy Wand" "Desert Brigandine" "Sorcerer Boots" "Golden Bracers" "Golden Obi" "Legion Gloves" "Fishing Rod" "Vaal Axe" "Golden Caligae" "Golden Wreath" "Sapphire Flask" "Citrine Amulet" "Jasper Chopper" "Crusader Gloves" "Despot Axe" "Golden Hoop" "Jet Amulet" "Golden Flame"
+    SetBorderColor 175 96 37 # Unique
+    SetFontSize 45
+    PlayAlertSound 5 300
+
+# Uniques - Very Valuable Uniques
+Show
+    Rarity = Unique
+    BaseType "Citrine Amulet" "Ancient Greaves" "Champion Kite Shield" "Penetrating Arrow Quiver" "Sanctified Life Flask" "Sanctified Mana Flask" "Serpentscale Boots" "Siege Axe" "Slaughter Knife" "Spine Bow" "Steelhead" "Trapper Boots"
+    SetBorderColor 175 96 37 # Unique
+    SetFontSize 42
+    PlayAlertSound 5 225
+
+# Uniques - CatchAll
+Show
+    Rarity = Unique
+    SetBorderColor 175 96 37 # Unique
+    SetFontSize 38
+    PlayAlertSound 5 225
+
+# Section: ### Maps ###########################################################
+
+# Maps - 
+Show
+    DropLevel >= 79
+    Class "Map"
+    SetBorderColor 255 40 0 # Maps - High-Tier
+    SetFontSize 45
+    PlayAlertSound 6 300
+
+Show # Maps/Fragments
+    DropLevel >= 74
+    Class "Map"
+    SetBorderColor 255 215 0 # Maps - Mid-Tier
+    SetFontSize 42
+
+Show # Maps/Fragments
+    Class "Map"
+    SetBorderColor 0 128 0 # Maps - Low-Tier
+    SetFontSize 38
+
+# Section: ### Jewels #########################################################
+
+# Jewels - Rare
+Show
+    Rarity = Rare
+    Class "Jewel"
+    SetBorderColor 255 255 119 # Jewels - Rare
+    SetFontSize 42
+
+# Jewels - Magic
+Show
+    Class "Jewel"
+    SetBorderColor 136 136 255 # Jewels - Magic
+    SetFontSize 38
+
+# Section: ### Divination Cards ###############################################
+
+# Divination Cards - Very Valuable
+Show
+    Class "Divination Card"
+    BaseType "The Brittle Emperor" "The Doctor" "The Hunger" "The Wind" "The Avenger" "The Celestial Justicar" "The Fiend" "The King's Heart" "The Pact" "The Watcher" "The Queen" "The Last One Standing" "The Artist" "Wealth and Power" "House of Mirrors" "The Dragon's Heart" "Pride Before the Fall" "The Vast" "Bowyer's Dream" "Hunter's Reward" "The Thaumaturgist" "The Warlord" "The Offering" "Lost Worlds" "The Ethereal"
+    SetBorderColor 175 96 37 # Divination Card - Very Valuable
+    SetFontSize 44
+
+# Divination Cards - Valuable
+Show
+    Class "Divination Card"
+    BaseType "The Hoarder" "The Drunken Aristocrat" "The Pack Leader" "The Sun" "The Gladiator" "Abandoned Wealth" "The Incantation" "Time-Lost Relic" "The Dark Mage" "The Road to Power" "The Chains that Bind" "The Betrayal" "The Trial" "Last Hope" "The Enlightened" "The Fletcher" "The Surveyor" "The Dapper Prodigy" "Tranquillity" "Earth Drinker"
+    SetBorderColor 175 96 37 # Divination Card - Valuable
+    SetFontSize 42
+
+# Divination Cards - CatchAll
+Show
+    Class "Divination Card"
+    SetFontSize 36
+
+# Section: ### Very High Itemlevel Rares ######################################
+
+# ItemLevel 77+ Rares - T1 Armour
+Show
+    ItemLevel >= 77
+    Rarity = Rare
+    BaseType "Glorious Plate" "Assassin's Garb" "Vaal Regalia" "Carnal Armour" "Saintly Chainmail" "Triumphant Lamellar" "Titan Greaves" "Slink Boots" "Sorcerer Boots" "Murder Boots" "Crusader Boots" "Dragonscale Boots" "Titan Gauntlets" "Slink Gloves" "Sorcerer Gloves" "Murder Mitts" "Crusader Gloves" "Dragonscale Gauntlets" "Eternal Burgonet" "Lion Pelt" "Hubris Circlet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Pinnacle Tower Shield" "Imperial Buckler" "Titanium Spirit Shield" "Supreme Spiked Shield" "Archon Kite Shield" "Elegant Round Shield"
+
+# ItemLevel 77+ Rares - T1 Weapon
+Show
+    ItemLevel >= 77
+    Rarity = Rare
+    Class "Claws" "Daggers" "Wands" "One Hand Swords" "Thrusting One Hand Swords" "One Hand Axes" "One Hand Maces" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Sceptres"
+    BaseType "Maraketh Bow" "Gemini Claw" "Sai" "Runic Hatchet" "Behemoth Mace" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Dragoon Sword" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Profane Wand"
+
+# ItemLevel 77+ Rares - Craft Bases - Weapon
+Show
+    ItemLevel >= 77
+    Rarity = Rare
+    BaseType "Imbued Wand" "Ambusher" "Reaver Sword" "Thicket Bow" "Great White Claw" "Corsair Sword" "Harbinger Bow" "Vaal Axe" "Platinum Kris" "Opal Wand" "Imperial Claw" "Terror Claw" "Jewelled Foil" "Vaal Rapier" "Piledriver"
+
+# ItemLevel 77+ Rares - Craft Bases - Armour
+Show
+    ItemLevel >= 77
+    Rarity = Rare
+    BaseType "Astral Plate" "Royal Burgonet" "Fossilised Spirit Shield"
+
+# ItemLevel 77+ Rares - Jewelery
+Show
+    ItemLevel >= 77
+    Rarity = Rare
+    Class "Amulets" "Rings" "Belts"
+
+# Section: ### Chromatic Orb Recipe - Normal & Magic ##########################
+
+# Chromatic Orb Recipe / Lower font size for large RGBs
+Show # Misc - Chromatic Orb Recipe - 4x1
+    Rarity <= Magic
+    Width = 1
+    Height = 4
+    SocketGroup "RGB"
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+
+Show # Misc - Chromatic Orb Recipe - 3x1
+    Rarity <= Magic
+    Width = 1
+    Height = 3
+    SocketGroup "RGB"
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+
+Show # Misc - Chromatic Orb Recipe - 2x2
+    Rarity <= Magic
+    Width = 2
+    Height = 2
+    SocketGroup "RGB"
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+
+Show # Misc - Chromatic Orb Recipe - Large
+    Rarity <= Magic
+    SocketGroup "RGB"
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
+
+# Section: ### Chance #########################################################
+
+#Disabled Block Start
+# Misc - Chance - Spine Bow
+#Show
+#    Rarity = Normal
+#    BaseType "Spine Bow"
+#    SetBorderColor 54 100 146 # Chance
+#    SetFontSize 28
+#Disabled Block End
+
+#Disabled Block Start
+# Misc - Chance - Judgement Staff
+#Show
+#    Rarity = Normal
+#    BaseType "Judgement Staff"
+#    SetBorderColor 54 100 146 # Chance
+#    SetFontSize 28
+#Disabled Block End
+
+#Disabled Block Start
+# Misc - Chance - Gavel
+#Show
+#    Rarity = Normal
+#    BaseType "Gavel"
+#    SetBorderColor 54 100 146 # Chance
+#    SetFontSize 28
+#Disabled Block End
+
+#Disabled Block Start
+# Misc - Chance - Imperial Bow
+#Show
+#    Rarity = Normal
+#    BaseType "Imperial Bow"
+#    SetBorderColor 54 100 146 # Chance
+#    SetFontSize 28
+#Disabled Block End
+
+#Disabled Block Start
+# Misc - Chance - Penetrating Arrow Quiver
+#Show
+#    Rarity = Normal
+#    BaseType "Penetrating Arrow Quiver"
+#    SetBorderColor 54 100 146 # Chance
+#    SetFontSize 28
+#Disabled Block End
+
+#Disabled Block Start
+# Misc - Chance - Occultist's Vestment
+#Show
+#    Rarity = Normal
+#    BaseType "Occultist's Vestment"
+#    SetTextColor 200 200 200 # Chance
+#    SetBorderColor 54 100 146 # Chance
+#    SetFontSize 28
+#Disabled Block End
+
+#Disabled Block Start
+# Misc - Chance - Prophecy Wand
+#Show
+#    Rarity = Normal
+#    BaseType "Prophecy Wand"
+#    SetBorderColor 54 100 146 # Chance
+#    SetFontSize 28
+#Disabled Block End
+
+#Disabled Block Start
+# Misc - Chance - Desert Brigandine
+#Show
+#    Rarity = Normal
+#    BaseType "Desert Brigandine"
+#    SetBorderColor 54 100 146 # Chance
+#    SetFontSize 28
+#Disabled Block End
+
+# Misc - Chance - Sorcerer Boots
+Show
+    Rarity = Normal
+    BaseType "Sorcerer Boots"
+    SetBorderColor 54 100 146 # Chance
+    SetFontSize 28
+
+# Section: ### Amulets, Rings, Belts ##########################################
+
+Hide # Amulets, Rings, Belts - Scarcely used amulet bases
+    ItemLevel >= 45
+    Rarity <= Magic
+    BaseType "Coral Amulet" "Paua Amulet"
+    SetBackgroundColor 0 0 0 127 # Dim background
+    SetFontSize 28
+
+Hide # Amulets, Rings, Belts - Scarcely used ring bases
+    ItemLevel >= 45
+    Rarity <= Magic
+    BaseType "Iron Ring" "Paua Ring"
+    SetBackgroundColor 0 0 0 127 # Dim background
+    SetFontSize 28
+
+Hide # Amulets, Rings, Belts - Scarcely used belt bases
+    ItemLevel >= 45
+    Rarity <= Magic
+    BaseType "Cloth Belt" "Studded Belt" "Heavy Belt"
+    SetBackgroundColor 0 0 0 190 # Dim background
+    SetFontSize 28
+
+Show # Amulets, Rings, Belts - Rare
+    Rarity = Rare
+    Class "Rings" "Amulets" "Belts"
+
+Show # Amulets, Rings, Belts - 84+ - Normal
+    ItemLevel >= 84
+    Rarity = Normal
+    Class "Rings" "Amulets" "Belts"
+    SetTextColor 240 240 240 # Amulets, Rings, Belts - Normal 84+
+    SetFontSize 28
+
+Show # Amulets, Rings, Belts - 84+ - Magic
+    ItemLevel >= 84
+    Rarity = Magic
+    Class "Rings" "Amulets" "Belts"
+    SetTextColor 140 190 255 # Amulets, Rings, Belts - Magic 84+
+    SetFontSize 28
+
+Hide # Amulets, Rings, Belts - 68+ - Normal
+    ItemLevel >= 68
+    Rarity = Normal
+    Class "Rings" "Amulets" "Belts"
+    SetBackgroundColor 0 0 0 190 # Dim background
+    SetFontSize 28
+
+Show # Amulets, Rings, Belts - 68+ - Magic
+    ItemLevel >= 68
+    Rarity = Magic
+    Class "Rings" "Amulets" "Belts"
+    SetFontSize 28
+
+Show # Amulets, Rings, Belts - <68 - Normal
+    ItemLevel < 68
+    Rarity = Normal
+    Class "Rings" "Amulets" "Belts"
+    SetFontSize 28
+
+Show # Amulets, Rings, Belts - <68 - Magic
+    ItemLevel < 68
+    Rarity = Magic
+    Class "Rings" "Amulets" "Belts"
+    SetFontSize 28
+
+Show # Amulets, Rings, Belts - CatchAll
+    Rarity >= Normal
+    Class "Rings" "Amulets" "Belts"
+    SetFontSize 28
+
+# Section: ### Chisel Recipe ##################################################
+
+# Chisel
+Show # Misc - Chisel Recipe - Normal
+    Rarity = Normal
+    BaseType "Gavel" "Stone Hammer" "Rock Breaker"
+    SetBorderColor 127 127 127 # Chisel Recipe
+    SetFontSize 28
+
+Show # Misc - Chisel Recipe - Magic
+    Quality >= 12
+    Rarity = Magic
+    BaseType "Gavel" "Stone Hammer" "Rock Breaker"
+    SetBorderColor 127 127 127 # Chisel Recipe
+    SetFontSize 28
+
+Show # Misc - Chisel Recipe - Rare
+    Quality >= 16
+    Rarity = Rare
+    BaseType "Gavel" "Stone Hammer" "Rock Breaker"
+    SetBorderColor 127 127 127 # Chisel Recipe
+    SetFontSize 28
+
+# Section: ### Flasks #########################################################
+
+# Add a border to flasks that are near the current level or have 15%+ quality
+Show # Flasks - Utility
+    Class "Utility Flask"
+    SetBorderColor 88 0 179 # Utility/Hybrid/Quality flask
+    SetFontSize 30
+
+Show # Flasks - Quality - 20%
+    Quality = 20
+    Class "Flask"
+    SetBackgroundColor 44 0 90 # Quality Flasks 20%
+    SetBorderColor 88 0 179 # Utility/Hybrid/Quality flask
+
+Show # Flasks - Quality - 10%
+    Quality >= 10
+    Class "Flask"
+    SetBorderColor 88 0 179 # Utility/Hybrid/Quality flask
+
+Show # Flasks - Hybrid - Hallowed
+    ItemLevel < 68
+    BaseType "Hallowed Hybrid Flask"
+    SetBorderColor 88 0 179 # Utility/Hybrid/Quality flask
+
+Hide # Flasks - Hybrid - Other
+    Class "Hybrid Flask"
+
+Show # Flasks - Mana - ilvl < 15
+    ItemLevel < 15
+    Class "Mana Flask"
+    SetBorderColor 88 0 222 # Mana flask
+
+Show # Flasks - Life - ilvl < 15
+    ItemLevel < 15
+    Class "Life Flask"
+    SetBorderColor 83 0 110 # Life flask
+
+Show # Flasks - Mana - ilvl < 26
+    ItemLevel < 26
+    DropLevel > 10
+    Class "Mana Flask"
+    SetBorderColor 88 0 222 # Mana flask
+
+Show # Flasks - Life - ilvl < 26
+    ItemLevel < 26
+    DropLevel > 10
+    Class "Life Flask"
+    SetBorderColor 83 0 110 # Life flask
+
+Show # Flasks - Mana - ilvl < 34
+    ItemLevel < 34
+    DropLevel > 22
+    Class "Mana Flask"
+    SetBorderColor 88 0 222 # Mana flask
+
+Show # Flasks - Life - ilvl < 34
+    ItemLevel < 34
+    DropLevel > 22
+    Class "Life Flask"
+    SetBorderColor 83 0 110 # Life flask
+
+Show # Flasks - Mana - ilvl < 43
+    ItemLevel < 43
+    DropLevel > 34
+    Class "Mana Flask"
+    SetBorderColor 88 0 222 # Mana flask
+
+Show # Flasks - Life - ilvl < 43
+    ItemLevel < 43
+    DropLevel > 34
+    Class "Life Flask"
+    SetBorderColor 83 0 110 # Life flask
+
+Show # Flasks - Mana - ilvl < 55
+    ItemLevel < 55
+    DropLevel > 40
+    Class "Mana Flask"
+    SetBorderColor 88 0 222 # Mana flask
+
+Show # Flasks - Life - ilvl < 55
+    ItemLevel < 55
+    DropLevel > 40
+    Class "Life Flask"
+    SetBorderColor 83 0 110 # Life flask
+
+Show # Flasks - Mana - Divine+ - (under 70)
+    ItemLevel < 67
+    DropLevel > 58
+    Class "Mana Flask"
+    SetBorderColor 88 0 222 # Mana flask
+
+Show # Flasks - Life - Divine+ - (under 70)
+    ItemLevel < 67
+    DropLevel > 58
+    Class "Life Flask"
+    SetBorderColor 83 0 110 # Life flask
+
+Show # Flasks - Mana - Divine+ - (over 70)
+    DropLevel > 58
+    Class "Mana Flask"
+    SetFontSize 25
+
+Show # Flasks - Life - Divine+ - (over 70)
+    DropLevel > 58
+    Class "Life Flask"
+    SetFontSize 25
+
+Hide # Flasks - Other
+    Class "Flask"
+
+# Section: ### Link Exceptions ################################################
+
+Show
+    ItemLevel < 20
+    Rarity <= Magic
+    LinkedSockets = 3
+    SetFontSize 28
+
+Show
+    ItemLevel < 40
+    DropLevel > 15
+    Rarity <= Magic
+    LinkedSockets = 4
+    SetFontSize 28
+
+Show
+    ItemLevel < 50
+    DropLevel > 25
+    Rarity <= Magic
+    LinkedSockets = 4
+    SetFontSize 28
+
+Show
+    ItemLevel < 65
+    DropLevel > 40
+    Rarity <= Magic
+    LinkedSockets = 4
+    SetFontSize 28
+
+# Section: ### Hide Obsolete Gear #############################################
+
+Hide
+    ItemLevel >= 10
+    DropLevel <= 5
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 15
+    DropLevel <= 10
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 20
+    DropLevel <= 13
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 25
+    DropLevel <= 20
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 30
+    DropLevel <= 25
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 35
+    DropLevel <= 30
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 40
+    DropLevel <= 35
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 45
+    DropLevel <= 40
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 50
+    DropLevel <= 46
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 55
+    DropLevel <= 52
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 60
+    DropLevel < 56
+    Rarity <= Magic
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+Hide
+    ItemLevel >= 65
+    Rarity <= Magic
+    BaseType "Alder Spiked Shield" "Ancestral Club" "Arcanist Gloves" "Arcanist Slippers" "Assassin Bow" "Assassin's Boots" "Assassin's Mitts" "Auric Mace" "Blood Raiment" "Branded Kite Shield" "Butcher Axe" "Cardinal Round Shield" "Carnal Sceptre" "Champion Kite Shield" "Citadel Bow" "Colossal Tower Shield" "Colossus Mallet" "Conquest Chainmail" "Courtesan Sword" "Crusader Buckler" "Crusader Plate" "Crypt Armour" "Demon Dagger" "Demon's Horn" "Desert Brigandine" "Despot Axe" "Destiny Leather" "Dragonbone Rapier" "Dragonscale Doublet" "Ebony Tower Shield" "Elegant Ringmail" "Engraved Hatchet" "Eternal Sword" "Exquisite Leather" "Eye Gouger" "Ezomyte Axe" "Ezomyte Blade" "Ezomyte Burgonet" "Ezomyte Dagger" "Ezomyte Spiked Shield" "Ezomyte Staff" "Ezomyte Tower Shield" "Fluted Bascinet" "Full Dragonscale" "Gavel" "Gemstone Sword" "General's Brigandine" "Gladiator Plate" "Gladius" "Golden Plate" "Gutting Knife" "Harlequin Mask" "Harmonic Spirit Shield" "Harpy Rapier" "Headman's Sword" "Hellion's Paw" "Hydrascale Boots" "Hydrascale Gauntlets" "Imperial Bow" "Imperial Maul" "Imperial Skean" "Imperial Staff" "Infernal Axe" "Infernal Sword" "Ironwood Buckler" "Judgement Staff" "Karui Axe" "Karui Chopper" "Karui Maul" "Karui Sceptre" "Lacewood Spirit Shield" "Lacquered Buckler" "Lathi" "Legion Boots" "Legion Gloves" "Legion Hammer" "Legion Sword" "Lion Sword" "Lithe Blade" "Loricated Ringmail" "Magistrate Crown" "Meatgrinder" "Midnight Blade" "Mind Cage" "Mirrored Spiked Shield" "Moon Staff" "Mosaic Kite Shield" "Necromancer Silks" "Nightmare Mace" "Occultist's Vestment" "Opal Sceptre" "Pecoraro" "Pernarch" "Pig-Faced Bascinet" "Platinum Sceptre" "Primordial Staff" "Prophecy Wand" "Prophet Crown" "Ranger Bow" "Reaver Axe" "Royal Axe" "Sacrificial Garb" "Sadist Garb" "Saint's Hauberk" "Savant's Robe" "Sentinel Jacket" "Shagreen Tower Shield" "Sharkskin Tunic" "Siege Axe" "Silken Hood" "Sinner Tricorne" "Slaughter Knife" "Solaris Circlet" "Solar Maul" "Spine Bow" "Spiny Round Shield" "Spiraled Foil" "Stealth Boots" "Stealth Gloves" "Steelwood Bow" "Sundering Axe" "Talon Axe" "Teak Round Shield" "Tempered Foil" "Tenderizer" "Terror Maul" "Throat Stabber" "Tornado Wand" "Twin Claw" "Tyrant's Sekhem" "Vaal Blade" "Vaal Buckler" "Vaal Claw" "Vaal Gauntlets" "Vaal Greatsword" "Vaal Greaves" "Vaal Hatchet" "Vaal Mask" "Vaal Sceptre" "Vaal Spirit Shield" "Varnished Coat" "Void Axe" "Void Sceptre" "Widowsilk Robe" "Zodiac Leather"
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+# Hide Maelström Staff Exception
+Hide
+    ItemLevel > 77
+    DropLevel = 64
+    Rarity <= Magic
+    Class "Staves"
+    SetBackgroundColor 0 0 0 190 # Hide
+    SetFontSize 26
+
+###############################################################################
+# Section: ### Normal & Magic Gear - Endgame ##################################
+###############################################################################
+
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Pinnacle Tower Shield"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Pinnacle Tower Shield"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Pinnacle Tower Shield"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Pinnacle Tower Shield"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Pinnacle Tower Shield"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Pinnacle Tower Shield"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Imperial Buckler"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Imperial Buckler"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Imperial Buckler"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Imperial Buckler"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Imperial Buckler"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Imperial Buckler"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Supreme Spiked Shield"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Supreme Spiked Shield"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Supreme Spiked Shield"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Supreme Spiked Shield"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Supreme Spiked Shield"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Supreme Spiked Shield"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Archon Kite Shield"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Archon Kite Shield"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Archon Kite Shield"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Archon Kite Shield"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Archon Kite Shield"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Archon Kite Shield"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Elegant Round Shield"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Elegant Round Shield"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Elegant Round Shield"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 77+ - No Sockets
+	ItemLevel >= 77
+	BaseType "Elegant Round Shield"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 77+ - 3/4 Linked Sockets
+	ItemLevel >= 77
+	BaseType "Elegant Round Shield"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 77+ - 3/4 Sockets
+	ItemLevel >= 77
+	BaseType "Elegant Round Shield"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+### One Hand Axe ###
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal - 77+ - 3/4 Linked Sockets - Runic Hatchet
+	BaseType "Runic Hatchet"
+	Rarity Normal
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal - 77+ - 3/4 Sockets - Runic Hatchet
+	BaseType "Runic Hatchet"
+	Rarity Normal
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Magic - 77+ - No Sockets - Runic Hatchet
+	BaseType "Runic Hatchet"
+	Rarity Magic
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Magic - 77+ - 3/4 Linked Sockets - Runic Hatchet
+	BaseType "Runic Hatchet"
+	Rarity Magic
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Magic - 77+ - 3/4 Sockets - Runic Hatchet
+	BaseType "Runic Hatchet"
+	Rarity Magic
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+### /One Hand Axe ###
+### One Hand Sword ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - No Sockets - Tiger Hook
+	BaseType "Tiger Hook"
+	Rarity Normal
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - 3/4 Linked Sockets - Tiger Hook
+	BaseType "Tiger Hook"
+	Rarity Normal
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - 3/4 Sockets - Tiger Hook
+	BaseType "Tiger Hook"
+	Rarity Normal
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - No Sockets - Tiger Hook
+	BaseType "Tiger Hook"
+	Rarity Magic
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Tiger Hook
+	BaseType "Tiger Hook"
+	Rarity Magic
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - 3/4 Sockets - Tiger Hook
+	BaseType "Tiger Hook"
+	Rarity Magic
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - No Sockets - Corsair Sword
+	ItemLevel >= 77
+	BaseType "Corsair Sword"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Corsair Sword
+	ItemLevel >= 77
+	BaseType "Corsair Sword"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - 3/4 Sockets - Corsair Sword
+	ItemLevel >= 77
+	BaseType "Corsair Sword"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+### /One Hand Sword ###
+### Two Hand Mace ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - No Sockets - Coronal Maul
+	BaseType "Coronal Maul"
+	Rarity Normal
+	Sockets < 4
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - 3/4 Linked Sockets - Coronal Maul
+	BaseType "Coronal Maul"
+	Rarity Normal
+	LinkedSockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - 3/4 Sockets - Coronal Maul
+	BaseType "Coronal Maul"
+	Rarity Normal
+	Sockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 77+ - No Sockets - Coronal Maul
+	BaseType "Coronal Maul"
+	Rarity Magic
+	Sockets < 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 77+ - 3/4 Linked Sockets - Coronal Maul
+	BaseType "Coronal Maul"
+	Rarity Magic
+	LinkedSockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 77+ - 3/4 Sockets - Coronal Maul
+	BaseType "Coronal Maul"
+	Rarity Magic
+	Sockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - No Sockets - Piledriver
+	ItemLevel >= 77
+	BaseType "Piledriver"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - 3/4 Linked Sockets - Piledriver
+	ItemLevel >= 77
+	BaseType "Piledriver"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - 3/4 Sockets - Piledriver
+	ItemLevel >= 77
+	BaseType "Piledriver"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 83+ - 3/4 Sockets - Piledriver
+	ItemLevel >= 83
+	BaseType "Piledriver"
+	Rarity Magic
+	Sockets >= 4
+	SetBackgroundColor 70 70 70
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 77+ - No Sockets - Piledriver
+	ItemLevel >= 77
+	BaseType "Piledriver"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 77+ - 3/4 Linked Sockets - Piledriver
+	ItemLevel >= 77
+	BaseType "Piledriver"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 77+ - 3/4 Sockets - Piledriver
+	ItemLevel >= 77
+	BaseType "Piledriver"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+### /Two Hand Mace ###
+### Bows ###
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+ - 3/4 Sockets - Maraketh Bow
+	BaseType "Maraketh Bow"
+	Rarity Magic
+	Sockets >= 4
+	ItemLevel >= 83
+	SetBackgroundColor 70 70 70
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - No Sockets - Maraketh Bow
+	BaseType "Maraketh Bow"
+	Rarity Normal
+	Sockets < 4
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Linked Sockets - Maraketh Bow
+	BaseType "Maraketh Bow"
+	Rarity Normal
+	LinkedSockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Sockets - Maraketh Bow
+	BaseType "Maraketh Bow"
+	Rarity Normal
+	Sockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - No Sockets - Maraketh Bow
+	BaseType "Maraketh Bow"
+	Rarity Magic
+	Sockets < 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - 3/4 Linked Sockets - Maraketh Bow
+	BaseType "Maraketh Bow"
+	Rarity Magic
+	LinkedSockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - 3/4 Sockets - Maraketh Bow
+	BaseType "Maraketh Bow"
+	Rarity Magic
+	Sockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - No Sockets - Thicket Bow
+	ItemLevel >= 77
+	BaseType "Thicket Bow"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Linked Sockets - Thicket Bow
+	ItemLevel >= 77
+	BaseType "Thicket Bow"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Sockets - Thicket Bow
+	ItemLevel >= 77
+	BaseType "Thicket Bow"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - No Sockets - Thicket Bow
+	ItemLevel >= 77
+	BaseType "Thicket Bow"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - 3/4 Linked Sockets - Thicket Bow
+	ItemLevel >= 77
+	BaseType "Thicket Bow"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - 3/4 Sockets - Thicket Bow
+	ItemLevel >= 77
+	BaseType "Thicket Bow"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - No Sockets - Harbinger Bow
+	ItemLevel >= 77
+	BaseType "Harbinger Bow"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Linked Sockets - Harbinger Bow
+	ItemLevel >= 77
+	BaseType "Harbinger Bow"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Sockets - Harbinger Bow
+	ItemLevel >= 77
+	BaseType "Harbinger Bow"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - No Sockets - Harbinger Bow
+	ItemLevel >= 77
+	BaseType "Harbinger Bow"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - 3/4 Linked Sockets - Harbinger Bow
+	ItemLevel >= 77
+	BaseType "Harbinger Bow"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - 3/4 Sockets - Harbinger Bow
+	ItemLevel >= 77
+	BaseType "Harbinger Bow"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+### /Bows ###
+### Thrusting One Hand Sword ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - No Sockets - Dragoon Sword
+	BaseType "Dragoon Sword"
+	Rarity Normal
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Linked Sockets - Dragoon Sword
+	BaseType "Dragoon Sword"
+	Rarity Normal
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Sockets - Dragoon Sword
+	BaseType "Dragoon Sword"
+	Rarity Normal
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - No Sockets - Dragoon Sword
+	BaseType "Dragoon Sword"
+	Rarity Magic
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Dragoon Sword
+	BaseType "Dragoon Sword"
+	Rarity Magic
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - 3/4 Sockets - Dragoon Sword
+	BaseType "Dragoon Sword"
+	Rarity Magic
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - No Sockets - Vaal Rapier
+	ItemLevel >= 77
+	BaseType "Vaal Rapier"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Linked Sockets - Vaal Rapier
+	ItemLevel >= 77
+	BaseType "Vaal Rapier"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Sockets - Vaal Rapier
+	ItemLevel >= 77
+	BaseType "Vaal Rapier"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - No Sockets - Vaal Rapier
+	ItemLevel >= 77
+	BaseType "Vaal Rapier"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Vaal Rapier
+	ItemLevel >= 77
+	BaseType "Vaal Rapier"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - 3/4 Sockets - Vaal Rapier
+	ItemLevel >= 77
+	BaseType "Vaal Rapier"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - No Sockets - Jewelled Foil
+	ItemLevel >= 77
+	BaseType "Jewelled Foil"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Linked Sockets - Jewelled Foil
+	ItemLevel >= 77
+	BaseType "Jewelled Foil"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Sockets - Jewelled Foil
+	ItemLevel >= 77
+	BaseType "Jewelled Foil"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - No Sockets - Jewelled Foil
+	ItemLevel >= 77
+	BaseType "Jewelled Foil"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Jewelled Foil
+	ItemLevel >= 77
+	BaseType "Jewelled Foil"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - 3/4 Sockets - Jewelled Foil
+	ItemLevel >= 77
+	BaseType "Jewelled Foil"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+### /Thrusting One Hand Sword ###
+### Daggers ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - No Sockets - Sai
+	BaseType "Sai"
+	Class "Daggers"
+	Rarity Normal
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Linked Sockets - Sai
+	BaseType "Sai"
+	Class "Daggers"
+	Rarity Normal
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Sockets - Sai
+	BaseType "Sai"
+	Class "Daggers"
+	Rarity Normal
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - No Sockets - Sai
+	BaseType "Sai"
+	Class "Daggers"
+	Rarity Magic
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - 3/4 Linked Sockets - Sai
+	BaseType "Sai"
+	Class "Daggers"
+	Rarity Magic
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - 3/4 Sockets - Sai
+	BaseType "Sai"
+	Class "Daggers"
+	Rarity Magic
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - No Sockets - Ambusher
+	ItemLevel >= 77
+	BaseType "Ambusher"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Linked Sockets - Ambusher
+	ItemLevel >= 77
+	BaseType "Ambusher"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Sockets - Ambusher
+	ItemLevel >= 77
+	BaseType "Ambusher"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - No Sockets - Ambusher
+	ItemLevel >= 77
+	BaseType "Ambusher"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - 3/4 Linked Sockets - Ambusher
+	ItemLevel >= 77
+	BaseType "Ambusher"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - 3/4 Sockets - Ambusher
+	ItemLevel >= 77
+	BaseType "Ambusher"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - No Sockets - Platinum Kris
+	ItemLevel >= 77
+	BaseType "Platinum Kris"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Linked Sockets - Platinum Kris
+	ItemLevel >= 77
+	BaseType "Platinum Kris"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Sockets - Platinum Kris
+	ItemLevel >= 77
+	BaseType "Platinum Kris"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - No Sockets - Platinum Kris
+	ItemLevel >= 77
+	BaseType "Platinum Kris"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - 3/4 Linked Sockets - Platinum Kris
+	ItemLevel >= 77
+	BaseType "Platinum Kris"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - 3/4 Sockets - Platinum Kris
+	ItemLevel >= 77
+	BaseType "Platinum Kris"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+### /Daggers ###
+### One Hand Mace ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 77+ - No Sockets - Behemoth Mace
+	BaseType "Behemoth Mace"
+	Rarity Normal
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 77+ - 3/4 Linked Sockets - Behemoth Mace
+	BaseType "Behemoth Mace"
+	Rarity Normal
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 77+ - 3/4 Sockets - Behemoth Mace
+	BaseType "Behemoth Mace"
+	Rarity Normal
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Magic - 77+ - No Sockets - Behemoth Mace
+	BaseType "Behemoth Mace"
+	Rarity Magic
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Magic - 77+ - 3/4 Linked Sockets - Behemoth Mace
+	BaseType "Behemoth Mace"
+	Rarity Magic
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Magic - 77+ - 3/4 Sockets - Behemoth Mace
+	BaseType "Behemoth Mace"
+	Rarity Magic
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+### /One Hand Mace ###
+### Two Hand Axe ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - No Sockets - Fleshripper
+	BaseType "Fleshripper"
+	Rarity Normal
+	Sockets < 4
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - 3/4 Linked Sockets - Fleshripper
+	BaseType "Fleshripper"
+	Rarity Normal
+	LinkedSockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - 3/4 Sockets - Fleshripper
+	BaseType "Fleshripper"
+	Rarity Normal
+	Sockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 77+ - No Sockets - Fleshripper
+	BaseType "Fleshripper"
+	Rarity Magic
+	Sockets < 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 77+ - 3/4 Linked Sockets - Fleshripper
+	BaseType "Fleshripper"
+	Rarity Magic
+	LinkedSockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 77+ - 3/4 Sockets - Fleshripper
+	BaseType "Fleshripper"
+	Rarity Magic
+	Sockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - No Sockets - Vaal Axe
+	ItemLevel >= 77
+	BaseType "Vaal Axe"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - 3/4 Linked Sockets - Vaal Axe
+	ItemLevel >= 77
+	BaseType "Vaal Axe"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - 3/4 Sockets - Vaal Axe
+	ItemLevel >= 77
+	BaseType "Vaal Axe"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 77+ - No Sockets - Vaal Axe
+	ItemLevel >= 77
+	BaseType "Vaal Axe"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 77+ - 3/4 Linked Sockets - Vaal Axe
+	ItemLevel >= 77
+	BaseType "Vaal Axe"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 77+ - 3/4 Sockets - Vaal Axe
+	ItemLevel >= 77
+	BaseType "Vaal Axe"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+### /Two Hand Axe ###
+### Two Hand Sword ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - No Sockets - Exquisite Blade
+	BaseType "Exquisite Blade"
+	Rarity Normal
+	Sockets < 4
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - 3/4 Linked Sockets - Exquisite Blade
+	BaseType "Exquisite Blade"
+	Rarity Normal
+	LinkedSockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - 3/4 Sockets - Exquisite Blade
+	BaseType "Exquisite Blade"
+	Rarity Normal
+	Sockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 77+ - No Sockets - Exquisite Blade
+	BaseType "Exquisite Blade"
+	Rarity Magic
+	Sockets < 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Exquisite Blade
+	BaseType "Exquisite Blade"
+	Rarity Magic
+	LinkedSockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 77+ - 3/4 Sockets - Exquisite Blade
+	BaseType "Exquisite Blade"
+	Rarity Magic
+	Sockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - No Sockets - Reaver Sword
+	ItemLevel >= 77
+	BaseType "Reaver Sword"
+	Rarity Normal
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - 3/4 Linked Sockets - Reaver Sword
+	ItemLevel >= 77
+	BaseType "Reaver Sword"
+	Rarity Normal
+	LinkedSockets >= 4
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - 3/4 Sockets - Reaver Sword
+	ItemLevel >= 77
+	BaseType "Reaver Sword"
+	Rarity Normal
+	Sockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 77+ - No Sockets - Reaver Sword
+	ItemLevel >= 77
+	BaseType "Reaver Sword"
+	Rarity Magic
+	Sockets < 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Reaver Sword
+	ItemLevel >= 77
+	BaseType "Reaver Sword"
+	Rarity Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 77+ - 3/4 Sockets - Reaver Sword
+	ItemLevel >= 77
+	BaseType "Reaver Sword"
+	Rarity Magic
+	Sockets >= 4
+	SetFontSize 28
+### /Two Hand Sword ###
+### Claws ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - No Sockets - Gemini Claw
+	BaseType "Gemini Claw"
+	Rarity Normal
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Linked Sockets - Gemini Claw
+	BaseType "Gemini Claw"
+	Rarity Normal
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Gemini Claw
+	BaseType "Gemini Claw"
+	Rarity Normal
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - No Sockets - Gemini Claw
+	BaseType "Gemini Claw"
+	Rarity Magic
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 Linked Sockets - Gemini Claw
+	BaseType "Gemini Claw"
+	Rarity Magic
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 Sockets - Gemini Claw
+	BaseType "Gemini Claw"
+	Rarity Magic
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - No Sockets - Great White Claw
+	ItemLevel >= 77
+	BaseType "Great White Claw"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Linked Sockets - Great White Claw
+	ItemLevel >= 77
+	BaseType "Great White Claw"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Great White Claw
+	ItemLevel >= 77
+	BaseType "Great White Claw"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - No Sockets - Great White Claw
+	ItemLevel >= 77
+	BaseType "Great White Claw"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 Linked Sockets - Great White Claw
+	ItemLevel >= 77
+	BaseType "Great White Claw"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 Sockets - Great White Claw
+	ItemLevel >= 77
+	BaseType "Great White Claw"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - No Sockets - Imperial Claw
+	ItemLevel >= 77
+	BaseType "Imperial Claw"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Linked Sockets - Imperial Claw
+	ItemLevel >= 77
+	BaseType "Imperial Claw"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Imperial Claw
+	ItemLevel >= 77
+	BaseType "Imperial Claw"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - No Sockets - Imperial Claw
+	ItemLevel >= 77
+	BaseType "Imperial Claw"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 Linked Sockets - Imperial Claw
+	ItemLevel >= 77
+	BaseType "Imperial Claw"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 Sockets - Imperial Claw
+	ItemLevel >= 77
+	BaseType "Imperial Claw"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - No Sockets - Terror Claw
+	ItemLevel >= 77
+	BaseType "Terror Claw"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Linked Sockets - Terror Claw
+	ItemLevel >= 77
+	BaseType "Terror Claw"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Terror Claw
+	ItemLevel >= 77
+	BaseType "Terror Claw"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - No Sockets - Terror Claw
+	ItemLevel >= 77
+	BaseType "Terror Claw"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 Linked Sockets - Terror Claw
+	ItemLevel >= 77
+	BaseType "Terror Claw"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 Sockets - Terror Claw
+	ItemLevel >= 77
+	BaseType "Terror Claw"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+### /Claws ###
+### Sceptre ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 77+ - No Sockets - Sambar Sceptre
+	BaseType "Sambar Sceptre"
+	Rarity Normal
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 77+ - 3/4 Linked Sockets - Sambar Sceptre
+	BaseType "Sambar Sceptre"
+	Rarity Normal
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 77+ - 3/4 Sockets - Sambar Sceptre
+	BaseType "Sambar Sceptre"
+	Rarity Normal
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Magic - 77+ - No Sockets - Sambar Sceptre
+	BaseType "Sambar Sceptre"
+	Rarity Magic
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Magic - 77+ - 3/4 Linked Sockets - Sambar Sceptre
+	BaseType "Sambar Sceptre"
+	Rarity Magic
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Magic - 77+ - 3/4 Sockets - Sambar Sceptre
+	BaseType "Sambar Sceptre"
+	Rarity Magic
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+### /Sceptre ###
+### Staff ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 77+ - No Sockets - Eclipse Staff
+	BaseType "Eclipse Staff"
+	Rarity Normal
+	Sockets < 4
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 77+ - 3/4 Linked Sockets - Eclipse Staff
+	BaseType "Eclipse Staff"
+	Rarity Normal
+	LinkedSockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 77+ - 3/4 Sockets - Eclipse Staff
+	BaseType "Eclipse Staff"
+	Rarity Normal
+	Sockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Magic - 77+ - No Sockets - Eclipse Staff
+	BaseType "Eclipse Staff"
+	Rarity Magic
+	Sockets < 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Magic - 77+ - 3/4 Linked Sockets - Eclipse Staff
+	BaseType "Eclipse Staff"
+	Rarity Magic
+	LinkedSockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Magic - 77+ - 3/4 Sockets - Eclipse Staff
+	BaseType "Eclipse Staff"
+	Rarity Magic
+	Sockets >= 4
+	ItemLevel >= 77
+	SetFontSize 28
+### /Staff ###
+### Wands ###
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - No Sockets - Profane Wand
+	BaseType "Profane Wand"
+	Rarity Normal
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Linked Sockets - Profane Wand
+	BaseType "Profane Wand"
+	Rarity Normal
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Sockets - Profane Wand
+	BaseType "Profane Wand"
+	Rarity Normal
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - No Sockets - Profane Wand
+	BaseType "Profane Wand"
+	Rarity Magic
+	Sockets < 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - 3/4 Linked Sockets - Profane Wand
+	BaseType "Profane Wand"
+	Rarity Magic
+	LinkedSockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - 3/4 Sockets - Profane Wand
+	BaseType "Profane Wand"
+	Rarity Magic
+	Sockets >= 3
+	ItemLevel >= 77
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - No Sockets - Imbued Wand
+	ItemLevel >= 77
+	BaseType "Imbued Wand"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Linked Sockets - Imbued Wand
+	ItemLevel >= 77
+	BaseType "Imbued Wand"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Sockets - Imbued Wand
+	ItemLevel >= 77
+	BaseType "Imbued Wand"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - No Sockets - Imbued Wand
+	ItemLevel >= 77
+	BaseType "Imbued Wand"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - 3/4 Linked Sockets - Imbued Wand
+	ItemLevel >= 77
+	BaseType "Imbued Wand"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - 3/4 Sockets - Imbued Wand
+	ItemLevel >= 77
+	BaseType "Imbued Wand"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - No Sockets - Opal Wand
+	ItemLevel >= 77
+	BaseType "Opal Wand"
+	Rarity Normal
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Linked Sockets - Opal Wand
+	ItemLevel >= 77
+	BaseType "Opal Wand"
+	Rarity Normal
+	LinkedSockets >= 3
+	SetFontSize 28
+Show	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Sockets - Opal Wand
+	ItemLevel >= 77
+	BaseType "Opal Wand"
+	Rarity Normal
+	Sockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - No Sockets - Opal Wand
+	ItemLevel >= 77
+	BaseType "Opal Wand"
+	Rarity Magic
+	Sockets < 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - 3/4 Linked Sockets - Opal Wand
+	ItemLevel >= 77
+	BaseType "Opal Wand"
+	Rarity Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - 3/4 Sockets - Opal Wand
+	ItemLevel >= 77
+	BaseType "Opal Wand"
+	Rarity Magic
+	Sockets >= 3
+	SetFontSize 28
+### /Wands ###
+
+### /Normal & Magic Gear - Endgame ############################################
+###############################################################################	
+	
+# Section: ### Best Rares #####################################################
+
+# Armour ###
+Show # Gear - Rare - Endgame - Armour - STR - Body Armours - Glorious Plate
+    Rarity = Rare
+    BaseType "Glorious Plate"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - STR - Body Armours - Astral Plate
+    Rarity = Rare
+    BaseType "Astral Plate"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX - Body Armours - Assassin's Garb
+    Rarity = Rare
+    BaseType "Assassin's Garb"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - INT - Body Armours - Vaal Regalia
+    Rarity = Rare
+    BaseType "Vaal Regalia"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX/INT - Body Armours - Carnal Armour
+    Rarity = Rare
+    BaseType "Carnal Armour"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - DEX/INT - Body Armours - Sadist Garb
+    ItemLevel <= 71
+    Rarity = Rare
+    BaseType "Sadist Garb"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - STR/INT - Body Armours - Saintly Chainmail
+    Rarity = Rare
+    BaseType "Saintly Chainmail"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - STR/INT - Body Armours - Saint's Hauberk
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Saint's Hauberk"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX/STR - Body Armours - Triumphant Lamellar
+    Rarity = Rare
+    BaseType "Triumphant Lamellar"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - DEX/STR - Body Armours - General's Brigandine
+    ItemLevel <= 69
+    Rarity = Rare
+    BaseType "General's Brigandine"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Helmets ###
+Show # Gear - Rare - Endgame - Armour - STR - Helmets - Eternal Burgonet
+    Rarity = Rare
+    BaseType "Eternal Burgonet"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - STR - Helmets - Royal Burgonet
+    Rarity = Rare
+    BaseType "Royal Burgonet"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX - Helmets - Lion Pelt
+    Rarity = Rare
+    BaseType "Lion Pelt"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - DEX - Helmets - Sinner Tricorne
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Sinner Tricorne"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - INT - Helmets - Hubris Circlet
+    Rarity = Rare
+    BaseType "Hubris Circlet"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - INT - Helmets - Mind Cage
+    ItemLevel <= 69
+    Rarity = Rare
+    BaseType "Mind Cage"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX/INT - Helmets - Deicide Mask
+    Rarity = Rare
+    BaseType "Deicide Mask"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - STR/INT - Helmets - Praetor Crown
+    Rarity = Rare
+    BaseType "Praetor Crown"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX/STR - Helmets - Nightmare Bascinet
+    Rarity = Rare
+    BaseType "Nightmare Bascinet"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Gloves ###
+Show # Gear - Rare - Endgame - Armour - STR - Gloves - Titan Gauntlets
+    Rarity = Rare
+    BaseType "Titan Gauntlets"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - STR - Gloves - Vaal Gauntlets
+    ItemLevel <= 69
+    Rarity = Rare
+    BaseType "Vaal Gauntlets"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX - Gloves - Slink Gloves
+    Rarity = Rare
+    BaseType "Slink Gloves"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - DEX - Gloves - Stealth Gloves
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Stealth Gloves"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - INT - Gloves - Sorcerer Gloves
+    Rarity = Rare
+    BaseType "Sorcerer Gloves"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - INT - Gloves - Arcanist Gloves
+    ItemLevel <= 69
+    Rarity = Rare
+    BaseType "Arcanist Gloves"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX/INT - Gloves - Murder Mitts
+    Rarity = Rare
+    BaseType "Murder Mitts"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - STR/INT - Gloves - Crusader Gloves
+    Rarity = Rare
+    BaseType "Crusader Gloves"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX/STR - Gloves - Dragonscale Gauntlets
+    Rarity = Rare
+    BaseType "Dragonscale Gauntlets"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Boots ###
+Show # Gear - Rare - Endgame - Armour - STR - Boots - Titan Greaves
+    Rarity = Rare
+    BaseType "Titan Greaves"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX - Boots - Slink Boots
+    Rarity = Rare
+    BaseType "Slink Boots"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - DEX - Boots - Stealth Boots
+    ItemLevel <= 69
+    Rarity = Rare
+    BaseType "Stealth Boots"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - INT - Boots - Sorcerer Boots
+    Rarity = Rare
+    BaseType "Sorcerer Boots"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX/INT - Boots - Murder Boots
+    Rarity = Rare
+    BaseType "Murder Boots"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - DEX/INT - Boots - Assassin's Boots
+    ItemLevel <= 69
+    Rarity = Rare
+    BaseType "Assassin's Boots"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - STR/INT - Boots - Crusader Boots
+    Rarity = Rare
+    BaseType "Crusader Boots"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX/STR - Boots - Dragonscale Boots
+    Rarity = Rare
+    BaseType "Dragonscale Boots"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Shields ###
+Show # Gear - Rare - Endgame - Armour - STR - Shields - Pinnacle Tower Shield
+    Rarity = Rare
+    BaseType "Pinnacle Tower Shield"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - STR - Shields - Colossal Tower Shield
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Colossal Tower Shield"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX - Shields - Imperial Buckler
+    Rarity = Rare
+    BaseType "Imperial Buckler"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - DEX - Shields - Crusader Buckler
+    ItemLevel <= 69
+    Rarity = Rare
+    BaseType "Crusader Buckler"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - INT - Shields - Titanium Spirit Shield
+    Rarity = Rare
+    BaseType "Titanium Spirit Shield"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX/INT - Shields - Supreme Spiked Shield
+    Rarity = Rare
+    BaseType "Supreme Spiked Shield"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - DEX/INT - Shields - Mirrored Spiked Shield
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Mirrored Spiked Shield"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Armour - DEX/STR - Shields - Elegant Round Shield
+    Rarity = Rare
+    BaseType "Elegant Round Shield"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Armour - DEX/STR - Shields - Cardinal Round Shield
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Cardinal Round Shield"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# One Hand Axe ###
+Show # Gear - Rare - Endgame - Weapon - One Hand Axes - Runic Hatchet
+    Rarity = Rare
+    BaseType "Runic Hatchet"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - One Hand Axes - Royal Axe
+    ItemLevel <= 69
+    Rarity = Rare
+    BaseType "Royal Axe"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - One Hand Axes - Infernal Axe
+    ItemLevel <= 71
+    Rarity = Rare
+    BaseType "Infernal Axe"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# One Hand Sword ###
+Show # Gear - Rare - Endgame - Weapon - One Hand Swords - Tiger Hook
+    Rarity = Rare
+    BaseType "Tiger Hook"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Weapon - One Hand Swords - Corsair Sword
+    Rarity = Rare
+    BaseType "Corsair Sword"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - One Hand Swords - Midnight Blade
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Midnight Blade"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Two Hand Mace ###
+Show # Gear - Rare - Endgame - Weapon - Two Hand Maces - Coronal Maul
+    Rarity = Rare
+    BaseType "Coronal Maul"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - Two Hand Maces - Terror Maul
+    ItemLevel <= 69
+    Rarity = Rare
+    BaseType "Terror Maul"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Bows ###
+Show # Gear - Rare - Endgame - Weapon - Bows - Maraketh Bow
+    Rarity = Rare
+    BaseType "Maraketh Bow"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Weapon - Bows - Harbinger Bow
+    Rarity = Rare
+    BaseType "Harbinger Bow"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Thrusting One Hand Sword ###
+Show # Gear - Rare - Endgame - Weapon - Thrusting One Hand Swords - Dragoon Sword
+    Rarity = Rare
+    BaseType "Dragoon Sword"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Weapon - Thrusting One Hand Swords - Vaal Rapier
+    Rarity = Rare
+    BaseType "Vaal Rapier"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Weapon - Thrusting One Hand Swords - Jewelled Foil
+    Rarity = Rare
+    BaseType "Jewelled Foil"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - Thrusting One Hand Swords - Harpy Rapier
+    ItemLevel <= 72
+    Rarity = Rare
+    BaseType "Harpy Rapier"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Daggers ###
+Show # Gear - Rare - Endgame - Weapon - Daggers - Sai
+    Rarity = Rare
+    Class "Daggers"
+    BaseType "Sai"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Weapon - Daggers - Platinum Kris
+    Rarity = Rare
+    BaseType "Platinum Kris"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - Daggers - Demon Dagger
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Demon Dagger"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# One Hand Mace ###
+Show # Gear - Rare - Endgame - Weapon - One Hand Maces - Behemoth Mace
+    Rarity = Rare
+    BaseType "Behemoth Mace"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - One Hand Maces - Nightmare Mace
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Nightmare Mace"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Two Hand Axe ###
+Show # Gear - Rare - Endgame - Weapon - Two Hand Axes - Fleshripper
+    Rarity = Rare
+    BaseType "Fleshripper"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Weapon - Two Hand Axes - Vaal Axe
+    Rarity = Rare
+    BaseType "Vaal Axe"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - Two Hand Axes - Void Axe
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Void Axe"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Two Hand Sword ###
+Show # Gear - Rare - Endgame - Weapon - Two Hand Swords - Exquisite Blade
+    Rarity = Rare
+    BaseType "Exquisite Blade"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - Two Hand Swords - Infernal Sword
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Infernal Sword"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Claws ###
+Show # Gear - Rare - Endgame - Weapon - Claws - Gemini Claw
+    Rarity = Rare
+    BaseType "Gemini Claw"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Weapon - Claws - Imperial Claw
+    Rarity = Rare
+    BaseType "Imperial Claw"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Endgame - Weapon - Claws - Terror Claw
+    Rarity = Rare
+    BaseType "Terror Claw"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Sceptre ###
+Show # Gear - Rare - Endgame - Weapon - Sceptres - Sambar Sceptre
+    Rarity = Rare
+    BaseType "Sambar Sceptre"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - Sceptres - Void Sceptre
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Void Sceptre"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Staff ###
+Show # Gear - Rare - Endgame - Weapon - Staves - Eclipse Staff
+    Rarity = Rare
+    BaseType "Eclipse Staff"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - Staves - Judgement Staff
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Judgement Staff"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Wands ###
+Show # Gear - Rare - Endgame - Weapon - Wands - Profane Wand
+    Rarity = Rare
+    BaseType "Profane Wand"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+Show # Gear - Rare - Progression - Weapon - Wands - Prophecy Wand
+    ItemLevel <= 70
+    Rarity = Rare
+    BaseType "Prophecy Wand"
+	SetBorderColor 255 255 119 # Rare - Best Rare
+
+# Section: ### Chromatic Orb Recipe - Rare ####################################
+
+# Chromatic Orb Recipe / Lower font size for large RGBs
+Show # Misc - Chromatic Orb Recipe - Rare - 4x1
+    Rarity = Rare
+    Width = 1
+    Height = 4
+    SocketGroup "RGB"
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+
+Show # Misc - Chromatic Orb Recipe - Rare - 3x1
+    Rarity = Rare
+    Width = 1
+    Height = 3
+    SocketGroup "RGB"
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+
+Show # Misc - Chromatic Orb Recipe - Rare - 2x2
+    Rarity = Rare
+    Width = 2
+    Height = 2
+    SocketGroup "RGB"
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+
+Show # Misc - Chromatic Orb Recipe - Rare - Large
+    Rarity = Rare
+    SocketGroup "RGB"
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
+    SetFontSize 28
+
+# Section: ### Rares - CatchAll ###############################################
+
+# Rares - Staves & Wands
+Show
+    Rarity = Rare
+    Class "Staves" "Wands" "Quivers"
+
+# Rares - DropLevel <= 45
+Show
+    ItemLevel >= 60
+    DropLevel <= 45
+    Rarity = Rare
+    SetFontSize 28
+
+# Rares - DropLevel <= 60
+Show
+    ItemLevel >= 60
+    DropLevel <= 60
+    Rarity = Rare
+    SetFontSize 30
+
+# Rares - CatchAll
+Show
+    ItemLevel >= 60
+    Rarity = Rare
+    SetFontSize 32
+
+# Rares - CatchAll
+Show
+    Rarity = Rare
+
+###############################################################################
+# Section: ### Normal & Magic Gear - Progression ##############################
+###############################################################################
+
+Show	#Gear - Progression - Armour - STR - Lowlevel - Helmets
+	Class "Helmets"
+	Rarity <= Magic
+	BaseType "Iron Hat" "Cone Helmet"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR - No sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Barbute Helmet" "Close Helmet" "Gladiator Helmet" "Reaver Helmet" "Siege Helmet" "Samite Helmet" "Ezomyte Burgonet" "Royal Burgonet" "Eternal Burgonet"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - STR - 3/4 Linked Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Barbute Helmet" "Close Helmet" "Gladiator Helmet" "Reaver Helmet" "Siege Helmet" "Samite Helmet" "Ezomyte Burgonet" "Royal Burgonet" "Eternal Burgonet"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR - 3/4 Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Barbute Helmet" "Close Helmet" "Gladiator Helmet" "Reaver Helmet" "Siege Helmet" "Samite Helmet" "Ezomyte Burgonet" "Royal Burgonet" "Eternal Burgonet"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - STR - Lowlevel - Body Armours
+	Class "Body Armours"
+	Rarity <= Magic
+	BaseType "Plate Vest" "Chestplate"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR - No sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Copper Plate" "War Plate" "Full Plate" "Arena Plate" "Lordly Plate" "Bronze Plate" "Battle Plate" "Sun Plate" "Colosseum Plate" "Majestic Plate" "Golden Plate" "Crusader Plate" "Astral Plate" "Gladiator Plate" "Glorious Plate"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - STR - 3/4 Linked Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Copper Plate" "War Plate" "Full Plate" "Arena Plate" "Lordly Plate" "Bronze Plate" "Battle Plate" "Sun Plate" "Colosseum Plate" "Majestic Plate" "Golden Plate" "Crusader Plate" "Astral Plate" "Gladiator Plate" "Glorious Plate"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR - 3/4 Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Copper Plate" "War Plate" "Full Plate" "Arena Plate" "Lordly Plate" "Bronze Plate" "Battle Plate" "Sun Plate" "Colosseum Plate" "Majestic Plate" "Golden Plate" "Crusader Plate" "Astral Plate" "Gladiator Plate" "Glorious Plate"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - STR - Lowlevel - Gloves
+	Class "Gloves"
+	Rarity <= Magic
+	BaseType "Iron Gauntlets" "Plated Gauntlets"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR - No sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Golden Bracers" "Bronze Gauntlets" "Steel Gauntlets" "Antique Gauntlets" "Ancient Gauntlets" "Goliath Gauntlets" "Vaal Gauntlets" "Titan Gauntlets"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - STR - 3/4 Linked Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Golden Bracers" "Bronze Gauntlets" "Steel Gauntlets" "Antique Gauntlets" "Ancient Gauntlets" "Goliath Gauntlets" "Vaal Gauntlets" "Titan Gauntlets"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR - 3/4 Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Golden Bracers" "Bronze Gauntlets" "Steel Gauntlets" "Antique Gauntlets" "Ancient Gauntlets" "Goliath Gauntlets" "Vaal Gauntlets" "Titan Gauntlets"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - STR - Lowlevel - Boots
+	Class "Boots"
+	Rarity <= Magic
+	BaseType "Iron Greaves" "Steel Greaves"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR - No sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Plated Greaves" "Reinforced Greaves" "Antique Greaves" "Ancient Greaves" "Goliath Greaves" "Vaal Greaves" "Titan Greaves"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - STR - 3/4 Linked Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Plated Greaves" "Reinforced Greaves" "Antique Greaves" "Ancient Greaves" "Goliath Greaves" "Vaal Greaves" "Titan Greaves"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR - 3/4 Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Plated Greaves" "Reinforced Greaves" "Antique Greaves" "Ancient Greaves" "Goliath Greaves" "Vaal Greaves" "Titan Greaves"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - STR - Lowlevel - Shields
+	Class "Shields"
+	Rarity <= Magic
+	BaseType "Splintered Tower Shield" "Corroded Tower Shield"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR - No sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	BaseType "Rawhide Tower Shield" "Cedar Tower Shield" "Copper Tower Shield" "Reinforced Tower Shield" "Painted Tower Shield" "Buckskin Tower Shield" "Mahogany Tower Shield" "Bronze Tower Shield" "Girded Tower Shield" "Crested Tower Shield" "Shagreen Tower Shield" "Ebony Tower Shield" "Ezomyte Tower Shield" "Colossal Tower Shield" "Pinnacle Tower Shield"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - STR - 3/4 Linked Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	BaseType "Rawhide Tower Shield" "Cedar Tower Shield" "Copper Tower Shield" "Reinforced Tower Shield" "Painted Tower Shield" "Buckskin Tower Shield" "Mahogany Tower Shield" "Bronze Tower Shield" "Girded Tower Shield" "Crested Tower Shield" "Shagreen Tower Shield" "Ebony Tower Shield" "Ezomyte Tower Shield" "Colossal Tower Shield" "Pinnacle Tower Shield"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR - 3/4 Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	BaseType "Rawhide Tower Shield" "Cedar Tower Shield" "Copper Tower Shield" "Reinforced Tower Shield" "Painted Tower Shield" "Buckskin Tower Shield" "Mahogany Tower Shield" "Bronze Tower Shield" "Girded Tower Shield" "Crested Tower Shield" "Shagreen Tower Shield" "Ebony Tower Shield" "Ezomyte Tower Shield" "Colossal Tower Shield" "Pinnacle Tower Shield"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX - Lowlevel - Helmets
+	Class "Helmets"
+	Rarity <= Magic
+	BaseType "Leather Cap" "Tricorne"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX - No sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Leather Hood" "Wolf Pelt" "Hunter Hood" "Noble Tricorne" "Ursine Pelt" "Silken Hood" "Sinner Tricorne" "Lion Pelt"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX - 3/4 Linked Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Leather Hood" "Wolf Pelt" "Hunter Hood" "Noble Tricorne" "Ursine Pelt" "Silken Hood" "Sinner Tricorne" "Lion Pelt"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX - 3/4 Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Leather Hood" "Wolf Pelt" "Hunter Hood" "Noble Tricorne" "Ursine Pelt" "Silken Hood" "Sinner Tricorne" "Lion Pelt"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX - Lowlevel - Body Armours
+	Class "Body Armours"
+	Rarity <= Magic
+	BaseType "Shabby Jerkin" "Strapped Leather"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX - No sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Buckskin Tunic" "Wild Leather" "Full Leather" "Sun Leather" "Thief's Garb" "Eelskin Tunic" "Frontier Leather" "Glorious Leather" "Coronal Leather" "Cutthroat's Garb" "Sharkskin Tunic" "Destiny Leather" "Exquisite Leather" "Zodiac Leather" "Assassin's Garb"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX - 3/4 Linked Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Buckskin Tunic" "Wild Leather" "Full Leather" "Sun Leather" "Thief's Garb" "Eelskin Tunic" "Frontier Leather" "Glorious Leather" "Coronal Leather" "Cutthroat's Garb" "Sharkskin Tunic" "Destiny Leather" "Exquisite Leather" "Zodiac Leather" "Assassin's Garb"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX - 3/4 Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Buckskin Tunic" "Wild Leather" "Full Leather" "Sun Leather" "Thief's Garb" "Eelskin Tunic" "Frontier Leather" "Glorious Leather" "Coronal Leather" "Cutthroat's Garb" "Sharkskin Tunic" "Destiny Leather" "Exquisite Leather" "Zodiac Leather" "Assassin's Garb"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX - Lowlevel - Gloves
+	Class "Gloves"
+	Rarity <= Magic
+	BaseType "Rawhide Gloves" "Goathide Gloves"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX - No sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Golden Bracers" "Deerskin Gloves" "Nubuck Gloves" "Eelskin Gloves" "Sharkskin Gloves" "Shagreen Gloves" "Stealth Gloves" "Slink Gloves"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX - 3/4 Linked Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Golden Bracers" "Deerskin Gloves" "Nubuck Gloves" "Eelskin Gloves" "Sharkskin Gloves" "Shagreen Gloves" "Stealth Gloves" "Slink Gloves"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX - 3/4 Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Golden Bracers" "Deerskin Gloves" "Nubuck Gloves" "Eelskin Gloves" "Sharkskin Gloves" "Shagreen Gloves" "Stealth Gloves" "Slink Gloves"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX - Lowlevel - Boots
+	Class "Boots"
+	Rarity <= Magic
+	BaseType "Rawhide Boots" "Goathide Boots"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX - No sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Deerskin Boots" "Nubuck Boots" "Eelskin Boots" "Sharkskin Boots" "Shagreen Boots" "Stealth Boots" "Slink Boots"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX - 3/4 Linked Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Deerskin Boots" "Nubuck Boots" "Eelskin Boots" "Sharkskin Boots" "Shagreen Boots" "Stealth Boots" "Slink Boots"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX - 3/4 Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Deerskin Boots" "Nubuck Boots" "Eelskin Boots" "Sharkskin Boots" "Shagreen Boots" "Stealth Boots" "Slink Boots"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX - Lowlevel - Shields
+	Class "Shields"
+	Rarity <= Magic
+	BaseType "Goathide Buckler" "Pine Buckler"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX - No sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	BaseType "Painted Buckler" "Hammered Buckler" "War Buckler" "Gilded Buckler" "Oak Buckler" "Enameled Buckler" "Corrugated Buckler" "Battle Buckler" "Golden Buckler" "Ironwood Buckler" "Lacquered Buckler" "Vaal Buckler" "Crusader Buckler" "Imperial Buckler"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX - 3/4 Linked Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	BaseType "Painted Buckler" "Hammered Buckler" "War Buckler" "Gilded Buckler" "Oak Buckler" "Enameled Buckler" "Corrugated Buckler" "Battle Buckler" "Golden Buckler" "Ironwood Buckler" "Lacquered Buckler" "Vaal Buckler" "Crusader Buckler" "Imperial Buckler"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX - 3/4 Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	BaseType "Painted Buckler" "Hammered Buckler" "War Buckler" "Gilded Buckler" "Oak Buckler" "Enameled Buckler" "Corrugated Buckler" "Battle Buckler" "Golden Buckler" "Ironwood Buckler" "Lacquered Buckler" "Vaal Buckler" "Crusader Buckler" "Imperial Buckler"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - INT - Lowlevel - Helmets
+	Class "Helmets"
+	Rarity <= Magic
+	BaseType "Vine Circlet" "Iron Circlet"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - INT - No sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Torture Cage" "Tribal Circlet" "Bone Circlet" "Lunaris Circlet" "Steel Circlet" "Necromancer Circlet" "Solaris Circlet" "Mind Cage" "Hubris Circlet"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - INT - 3/4 Linked Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Torture Cage" "Tribal Circlet" "Bone Circlet" "Lunaris Circlet" "Steel Circlet" "Necromancer Circlet" "Solaris Circlet" "Mind Cage" "Hubris Circlet"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - INT - 3/4 Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Torture Cage" "Tribal Circlet" "Bone Circlet" "Lunaris Circlet" "Steel Circlet" "Necromancer Circlet" "Solaris Circlet" "Mind Cage" "Hubris Circlet"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - INT - Lowlevel - Body Armours
+	Class "Body Armours"
+	Rarity <= Magic
+	BaseType "Simple Robe" "Silken Vest"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - INT - No sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Scholar's Robe" "Silken Garb" "Mage's Vestment" "Silk Robe" "Cabalist Regalia" "Sage's Robe" "Silken Wrap" "Conjurer's Vestment" "Spidersilk Robe" "Destroyer Regalia" "Savant's Robe" "Necromancer Silks" "Occultist's Vestment" "Widowsilk Robe" "Vaal Regalia"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - INT - 3/4 Linked Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Scholar's Robe" "Silken Garb" "Mage's Vestment" "Silk Robe" "Cabalist Regalia" "Sage's Robe" "Silken Wrap" "Conjurer's Vestment" "Spidersilk Robe" "Destroyer Regalia" "Savant's Robe" "Necromancer Silks" "Occultist's Vestment" "Widowsilk Robe" "Vaal Regalia"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - INT - 3/4 Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Scholar's Robe" "Silken Garb" "Mage's Vestment" "Silk Robe" "Cabalist Regalia" "Sage's Robe" "Silken Wrap" "Conjurer's Vestment" "Spidersilk Robe" "Destroyer Regalia" "Savant's Robe" "Necromancer Silks" "Occultist's Vestment" "Widowsilk Robe" "Vaal Regalia"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - INT - Lowlevel - Gloves
+	Class "Gloves"
+	Rarity <= Magic
+	BaseType "Wool Gloves" "Velvet Gloves"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - INT - No sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Golden Bracers" "Silk Gloves" "Embroidered Gloves" "Satin Gloves" "Samite Gloves" "Conjurer Gloves" "Arcanist Gloves" "Sorcerer Gloves"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - INT - 3/4 Linked Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Golden Bracers" "Silk Gloves" "Embroidered Gloves" "Satin Gloves" "Samite Gloves" "Conjurer Gloves" "Arcanist Gloves" "Sorcerer Gloves"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - INT - 3/4 Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Golden Bracers" "Silk Gloves" "Embroidered Gloves" "Satin Gloves" "Samite Gloves" "Conjurer Gloves" "Arcanist Gloves" "Sorcerer Gloves"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - INT - Lowlevel - Boots
+	Class "Boots"
+	Rarity <= Magic
+	BaseType "Wool Shoes" "Velvet Slippers"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - INT - No sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Silk Slippers" "Scholar Boots" "Satin Slippers" "Samite Slippers" "Conjurer Boots" "Arcanist Slippers" "Sorcerer Boots"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - INT - 3/4 Linked Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Silk Slippers" "Scholar Boots" "Satin Slippers" "Samite Slippers" "Conjurer Boots" "Arcanist Slippers" "Sorcerer Boots"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - INT - 3/4 Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Silk Slippers" "Scholar Boots" "Satin Slippers" "Samite Slippers" "Conjurer Boots" "Arcanist Slippers" "Sorcerer Boots"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - INT - Lowlevel - Shields
+	Class "Shields"
+	Rarity <= Magic
+	BaseType "Twig Spirit Shield" "Yew Spirit Shield"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - INT - No sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	BaseType "Bone Spirit Shield" "Tarnished Spirit Shield" "Jingling Spirit Shield" "Brass Spirit Shield" "Walnut Spirit Shield" "Ivory Spirit Shield" "Ancient Spirit Shield" "Chiming Spirit Shield" "Thorium Spirit Shield" "Lacewood Spirit Shield" "Fossilised Spirit Shield" "Vaal Spirit Shield" "Harmonic Spirit Shield" "Titanium Spirit Shield"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - INT - 3/4 Linked Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	BaseType "Bone Spirit Shield" "Tarnished Spirit Shield" "Jingling Spirit Shield" "Brass Spirit Shield" "Walnut Spirit Shield" "Ivory Spirit Shield" "Ancient Spirit Shield" "Chiming Spirit Shield" "Thorium Spirit Shield" "Lacewood Spirit Shield" "Fossilised Spirit Shield" "Vaal Spirit Shield" "Harmonic Spirit Shield" "Titanium Spirit Shield"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - INT - 3/4 Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	BaseType "Bone Spirit Shield" "Tarnished Spirit Shield" "Jingling Spirit Shield" "Brass Spirit Shield" "Walnut Spirit Shield" "Ivory Spirit Shield" "Ancient Spirit Shield" "Chiming Spirit Shield" "Thorium Spirit Shield" "Lacewood Spirit Shield" "Fossilised Spirit Shield" "Vaal Spirit Shield" "Harmonic Spirit Shield" "Titanium Spirit Shield"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX/INT - Lowlevel - Helmets
+	Class "Helmets"
+	Rarity <= Magic
+	BaseType "Scare Mask" "Plague Mask"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/INT - No sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Iron Mask" "Festival Mask" "Golden Mask" "Raven Mask" "Callous Mask" "Regicide Mask" "Harlequin Mask" "Vaal Mask" "Deicide Mask"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX/INT - 3/4 Linked Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Iron Mask" "Festival Mask" "Golden Mask" "Raven Mask" "Callous Mask" "Regicide Mask" "Harlequin Mask" "Vaal Mask" "Deicide Mask"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/INT - 3/4 Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Iron Mask" "Festival Mask" "Golden Mask" "Raven Mask" "Callous Mask" "Regicide Mask" "Harlequin Mask" "Vaal Mask" "Deicide Mask"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX/INT - Lowlevel - Body Armours
+	Class "Body Armours"
+	Rarity <= Magic
+	BaseType "Padded Vest" "Oiled Vest"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/INT - No sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Padded Jacket" "Oiled Coat" "Scarlet Raiment" "Waxed Garb" "Bone Armour" "Quilted Jacket" "Sleek Coat" "Crimson Raiment" "Lacquered Garb" "Crypt Armour" "Sentinel Jacket" "Varnished Coat" "Blood Raiment" "Sadist Garb" "Carnal Armour"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX/INT - 3/4 Linked Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Padded Jacket" "Oiled Coat" "Scarlet Raiment" "Waxed Garb" "Bone Armour" "Quilted Jacket" "Sleek Coat" "Crimson Raiment" "Lacquered Garb" "Crypt Armour" "Sentinel Jacket" "Varnished Coat" "Blood Raiment" "Sadist Garb" "Carnal Armour"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/INT - 3/4 Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Padded Jacket" "Oiled Coat" "Scarlet Raiment" "Waxed Garb" "Bone Armour" "Quilted Jacket" "Sleek Coat" "Crimson Raiment" "Lacquered Garb" "Crypt Armour" "Sentinel Jacket" "Varnished Coat" "Blood Raiment" "Sadist Garb" "Carnal Armour"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX/INT - Lowlevel - Gloves
+	Class "Gloves"
+	Rarity <= Magic
+	BaseType "Wrapped Mitts" "Strapped Mitts"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/INT - No sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Clasped Mitts" "Trapper Mitts" "Ambush Mitts" "Carnal Mitts" "Assassin's Mitts" "Murder Mitts"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX/INT - 3/4 Linked Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Clasped Mitts" "Trapper Mitts" "Ambush Mitts" "Carnal Mitts" "Assassin's Mitts" "Murder Mitts"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/INT - 3/4 Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Clasped Mitts" "Trapper Mitts" "Ambush Mitts" "Carnal Mitts" "Assassin's Mitts" "Murder Mitts"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX/INT - Lowlevel - Boots
+	Class "Boots"
+	Rarity <= Magic
+	BaseType "Wrapped Boots" "Strapped Boots"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/INT - No sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Clasped Boots" "Shackled Boots" "Trapper Boots" "Ambush Boots" "Carnal Boots" "Assassin's Boots" "Murder Boots"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX/INT - 3/4 Linked Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Clasped Boots" "Shackled Boots" "Trapper Boots" "Ambush Boots" "Carnal Boots" "Assassin's Boots" "Murder Boots"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/INT - 3/4 Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Clasped Boots" "Shackled Boots" "Trapper Boots" "Ambush Boots" "Carnal Boots" "Assassin's Boots" "Murder Boots"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX/INT - Lowlevel - Shields
+	Class "Shields"
+	Rarity <= Magic
+	BaseType "Spiked Bundle" "Driftwood Spiked Shield"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/INT - No sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	BaseType "Alloyed Spiked Shield" "Burnished Spiked Shield" "Ornate Spiked Shield" "Redwood Spiked Shield" "Compound Spiked Shield" "Polished Spiked Shield" "Sovereign Spiked Shield" "Alder Spiked Shield" "Ezomyte Spiked Shield" "Mirrored Spiked Shield" "Supreme Spiked Shield"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX/INT - 3/4 Linked Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	BaseType "Alloyed Spiked Shield" "Burnished Spiked Shield" "Ornate Spiked Shield" "Redwood Spiked Shield" "Compound Spiked Shield" "Polished Spiked Shield" "Sovereign Spiked Shield" "Alder Spiked Shield" "Ezomyte Spiked Shield" "Mirrored Spiked Shield" "Supreme Spiked Shield"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/INT - 3/4 Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	BaseType "Alloyed Spiked Shield" "Burnished Spiked Shield" "Ornate Spiked Shield" "Redwood Spiked Shield" "Compound Spiked Shield" "Polished Spiked Shield" "Sovereign Spiked Shield" "Alder Spiked Shield" "Ezomyte Spiked Shield" "Mirrored Spiked Shield" "Supreme Spiked Shield"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - STR/INT - Lowlevel - Helmets
+	Class "Helmets"
+	Rarity <= Magic
+	BaseType "Rusted Coif" "Soldier Helmet"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR/INT - No sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Great Helmet" "Crusader Helmet" "Aventail Helmet" "Zealot Helmet" "Great Crown" "Magistrate Crown" "Prophet Crown" "Praetor Crown"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - STR/INT - 3/4 Linked Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Great Helmet" "Crusader Helmet" "Aventail Helmet" "Zealot Helmet" "Great Crown" "Magistrate Crown" "Prophet Crown" "Praetor Crown"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR/INT - 3/4 Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Great Helmet" "Crusader Helmet" "Aventail Helmet" "Zealot Helmet" "Great Crown" "Magistrate Crown" "Prophet Crown" "Praetor Crown"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - STR/INT - Lowlevel - Body Armours
+	Class "Body Armours"
+	Rarity <= Magic
+	BaseType "Chainmail Vest" "Chainmail Tunic"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR/INT - No sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Ringmail Coat" "Chainmail Doublet" "Full Ringmail" "Full Chainmail" "Holy Chainmail" "Latticed Ringmail" "Crusader Chainmail" "Ornate Ringmail" "Chain Hauberk" "Devout Chainmail" "Loricated Ringmail" "Conquest Chainmail" "Elegant Ringmail" "Saint's Hauberk" "Saintly Chainmail"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - STR/INT - 3/4 Linked Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Ringmail Coat" "Chainmail Doublet" "Full Ringmail" "Full Chainmail" "Holy Chainmail" "Latticed Ringmail" "Crusader Chainmail" "Ornate Ringmail" "Chain Hauberk" "Devout Chainmail" "Loricated Ringmail" "Conquest Chainmail" "Elegant Ringmail" "Saint's Hauberk" "Saintly Chainmail"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR/INT - 3/4 Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Ringmail Coat" "Chainmail Doublet" "Full Ringmail" "Full Chainmail" "Holy Chainmail" "Latticed Ringmail" "Crusader Chainmail" "Ornate Ringmail" "Chain Hauberk" "Devout Chainmail" "Loricated Ringmail" "Conquest Chainmail" "Elegant Ringmail" "Saint's Hauberk" "Saintly Chainmail"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - STR/INT - Lowlevel - Gloves
+	Class "Gloves"
+	Rarity <= Magic
+	BaseType "Chain Gloves" "Ringmail Gloves"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR/INT - No sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Mesh Gloves" "Riveted Gloves" "Zealot Gloves" "Soldier Gloves" "Legion Gloves" "Crusader Gloves"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - STR/INT - 3/4 Linked Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Mesh Gloves" "Riveted Gloves" "Zealot Gloves" "Soldier Gloves" "Legion Gloves" "Crusader Gloves"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR/INT - 3/4 Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Mesh Gloves" "Riveted Gloves" "Zealot Gloves" "Soldier Gloves" "Legion Gloves" "Crusader Gloves"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - STR/INT - Lowlevel - Boots
+	Class "Boots"
+	Rarity <= Magic
+	BaseType "Chain Boots" "Ringmail Boots"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR/INT - No sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Mesh Boots" "Riveted Boots" "Zealot Boots" "Soldier Boots" "Legion Boots" "Crusader Boots"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - STR/INT - 3/4 Linked Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Mesh Boots" "Riveted Boots" "Zealot Boots" "Soldier Boots" "Legion Boots" "Crusader Boots"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR/INT - 3/4 Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Mesh Boots" "Riveted Boots" "Zealot Boots" "Soldier Boots" "Legion Boots" "Crusader Boots"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - STR/INT - Lowlevel - Shields
+	Class "Shields"
+	Rarity <= Magic
+	BaseType "Plank Kite Shield" "Linden Kite Shield"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR/INT - No sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	BaseType "Reinforced Kite Shield" "Layered Kite Shield" "Ceremonial Kite Shield" "Etched Kite Shield" "Steel Kite Shield" "Laminated Kite Shield" "Angelic Kite Shield" "Branded Kite Shield" "Champion Kite Shield" "Mosaic Kite Shield" "Archon Kite Shield"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - STR/INT - 3/4 Linked Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	BaseType "Reinforced Kite Shield" "Layered Kite Shield" "Ceremonial Kite Shield" "Etched Kite Shield" "Steel Kite Shield" "Laminated Kite Shield" "Angelic Kite Shield" "Branded Kite Shield" "Champion Kite Shield" "Mosaic Kite Shield" "Archon Kite Shield"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - STR/INT - 3/4 Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	BaseType "Reinforced Kite Shield" "Layered Kite Shield" "Ceremonial Kite Shield" "Etched Kite Shield" "Steel Kite Shield" "Laminated Kite Shield" "Angelic Kite Shield" "Branded Kite Shield" "Champion Kite Shield" "Mosaic Kite Shield" "Archon Kite Shield"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX/STR - Lowlevel - Helmets
+	Class "Helmets"
+	Rarity <= Magic
+	BaseType "Battered Helm" "Sallet"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/STR - No sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Visored Sallet" "Gilded Sallet" "Secutor Helm" "Fencer Helm" "Lacquered Helmet" "Fluted Bascinet" "Pig-Faced Bascinet" "Nightmare Bascinet"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX/STR - 3/4 Linked Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Visored Sallet" "Gilded Sallet" "Secutor Helm" "Fencer Helm" "Lacquered Helmet" "Fluted Bascinet" "Pig-Faced Bascinet" "Nightmare Bascinet"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/STR - 3/4 Sockets - Helmets
+	Class "Helmets"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Visored Sallet" "Gilded Sallet" "Secutor Helm" "Fencer Helm" "Lacquered Helmet" "Fluted Bascinet" "Pig-Faced Bascinet" "Nightmare Bascinet"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX/STR - Lowlevel - Body Armours
+	Class "Body Armours"
+	Rarity <= Magic
+	BaseType "Scale Vest" "Light Brigandine"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/STR - No sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Scale Doublet" "Infantry Brigandine" "Full Scale Armour" "Soldier's Brigandine" "Field Lamellar" "Wyrmscale Doublet" "Hussar Brigandine" "Full Wyrmscale" "Commander's Brigandine" "Battle Lamellar" "Dragonscale Doublet" "Desert Brigandine" "Full Dragonscale" "General's Brigandine" "Triumphant Lamellar"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX/STR - 3/4 Linked Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Scale Doublet" "Infantry Brigandine" "Full Scale Armour" "Soldier's Brigandine" "Field Lamellar" "Wyrmscale Doublet" "Hussar Brigandine" "Full Wyrmscale" "Commander's Brigandine" "Battle Lamellar" "Dragonscale Doublet" "Desert Brigandine" "Full Dragonscale" "General's Brigandine" "Triumphant Lamellar"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/STR - 3/4 Sockets - Body Armours
+	Class "Body Armours"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Scale Doublet" "Infantry Brigandine" "Full Scale Armour" "Soldier's Brigandine" "Field Lamellar" "Wyrmscale Doublet" "Hussar Brigandine" "Full Wyrmscale" "Commander's Brigandine" "Battle Lamellar" "Dragonscale Doublet" "Desert Brigandine" "Full Dragonscale" "General's Brigandine" "Triumphant Lamellar"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX/STR - Lowlevel - Gloves
+	Class "Gloves"
+	Rarity <= Magic
+	BaseType "Fishscale Gauntlets" "Ironscale Gauntlets"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/STR - No sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Bronzescale Gauntlets" "Steelscale Gauntlets" "Serpentscale Gauntlets" "Wyrmscale Gauntlets" "Hydrascale Gauntlets" "Dragonscale Gauntlets"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX/STR - 3/4 Linked Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Bronzescale Gauntlets" "Steelscale Gauntlets" "Serpentscale Gauntlets" "Wyrmscale Gauntlets" "Hydrascale Gauntlets" "Dragonscale Gauntlets"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/STR - 3/4 Sockets - Gloves
+	Class "Gloves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Bronzescale Gauntlets" "Steelscale Gauntlets" "Serpentscale Gauntlets" "Wyrmscale Gauntlets" "Hydrascale Gauntlets" "Dragonscale Gauntlets"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX/STR - Lowlevel - Boots
+	Class "Boots"
+	Rarity <= Magic
+	BaseType "Leatherscale Boots" "Ironscale Boots"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/STR - No sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	BaseType "Bronzescale Boots" "Steelscale Boots" "Serpentscale Boots" "Wyrmscale Boots" "Hydrascale Boots" "Dragonscale Boots"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX/STR - 3/4 Linked Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	BaseType "Bronzescale Boots" "Steelscale Boots" "Serpentscale Boots" "Wyrmscale Boots" "Hydrascale Boots" "Dragonscale Boots"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/STR - 3/4 Sockets - Boots
+	Class "Boots"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	BaseType "Bronzescale Boots" "Steelscale Boots" "Serpentscale Boots" "Wyrmscale Boots" "Hydrascale Boots" "Dragonscale Boots"
+	SetFontSize 28
+
+Show	#Gear - Progression - Armour - DEX/STR - Lowlevel - Shields
+	Class "Shields"
+	Rarity <= Magic
+	BaseType "Rotted Round Shield" "Fir Round Shield"
+	ItemLevel <= 30
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/STR - No sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	BaseType "Studded Round Shield" "Scarlet Round Shield" "Splendid Round Shield" "Maple Round Shield" "Spiked Round Shield" "Crimson Round Shield" "Baroque Round Shield" "Teak Round Shield" "Spiny Round Shield" "Cardinal Round Shield" "Elegant Round Shield"
+	SetFontSize 28
+Show	#Gear - Progression - Armour - DEX/STR - 3/4 Linked Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	BaseType "Studded Round Shield" "Scarlet Round Shield" "Splendid Round Shield" "Maple Round Shield" "Spiked Round Shield" "Crimson Round Shield" "Baroque Round Shield" "Teak Round Shield" "Spiny Round Shield" "Cardinal Round Shield" "Elegant Round Shield"
+	SetFontSize 28
+Hide	#Gear - Progression - Armour - DEX/STR - 3/4 Sockets - Shields
+	Class "Shields"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	BaseType "Studded Round Shield" "Scarlet Round Shield" "Splendid Round Shield" "Maple Round Shield" "Spiked Round Shield" "Crimson Round Shield" "Baroque Round Shield" "Teak Round Shield" "Spiny Round Shield" "Cardinal Round Shield" "Elegant Round Shield"
+	SetFontSize 28
+
+### One Hand Axe ###
+Show	#Gear - Progression - Weapon - One Hand Axes - Lowlevel
+	Class "One Hand Axes"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - One Hand Axes - No Sockets
+	Class "One Hand Axes"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - One Hand Axes - 3/4 Linked Sockets
+	Class "One Hand Axes"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - One Hand Axes - 3/4 Sockets
+	Class "One Hand Axes"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	SetFontSize 28
+### /One Hand Axe ###
+### One Hand Sword ###
+Show	#Gear - Progression - Weapon - One Hand Swords - Lowlevel
+	Class "One Hand Swords"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - One Hand Swords - No Sockets
+	Class "One Hand Swords"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - One Hand Swords - 3/4 Linked Sockets
+	Class "One Hand Swords"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - One Hand Swords - 3/4 Sockets
+	Class "One Hand Swords"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	SetFontSize 28
+### /One Hand Sword ###
+### Two Hand Mace ###
+Show	#Gear - Progression - Weapon - Two Hand Maces - Lowlevel
+	Class "Two Hand Maces"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Two Hand Maces - No Sockets
+	Class "Two Hand Maces"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - Two Hand Maces - 3/4 Linked Sockets
+	Class "Two Hand Maces"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Two Hand Maces - 3/4 Sockets
+	Class "Two Hand Maces"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	SetFontSize 28
+### /Two Hand Mace ###
+### Bows ###
+Show	#Gear - Progression - Weapon - Bows - Lowlevel
+	Class "Bows"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Bows - No Sockets
+	Class "Bows"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - Bows - 3/4 Linked Sockets
+	Class "Bows"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Bows - 3/4 Sockets
+	Class "Bows"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	SetFontSize 28
+### /Bows ###
+### Thrusting One Hand Sword ###
+Show	#Gear - Progression - Weapon - Thrusting One Hand Swords - Lowlevel
+	Class "Thrusting One Hand Swords"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Thrusting One Hand Swords - No Sockets
+	Class "Thrusting One Hand Swords"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - Thrusting One Hand Swords - 3/4 Linked Sockets
+	Class "Thrusting One Hand Swords"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Thrusting One Hand Swords - 3/4 Sockets
+	Class "Thrusting One Hand Swords"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	SetFontSize 28
+### /Thrusting One Hand Sword ###
+### Daggers ###
+Show	#Gear - Progression - Weapon - Daggers - Lowlevel
+	Class "Daggers"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Daggers - No Sockets
+	Class "Daggers"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - Daggers - 3/4 Linked Sockets
+	Class "Daggers"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Daggers - 3/4 Sockets
+	Class "Daggers"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	SetFontSize 28
+### /Daggers ###
+### One Hand Mace ###
+Show	#Gear - Progression - Weapon - One Hand Maces - Lowlevel
+	Class "One Hand Maces"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - One Hand Maces - No Sockets
+	Class "One Hand Maces"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - One Hand Maces - 3/4 Linked Sockets
+	Class "One Hand Maces"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - One Hand Maces - 3/4 Sockets
+	Class "One Hand Maces"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	SetFontSize 28
+### /One Hand Mace ###
+### Two Hand Axe ###
+Show	#Gear - Progression - Weapon - Two Hand Axes - Lowlevel
+	Class "Two Hand Axes"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Two Hand Axes - No Sockets
+	Class "Two Hand Axes"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - Two Hand Axes - 3/4 Linked Sockets
+	Class "Two Hand Axes"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Two Hand Axes - 3/4 Sockets
+	Class "Two Hand Axes"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	SetFontSize 28
+### /Two Hand Axe ###
+### Two Hand Sword ###
+Show	#Gear - Progression - Weapon - Two Hand Swords - Lowlevel
+	Class "Two Hand Swords"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Two Hand Swords - No Sockets
+	Class "Two Hand Swords"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - Two Hand Swords - 3/4 Linked Sockets
+	Class "Two Hand Swords"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Two Hand Swords - 3/4 Sockets
+	Class "Two Hand Swords"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	SetFontSize 28
+### /Two Hand Sword ###
+### Claws ###
+Show	#Gear - Progression - Weapon - Claws - Lowlevel
+	Class "Claws"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Claws - No Sockets
+	Class "Claws"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - Claws - 3/4 Linked Sockets
+	Class "Claws"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Claws - 3/4 Sockets
+	Class "Claws"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	SetFontSize 28
+### /Claws ###
+### Sceptre ###
+Show	#Gear - Progression - Weapon - Sceptres - Lowlevel
+	Class "Sceptres"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Sceptres - No Sockets
+	Class "Sceptres"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - Sceptres - 3/4 Linked Sockets
+	Class "Sceptres"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Sceptres - 3/4 Sockets
+	Class "Sceptres"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	SetFontSize 28
+### /Sceptre ###
+### Staff ###
+Show	#Gear - Progression - Weapon - Staves - Lowlevel
+	Class "Staves"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Staves - No Sockets
+	Class "Staves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 4
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - Staves - 3/4 Linked Sockets
+	Class "Staves"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 4
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Staves - 3/4 Sockets
+	Class "Staves"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 4
+	SetFontSize 28
+### /Staff ###
+### Wands ###
+Show	#Gear - Progression - Weapon - Wands - Lowlevel
+	Class "Wands"
+	Rarity <= Magic
+	ItemLevel <= 10
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Wands - No Sockets
+	Class "Wands"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets < 3
+	SetFontSize 28
+Show	#Gear - Progression - Weapon - Wands - 3/4 Linked Sockets
+	Class "Wands"
+	ItemLevel < 77
+	Rarity <= Magic
+	LinkedSockets >= 3
+	SetFontSize 28
+Hide	#Gear - Progression - Weapon - Wands - 3/4 Sockets
+	Class "Wands"
+	ItemLevel < 77
+	Rarity <= Magic
+	Sockets >= 3
+	SetFontSize 28
+### /Wands ###
+
+### /Normal & Magic Gear - Progression ########################################
+###############################################################################	
+	
+# Section: ### Hiding Low Links ###############################################
+
+Hide # Few links - One Handers
+    ItemLevel > 14
+    Rarity <= Magic
+    LinkedSockets < 3
+    Class "Claws" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Daggers" "Shields"
+    SetBackgroundColor 0 0 0 127 # Dim background
+    SetFontSize 25
+
+Hide # Trash - Few links - Two Handers
+    ItemLevel > 14
+    Rarity <= Magic
+    LinkedSockets < 4
+    Class "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Bows" "Staves"
+    SetBackgroundColor 0 0 0 127 # Dim background
+    SetFontSize 25
+
+Hide # Trash - Few links - Armour
+    ItemLevel > 14
+    Rarity <= Magic
+    LinkedSockets < 4
+    Class "Helmets" "Body Armours" "Gloves" "Boots"
+    SetBackgroundColor 0 0 0 127 # Dim background
+    SetFontSize 25
+
