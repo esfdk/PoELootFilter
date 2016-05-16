@@ -84,6 +84,11 @@ Show # Specials - Sacrificial Garb
 
 # Section: ### Currency #######################################################
 
+Show # Currency - Perandus Coin
+    BaseType "Perandus Coin"
+    SetBorderColor 255 165 0 # Perandus Coin
+    SetFontSize 38
+
 Show # Currency - Extremely Valuable
     BaseType "Mirror of Kalandra" "Albino Rhoa Feather"
     SetBorderColor 175 96 37 # Currency - Valuable
@@ -225,31 +230,77 @@ Show # Divination Cards - CatchAll
 
 # Section: ### Very High Itemlevel Rares ######################################
 
+Show # ItemLevel 84+ Rares - T1 Armour
+    ItemLevel >= 84
+    Rarity = Rare
+    BaseType "Glorious Plate" "Assassin's Garb" "Vaal Regalia" "Carnal Armour" "Saintly Chainmail" "Triumphant Lamellar" "Titan Greaves" "Slink Boots" "Sorcerer Boots" "Murder Boots" "Crusader Boots" "Dragonscale Boots" "Titan Gauntlets" "Slink Gloves" "Sorcerer Gloves" "Murder Mitts" "Crusader Gloves" "Dragonscale Gauntlets" "Eternal Burgonet" "Lion Pelt" "Hubris Circlet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Pinnacle Tower Shield" "Imperial Buckler" "Titanium Spirit Shield" "Supreme Spiked Shield" "Archon Kite Shield" "Elegant Round Shield"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 38
+
 Show # ItemLevel 77+ Rares - T1 Armour
     ItemLevel >= 77
     Rarity = Rare
     BaseType "Glorious Plate" "Assassin's Garb" "Vaal Regalia" "Carnal Armour" "Saintly Chainmail" "Triumphant Lamellar" "Titan Greaves" "Slink Boots" "Sorcerer Boots" "Murder Boots" "Crusader Boots" "Dragonscale Boots" "Titan Gauntlets" "Slink Gloves" "Sorcerer Gloves" "Murder Mitts" "Crusader Gloves" "Dragonscale Gauntlets" "Eternal Burgonet" "Lion Pelt" "Hubris Circlet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Pinnacle Tower Shield" "Imperial Buckler" "Titanium Spirit Shield" "Supreme Spiked Shield" "Archon Kite Shield" "Elegant Round Shield"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 36
+
+Show # ItemLevel 83+ Rares - T1 Weapon
+    ItemLevel >= 83
+    Rarity = Rare
+    Class "Claws" "Daggers" "Wands" "One Hand Swords" "Thrusting One Hand Swords" "One Hand Axes" "One Hand Maces" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Sceptres"
+    BaseType "Maraketh Bow" "Gemini Claw" "Sai" "Runic Hatchet" "Behemoth Mace" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Dragoon Sword" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Profane Wand"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 38
 
 Show # ItemLevel 77+ Rares - T1 Weapon
     ItemLevel >= 77
     Rarity = Rare
     Class "Claws" "Daggers" "Wands" "One Hand Swords" "Thrusting One Hand Swords" "One Hand Axes" "One Hand Maces" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Sceptres"
     BaseType "Maraketh Bow" "Gemini Claw" "Sai" "Runic Hatchet" "Behemoth Mace" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Dragoon Sword" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Profane Wand"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 36
+
+Show # ItemLevel 83+ Rares - Craft Bases - Weapon
+    ItemLevel >= 83
+    Rarity = Rare
+    BaseType "Imbued Wand" "Ambusher" "Reaver Sword" "Thicket Bow" "Great White Claw" "Corsair Sword" "Harbinger Bow" "Vaal Axe" "Platinum Kris" "Opal Wand" "Imperial Claw" "Terror Claw" "Jewelled Foil" "Vaal Rapier" "Piledriver"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 38
 
 Show # ItemLevel 77+ Rares - Craft Bases - Weapon
     ItemLevel >= 77
     Rarity = Rare
     BaseType "Imbued Wand" "Ambusher" "Reaver Sword" "Thicket Bow" "Great White Claw" "Corsair Sword" "Harbinger Bow" "Vaal Axe" "Platinum Kris" "Opal Wand" "Imperial Claw" "Terror Claw" "Jewelled Foil" "Vaal Rapier" "Piledriver"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 36
+
+Show # ItemLevel 83+ Rares - Craft Bases - Armour
+    ItemLevel >= 83
+    Rarity = Rare
+    BaseType "Astral Plate" "Royal Burgonet" "Fossilised Spirit Shield"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 38
 
 Show # ItemLevel 77+ Rares - Craft Bases - Armour
     ItemLevel >= 77
     Rarity = Rare
     BaseType "Astral Plate" "Royal Burgonet" "Fossilised Spirit Shield"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 36
+
+Show # ItemLevel 83+ Rares - Jewelery
+    ItemLevel >= 83
+    Rarity = Rare
+    Class "Amulets" "Rings" "Belts"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 38
 
 Show # ItemLevel 77+ Rares - Jewelery
     ItemLevel >= 77
     Rarity = Rare
     Class "Amulets" "Rings" "Belts"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 36
 
 # Section: ### Chromatic Orb Recipe - Normal & Magic ##########################
 
@@ -275,11 +326,19 @@ Show # Misc - Chromatic Orb Recipe - 2x2
     SocketGroup "RGB"
     SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
 
+Show # Misc - Chromatic Orb Recipe - 3x2
+    Rarity <= Magic
+    Width = 2
+    Height = 3
+    SocketGroup "RGB"
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
+    SetFontSize 28
+
 Show # Misc - Chromatic Orb Recipe - Large
     Rarity <= Magic
     SocketGroup "RGB"
     SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
-    SetFontSize 30
+    SetFontSize 24
 
 # Section: ### Chance #########################################################
 
@@ -399,14 +458,16 @@ Show # Amulets, Rings, Belts - 84+ - Normal
     Rarity = Normal
     Class "Rings" "Amulets" "Belts"
     SetTextColor 240 240 240 # Amulets, Rings, Belts - Normal 84+
-    SetFontSize 28
+    SetBorderColor 240 240 240 # Amulets, Rings, Belts - Normal 84+
+    SetFontSize 30
 
 Show # Amulets, Rings, Belts - 84+ - Magic
     ItemLevel >= 84
     Rarity = Magic
     Class "Rings" "Amulets" "Belts"
     SetTextColor 140 190 255 # Amulets, Rings, Belts - Magic 84+
-    SetFontSize 28
+    SetBorderColor 140 190 255 # Amulets, Rings, Belts - Magic 84+
+    SetFontSize 30
 
 Hide # Amulets, Rings, Belts - 68+ - Normal
     ItemLevel >= 68
@@ -695,6 +756,48 @@ Hide # Hide Maelstr�m Staff Exception
 
 # Section: ### Normal & Magic Gear - Endgame ##################################
 
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - No Sockets
     ItemLevel >= 77
     Rarity = Normal
@@ -737,6 +840,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 77+ - 3/4 Sock
     BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Pinnacle Tower Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Pinnacle Tower Shield"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Pinnacle Tower Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Pinnacle Tower Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Pinnacle Tower Shield"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Pinnacle Tower Shield"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - No Sockets
     ItemLevel >= 77
     Rarity = Normal
@@ -778,6 +923,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic - 77+ - 3/4 Sock
     Sockets >= 3
     BaseType "Pinnacle Tower Shield"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - No Sockets
     ItemLevel >= 77
@@ -821,6 +1008,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 77+ - 3/4 Sock
     BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Imperial Buckler"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Imperial Buckler"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Imperial Buckler"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Imperial Buckler"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Imperial Buckler"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Imperial Buckler"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - No Sockets
     ItemLevel >= 77
     Rarity = Normal
@@ -863,6 +1092,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic - 77+ - 3/4 Sock
     BaseType "Imperial Buckler"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - No Sockets
     ItemLevel >= 77
     Rarity = Normal
@@ -905,6 +1176,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 77+ - 3/4 Sock
     BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - No Sockets
     ItemLevel >= 77
     Rarity = Normal
@@ -946,6 +1259,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic - 77+ - 3/4 Sock
     Sockets >= 3
     BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - No Sockets
     ItemLevel >= 77
@@ -989,6 +1344,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 77+ - 3/4 
     BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Supreme Spiked Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Supreme Spiked Shield"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Supreme Spiked Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Supreme Spiked Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Supreme Spiked Shield"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Supreme Spiked Shield"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - No Sockets
     ItemLevel >= 77
     Rarity = Normal
@@ -1031,6 +1428,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic - 77+ - 3/4 
     BaseType "Supreme Spiked Shield"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - No Sockets
     ItemLevel >= 77
     Rarity = Normal
@@ -1073,6 +1512,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 77+ - 3/4 
     BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Archon Kite Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Archon Kite Shield"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Archon Kite Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Archon Kite Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Archon Kite Shield"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Archon Kite Shield"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - No Sockets
     ItemLevel >= 77
     Rarity = Normal
@@ -1114,6 +1595,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic - 77+ - 3/4 
     Sockets >= 3
     BaseType "Archon Kite Shield"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - No Sockets
     ItemLevel >= 77
@@ -1156,6 +1679,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 77+ - 3/4 
     Sockets >= 4
     BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Elegant Round Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Elegant Round Shield"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Elegant Round Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 84+ - No Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Elegant Round Shield"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 84+ - 3/4 Linked Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Elegant Round Shield"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 84+ - 3/4 Sockets
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Elegant Round Shield"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - No Sockets
     ItemLevel >= 77
@@ -1200,6 +1765,55 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic - 77+ - 3/4 
     SetFontSize 28
 
 # One Hand Axe ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal - 83+ - No Sockets - Runic Hatchet
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Runic Hatchet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal - 83+ - 3/4 Linked Sockets - Runic Hatchet
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Runic Hatchet"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal - 83+ - 3/4 Sockets - Runic Hatchet
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Runic Hatchet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Magic - 83+ - No Sockets - Runic Hatchet
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Runic Hatchet"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Magic - 83+ - 3/4 Linked Sockets - Runic Hatchet
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Runic Hatchet"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Magic - 83+ - 3/4 Sockets - Runic Hatchet
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Runic Hatchet"
+    SetFontSize 30
+
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal - 77+ - No Sockets - Runic Hatchet
+    ItemLevel >= 77
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Runic Hatchet"
+    SetFontSize 28
+
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal - 77+ - 3/4 Linked Sockets - Runic Hatchet
     ItemLevel >= 77
     Rarity = Normal
@@ -1236,6 +1850,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Magic - 77+ 
     SetFontSize 28
 
 # One Hand Sword ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 83+ - No Sockets - Tiger Hook
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Tiger Hook"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 83+ - 3/4 Linked Sockets - Tiger Hook
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Tiger Hook"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 83+ - 3/4 Sockets - Tiger Hook
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Tiger Hook"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 83+ - No Sockets - Tiger Hook
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Tiger Hook"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 83+ - 3/4 Linked Sockets - Tiger Hook
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Tiger Hook"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 83+ - 3/4 Sockets - Tiger Hook
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Tiger Hook"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - No Sockets - Tiger Hook
     ItemLevel >= 77
     Rarity = Normal
@@ -1278,6 +1934,69 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77
     BaseType "Tiger Hook"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 83+ - No Sockets - Corsair Sword
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Corsair Sword"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 83+ - 3/4 Linked Sockets - Corsair Sword
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Corsair Sword"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 83+ - 3/4 Sockets - Corsair Sword
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Corsair Sword"
+    SetFontSize 30
+
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - No Sockets - Corsair Sword
+    ItemLevel >= 77
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Corsair Sword"
+    SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - 3/4 Linked Sockets - Corsair Sword
+    ItemLevel >= 77
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Corsair Sword"
+    SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - 3/4 Sockets - Corsair Sword
+    ItemLevel >= 77
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Corsair Sword"
+    SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 83+ - No Sockets - Corsair Sword
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Corsair Sword"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 83+ - 3/4 Linked Sockets - Corsair Sword
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Corsair Sword"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 83+ - 3/4 Sockets - Corsair Sword
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Corsair Sword"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - No Sockets - Corsair Sword
     ItemLevel >= 77
     Rarity = Magic
@@ -1300,6 +2019,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77
     SetFontSize 28
 
 # Two Hand Mace ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 83+ - No Sockets - Coronal Maul
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Coronal Maul"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 83+ - 3/4 Linked Sockets - Coronal Maul
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Coronal Maul"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 83+ - 3/4 Sockets - Coronal Maul
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Coronal Maul"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 83+ - No Sockets - Coronal Maul
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Coronal Maul"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 83+ - 3/4 Linked Sockets - Coronal Maul
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Coronal Maul"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 83+ - 3/4 Sockets - Coronal Maul
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Coronal Maul"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - No Sockets - Coronal Maul
     ItemLevel >= 77
     Rarity = Normal
@@ -1342,6 +2103,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 77+
     BaseType "Coronal Maul"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 83+ - No Sockets - Piledriver
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Piledriver"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 83+ - 3/4 Linked Sockets - Piledriver
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Piledriver"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 83+ - 3/4 Sockets - Piledriver
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Piledriver"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - No Sockets - Piledriver
     ItemLevel >= 77
     Rarity = Normal
@@ -1363,13 +2145,26 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77
     BaseType "Piledriver"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 83+ - No Sockets - Piledriver
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Piledriver"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 83+ - 3/4 Linked Sockets - Piledriver
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Piledriver"
+    SetFontSize 32
+
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 83+ - 3/4 Sockets - Piledriver
     ItemLevel >= 83
     Rarity = Magic
     Sockets >= 4
     BaseType "Piledriver"
-    SetBackgroundColor 70 70 70
-    SetFontSize 28
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 77+ - No Sockets - Piledriver
     ItemLevel >= 77
@@ -1393,13 +2188,47 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 77+
     SetFontSize 28
 
 # Bows ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 83+ - No Sockets - Maraketh Bow
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Maraketh Bow"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 83+ - 3/4 Linked Sockets - Maraketh Bow
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Maraketh Bow"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 83+ - 3/4 Sockets - Maraketh Bow
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Maraketh Bow"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+ - No Sockets - Maraketh Bow
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Maraketh Bow"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+ - 3/4 Linked Sockets - Maraketh Bow
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Maraketh Bow"
+    SetFontSize 32
+
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+ - 3/4 Sockets - Maraketh Bow
     ItemLevel >= 83
     Rarity = Magic
     Sockets >= 4
     BaseType "Maraketh Bow"
-    SetBackgroundColor 70 70 70
-    SetFontSize 28
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - No Sockets - Maraketh Bow
     ItemLevel >= 77
@@ -1443,6 +2272,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - 3/4 Soc
     BaseType "Maraketh Bow"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 83+ - No Sockets - Thicket Bow
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Thicket Bow"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 83+ - 3/4 Linked Sockets - Thicket Bow
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Thicket Bow"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 83+ - 3/4 Sockets - Thicket Bow
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Thicket Bow"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - No Sockets - Thicket Bow
     ItemLevel >= 77
     Rarity = Normal
@@ -1463,6 +2313,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 So
     Sockets >= 4
     BaseType "Thicket Bow"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+ - No Sockets - Thicket Bow
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Thicket Bow"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+ - 3/4 Linked Sockets - Thicket Bow
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Thicket Bow"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+ - 3/4 Sockets - Thicket Bow
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Thicket Bow"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - No Sockets - Thicket Bow
     ItemLevel >= 77
@@ -1485,6 +2356,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - 3/4 Soc
     BaseType "Thicket Bow"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 83+ - No Sockets - Harbinger Bow
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Harbinger Bow"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 83+ - 3/4 Linked Sockets - Harbinger Bow
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Harbinger Bow"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 83+ - 3/4 Sockets - Harbinger Bow
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Harbinger Bow"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - No Sockets - Harbinger Bow
     ItemLevel >= 77
     Rarity = Normal
@@ -1505,6 +2397,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 So
     Sockets >= 4
     BaseType "Harbinger Bow"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+ - No Sockets - Harbinger Bow
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Harbinger Bow"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+ - 3/4 Linked Sockets - Harbinger Bow
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Harbinger Bow"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+ - 3/4 Sockets - Harbinger Bow
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Harbinger Bow"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - No Sockets - Harbinger Bow
     ItemLevel >= 77
@@ -1528,6 +2441,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 77+ - 3/4 Soc
     SetFontSize 28
 
 # Thrusting One Hand Sword ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 83+ - No Sockets - Dragoon Sword
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Dragoon Sword"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 83+ - 3/4 Linked Sockets - Dragoon Sword
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Dragoon Sword"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 83+ - 3/4 Sockets - Dragoon Sword
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Dragoon Sword"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 83+ - No Sockets - Dragoon Sword
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Dragoon Sword"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 83+ - 3/4 Linked Sockets - Dragoon Sword
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Dragoon Sword"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 83+ - 3/4 Sockets - Dragoon Sword
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Dragoon Sword"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - No Sockets - Dragoon Sword
     ItemLevel >= 77
     Rarity = Normal
@@ -1570,6 +2525,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - 
     BaseType "Dragoon Sword"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 83+ - No Sockets - Vaal Rapier
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Vaal Rapier"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 83+ - 3/4 Linked Sockets - Vaal Rapier
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Vaal Rapier"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 83+ - 3/4 Sockets - Vaal Rapier
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Vaal Rapier"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - No Sockets - Vaal Rapier
     ItemLevel >= 77
     Rarity = Normal
@@ -1590,6 +2566,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - 
     Sockets >= 3
     BaseType "Vaal Rapier"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 83+ - No Sockets - Vaal Rapier
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Vaal Rapier"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 83+ - 3/4 Linked Sockets - Vaal Rapier
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Vaal Rapier"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 83+ - 3/4 Sockets - Vaal Rapier
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Vaal Rapier"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - No Sockets - Vaal Rapier
     ItemLevel >= 77
@@ -1612,6 +2609,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - 
     BaseType "Vaal Rapier"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 83+ - No Sockets - Jewelled Foil
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Jewelled Foil"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 83+ - 3/4 Linked Sockets - Jewelled Foil
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Jewelled Foil"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 83+ - 3/4 Sockets - Jewelled Foil
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Jewelled Foil"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - No Sockets - Jewelled Foil
     ItemLevel >= 77
     Rarity = Normal
@@ -1632,6 +2650,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - 
     Sockets >= 3
     BaseType "Jewelled Foil"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 83+ - No Sockets - Jewelled Foil
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Jewelled Foil"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 83+ - 3/4 Linked Sockets - Jewelled Foil
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Jewelled Foil"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 83+ - 3/4 Sockets - Jewelled Foil
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Jewelled Foil"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Magic - 77+ - No Sockets - Jewelled Foil
     ItemLevel >= 77
@@ -1655,6 +2694,54 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - 
     SetFontSize 28
 
 # Daggers ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 83+ - No Sockets - Sai
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    Class "Daggers"
+    BaseType "Sai"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 83+ - 3/4 Linked Sockets - Sai
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    Class "Daggers"
+    BaseType "Sai"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 83+ - 3/4 Sockets - Sai
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    Class "Daggers"
+    BaseType "Sai"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+ - No Sockets - Sai
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    Class "Daggers"
+    BaseType "Sai"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+ - 3/4 Linked Sockets - Sai
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    Class "Daggers"
+    BaseType "Sai"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+ - 3/4 Sockets - Sai
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    Class "Daggers"
+    BaseType "Sai"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - No Sockets - Sai
     ItemLevel >= 77
     Rarity = Normal
@@ -1703,6 +2790,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - 3/4 
     BaseType "Sai"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 83+ - No Sockets - Ambusher
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Ambusher"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 83+ - 3/4 Linked Sockets - Ambusher
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Ambusher"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 83+ - 3/4 Sockets - Ambusher
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Ambusher"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - No Sockets - Ambusher
     ItemLevel >= 77
     Rarity = Normal
@@ -1723,6 +2831,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4
     Sockets >= 3
     BaseType "Ambusher"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+ - No Sockets - Ambusher
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Ambusher"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+ - 3/4 Linked Sockets - Ambusher
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Ambusher"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+ - 3/4 Sockets - Ambusher
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Ambusher"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - No Sockets - Ambusher
     ItemLevel >= 77
@@ -1745,6 +2874,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - 3/4 
     BaseType "Ambusher"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 83+ - No Sockets - Platinum Kris
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Platinum Kris"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 83+ - 3/4 Linked Sockets - Platinum Kris
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Platinum Kris"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 83+ - 3/4 Sockets - Platinum Kris
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Platinum Kris"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - No Sockets - Platinum Kris
     ItemLevel >= 77
     Rarity = Normal
@@ -1765,6 +2915,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4
     Sockets >= 3
     BaseType "Platinum Kris"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+ - No Sockets - Platinum Kris
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Platinum Kris"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+ - 3/4 Linked Sockets - Platinum Kris
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Platinum Kris"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+ - 3/4 Sockets - Platinum Kris
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Platinum Kris"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - No Sockets - Platinum Kris
     ItemLevel >= 77
@@ -1788,6 +2959,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 77+ - 3/4 
     SetFontSize 28
 
 # One Hand Mace ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 83+ - No Sockets - Behemoth Mace
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Behemoth Mace"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 83+ - 3/4 Linked Sockets - Behemoth Mace
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Behemoth Mace"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 83+ - 3/4 Sockets - Behemoth Mace
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Behemoth Mace"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Magic - 83+ - No Sockets - Behemoth Mace
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Behemoth Mace"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Magic - 83+ - 3/4 Linked Sockets - Behemoth Mace
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Behemoth Mace"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Magic - 83+ - 3/4 Sockets - Behemoth Mace
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Behemoth Mace"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 77+ - No Sockets - Behemoth Mace
     ItemLevel >= 77
     Rarity = Normal
@@ -1831,6 +3044,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Magic - 77+
     SetFontSize 28
 
 # Two Hand Axe ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 83+ - No Sockets - Fleshripper
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Fleshripper"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 83+ - 3/4 Linked Sockets - Fleshripper
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Fleshripper"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 83+ - 3/4 Sockets - Fleshripper
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Fleshripper"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 83+ - No Sockets - Fleshripper
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Fleshripper"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 83+ - 3/4 Linked Sockets - Fleshripper
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Fleshripper"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 83+ - 3/4 Sockets - Fleshripper
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Fleshripper"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - No Sockets - Fleshripper
     ItemLevel >= 77
     Rarity = Normal
@@ -1873,6 +3128,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 77+ 
     BaseType "Fleshripper"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 83+ - No Sockets - Vaal Axe
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Vaal Axe"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 83+ - 3/4 Linked Sockets - Vaal Axe
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Vaal Axe"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 83+ - 3/4 Sockets - Vaal Axe
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Vaal Axe"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - No Sockets - Vaal Axe
     ItemLevel >= 77
     Rarity = Normal
@@ -1893,6 +3169,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+
     Sockets >= 4
     BaseType "Vaal Axe"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 83+ - No Sockets - Vaal Axe
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Vaal Axe"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 83+ - 3/4 Linked Sockets - Vaal Axe
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Vaal Axe"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 83+ - 3/4 Sockets - Vaal Axe
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Vaal Axe"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 77+ - No Sockets - Vaal Axe
     ItemLevel >= 77
@@ -1916,6 +3213,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 77+ 
     SetFontSize 28
 
 # Two Hand Sword ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 83+ - No Sockets - Exquisite Blade
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Exquisite Blade"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 83+ - 3/4 Linked Sockets - Exquisite Blade
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Exquisite Blade"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 83+ - 3/4 Sockets - Exquisite Blade
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Exquisite Blade"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 83+ - No Sockets - Exquisite Blade
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Exquisite Blade"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 83+ - 3/4 Linked Sockets - Exquisite Blade
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Exquisite Blade"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 83+ - 3/4 Sockets - Exquisite Blade
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Exquisite Blade"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - No Sockets - Exquisite Blade
     ItemLevel >= 77
     Rarity = Normal
@@ -1958,6 +3297,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 77
     BaseType "Exquisite Blade"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 83+ - No Sockets - Reaver Sword
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Reaver Sword"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 83+ - 3/4 Linked Sockets - Reaver Sword
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Reaver Sword"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 83+ - 3/4 Sockets - Reaver Sword
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Reaver Sword"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - No Sockets - Reaver Sword
     ItemLevel >= 77
     Rarity = Normal
@@ -1978,6 +3338,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 7
     Sockets >= 4
     BaseType "Reaver Sword"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 83+ - No Sockets - Reaver Sword
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Reaver Sword"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 83+ - 3/4 Linked Sockets - Reaver Sword
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Reaver Sword"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 83+ - 3/4 Sockets - Reaver Sword
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Reaver Sword"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 77+ - No Sockets - Reaver Sword
     ItemLevel >= 77
@@ -2001,6 +3382,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 77
     SetFontSize 28
 
 # Claws ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - No Sockets - Gemini Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Gemini Claw"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - 3/4 Linked Sockets - Gemini Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Gemini Claw"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - 3/4 Sockets - Gemini Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Gemini Claw"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - No Sockets - Gemini Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Gemini Claw"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - 3/4 Linked Sockets - Gemini Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Gemini Claw"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - 3/4 Sockets - Gemini Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Gemini Claw"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - No Sockets - Gemini Claw
     ItemLevel >= 77
     Rarity = Normal
@@ -2043,6 +3466,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 So
     BaseType "Gemini Claw"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - No Sockets - Great White Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Great White Claw"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - 3/4 Linked Sockets - Great White Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Great White Claw"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - 3/4 Sockets - Great White Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Great White Claw"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - No Sockets - Great White Claw
     ItemLevel >= 77
     Rarity = Normal
@@ -2063,6 +3507,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 S
     Sockets >= 3
     BaseType "Great White Claw"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - No Sockets - Great White Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Great White Claw"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - 3/4 Linked Sockets - Great White Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Great White Claw"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - 3/4 Sockets - Great White Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Great White Claw"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - No Sockets - Great White Claw
     ItemLevel >= 77
@@ -2085,6 +3550,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 So
     BaseType "Great White Claw"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - No Sockets - Imperial Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Imperial Claw"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - 3/4 Linked Sockets - Imperial Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Imperial Claw"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - 3/4 Sockets - Imperial Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Imperial Claw"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - No Sockets - Imperial Claw
     ItemLevel >= 77
     Rarity = Normal
@@ -2105,6 +3591,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 S
     Sockets >= 3
     BaseType "Imperial Claw"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - No Sockets - Imperial Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Imperial Claw"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - 3/4 Linked Sockets - Imperial Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Imperial Claw"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - 3/4 Sockets - Imperial Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Imperial Claw"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - No Sockets - Imperial Claw
     ItemLevel >= 77
@@ -2127,6 +3634,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 So
     BaseType "Imperial Claw"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - No Sockets - Terror Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Terror Claw"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - 3/4 Linked Sockets - Terror Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Terror Claw"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+ - 3/4 Sockets - Terror Claw
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Terror Claw"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - No Sockets - Terror Claw
     ItemLevel >= 77
     Rarity = Normal
@@ -2147,6 +3675,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 S
     Sockets >= 3
     BaseType "Terror Claw"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - No Sockets - Terror Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Terror Claw"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - 3/4 Linked Sockets - Terror Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Terror Claw"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+ - 3/4 Sockets - Terror Claw
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Terror Claw"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - No Sockets - Terror Claw
     ItemLevel >= 77
@@ -2170,6 +3719,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 77+ - 3/4 So
     SetFontSize 28
 
 # Sceptre ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 83+ - No Sockets - Sambar Sceptre
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Sambar Sceptre"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 83+ - 3/4 Linked Sockets - Sambar Sceptre
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Sambar Sceptre"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 83+ - 3/4 Sockets - Sambar Sceptre
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Sambar Sceptre"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Magic - 83+ - No Sockets - Sambar Sceptre
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Sambar Sceptre"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Magic - 83+ - 3/4 Linked Sockets - Sambar Sceptre
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Sambar Sceptre"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Magic - 83+ - 3/4 Sockets - Sambar Sceptre
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Sambar Sceptre"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 77+ - No Sockets - Sambar Sceptre
     ItemLevel >= 77
     Rarity = Normal
@@ -2213,6 +3804,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Magic - 77+ - 3/4
     SetFontSize 28
 
 # Staff ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 83+ - No Sockets - Eclipse Staff
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Eclipse Staff"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 83+ - 3/4 Linked Sockets - Eclipse Staff
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Eclipse Staff"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 83+ - 3/4 Sockets - Eclipse Staff
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Eclipse Staff"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Magic - 83+ - No Sockets - Eclipse Staff
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Eclipse Staff"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Magic - 83+ - 3/4 Linked Sockets - Eclipse Staff
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Eclipse Staff"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Magic - 83+ - 3/4 Sockets - Eclipse Staff
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Eclipse Staff"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 77+ - No Sockets - Eclipse Staff
     ItemLevel >= 77
     Rarity = Normal
@@ -2256,6 +3889,48 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Magic - 77+ - 3/4 S
     SetFontSize 28
 
 # Wands ###
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 83+ - No Sockets - Profane Wand
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Profane Wand"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 83+ - 3/4 Linked Sockets - Profane Wand
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Profane Wand"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 83+ - 3/4 Sockets - Profane Wand
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Profane Wand"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 83+ - No Sockets - Profane Wand
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Profane Wand"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 83+ - 3/4 Linked Sockets - Profane Wand
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Profane Wand"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 83+ - 3/4 Sockets - Profane Wand
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Profane Wand"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - No Sockets - Profane Wand
     ItemLevel >= 77
     Rarity = Normal
@@ -2298,6 +3973,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - 3/4 So
     BaseType "Profane Wand"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 83+ - No Sockets - Imbued Wand
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Imbued Wand"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 83+ - 3/4 Linked Sockets - Imbued Wand
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Imbued Wand"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 83+ - 3/4 Sockets - Imbued Wand
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Imbued Wand"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - No Sockets - Imbued Wand
     ItemLevel >= 77
     Rarity = Normal
@@ -2318,6 +4014,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 S
     Sockets >= 3
     BaseType "Imbued Wand"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 83+ - No Sockets - Imbued Wand
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Imbued Wand"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 83+ - 3/4 Linked Sockets - Imbued Wand
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Imbued Wand"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 83+ - 3/4 Sockets - Imbued Wand
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Imbued Wand"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - No Sockets - Imbued Wand
     ItemLevel >= 77
@@ -2340,6 +4057,27 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - 3/4 So
     BaseType "Imbued Wand"
     SetFontSize 28
 
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 83+ - No Sockets - Opal Wand
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets < 3
+    BaseType "Opal Wand"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 83+ - 3/4 Linked Sockets - Opal Wand
+    ItemLevel >= 83
+    Rarity = Normal
+    LinkedSockets >= 3
+    BaseType "Opal Wand"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 83+ - 3/4 Sockets - Opal Wand
+    ItemLevel >= 83
+    Rarity = Normal
+    Sockets >= 3
+    BaseType "Opal Wand"
+    SetFontSize 30
+
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - No Sockets - Opal Wand
     ItemLevel >= 77
     Rarity = Normal
@@ -2360,6 +4098,27 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 S
     Sockets >= 3
     BaseType "Opal Wand"
     SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 83+ - No Sockets - Opal Wand
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets < 3
+    BaseType "Opal Wand"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 83+ - 3/4 Linked Sockets - Opal Wand
+    ItemLevel >= 83
+    Rarity = Magic
+    LinkedSockets >= 3
+    BaseType "Opal Wand"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 83+ - 3/4 Sockets - Opal Wand
+    ItemLevel >= 83
+    Rarity = Magic
+    Sockets >= 3
+    BaseType "Opal Wand"
+    SetFontSize 30
 
 Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - No Sockets - Opal Wand
     ItemLevel >= 77
@@ -2843,11 +4602,19 @@ Show # Misc - Chromatic Orb Recipe - Rare - 2x2
     SocketGroup "RGB"
     SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
 
+Show # Misc - Chromatic Orb Recipe - Rare - 3x2
+    Rarity = Rare
+    Width = 2
+    Height = 3
+    SocketGroup "RGB"
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
+    SetFontSize 28
+
 Show # Misc - Chromatic Orb Recipe - Rare - Large
     Rarity = Rare
     SocketGroup "RGB"
     SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
-    SetFontSize 28
+    SetFontSize 26
 
 # Section: ### Rares - CatchAll ###############################################
 
