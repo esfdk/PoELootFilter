@@ -45,11 +45,11 @@ Show # Specials - Hideout Doodads & Microtransactions
 Show # Specials - Labyrinth keys
     BaseType "Treasure Key" "Golden Key" "Silver Key"
     SetBorderColor 150 0 0 # Special drops
-    SetFontSize 42
+    SetFontSize 44
 
 Show # Specials - Quest Items
     Class "Quest"
-    SetFontSize 38
+    SetFontSize 40
 
 # Tabula Rasa Exception, show it as a regular unique
 Show # Specials - Tabula Rasa
@@ -71,7 +71,7 @@ Show # Specials - 5L
     LinkedSockets = 5
     SetBackgroundColor 0 0 0 # Contrast background
     SetBorderColor 127 127 127 # 6S/5L/6L border
-    SetFontSize 42
+    SetFontSize 40
 
 Show # Specials - 6S
     Sockets = 6
@@ -84,6 +84,14 @@ Show # Specials - Sacrificial Garb
 
 # Section: ### Currency #######################################################
 
+#Disabled Block Start
+#Show # Currency - Perandus Coin
+#    BaseType "Silver Coin"
+#    SetTextColor 128 0 200 # Prophecy
+#    SetBorderColor 128 0 200 # Prophecy
+#    SetFontSize 38
+#Disabled Block End
+
 Show # Currency - Perandus Coin
     BaseType "Perandus Coin"
     SetBorderColor 255 165 0 # Perandus Coin
@@ -93,13 +101,13 @@ Show # Currency - Extremely Valuable
     BaseType "Mirror of Kalandra" "Albino Rhoa Feather"
     SetBorderColor 175 96 37 # Currency - Valuable
     SetFontSize 45
-    PlayAlertSound 5 300
+    PlayAlertSound 7 300
 
 Show # Currency - Very Valuable
     BaseType "Divine Orb" "Eternal Orb" "Exalted Orb"
     SetBorderColor 175 96 37 # Currency - Valuable
     SetFontSize 43
-    PlayAlertSound 5 300
+    PlayAlertSound 7 300
 
 Show # Currency - Valuable
     BaseType "Regal Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Regret"
@@ -234,6 +242,7 @@ Show # ItemLevel 84+ Rares - T1 Armour
     ItemLevel >= 84
     Rarity = Rare
     BaseType "Glorious Plate" "Assassin's Garb" "Vaal Regalia" "Carnal Armour" "Saintly Chainmail" "Triumphant Lamellar" "Titan Greaves" "Slink Boots" "Sorcerer Boots" "Murder Boots" "Crusader Boots" "Dragonscale Boots" "Titan Gauntlets" "Slink Gloves" "Sorcerer Gloves" "Murder Mitts" "Crusader Gloves" "Dragonscale Gauntlets" "Eternal Burgonet" "Lion Pelt" "Hubris Circlet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Pinnacle Tower Shield" "Imperial Buckler" "Titanium Spirit Shield" "Supreme Spiked Shield" "Archon Kite Shield" "Elegant Round Shield"
+    SetBackgroundColor 60 60 0 # Rare - Best Rare
     SetBorderColor 255 255 119 # Rare - Best Rare
     SetFontSize 38
 
@@ -249,6 +258,7 @@ Show # ItemLevel 83+ Rares - T1 Weapon
     Rarity = Rare
     Class "Claws" "Daggers" "Wands" "One Hand Swords" "Thrusting One Hand Swords" "One Hand Axes" "One Hand Maces" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Sceptres"
     BaseType "Maraketh Bow" "Gemini Claw" "Sai" "Runic Hatchet" "Behemoth Mace" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Dragoon Sword" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Profane Wand"
+    SetBackgroundColor 60 60 0 # Rare - Best Rare
     SetBorderColor 255 255 119 # Rare - Best Rare
     SetFontSize 38
 
@@ -264,6 +274,7 @@ Show # ItemLevel 83+ Rares - Craft Bases - Weapon
     ItemLevel >= 83
     Rarity = Rare
     BaseType "Imbued Wand" "Ambusher" "Reaver Sword" "Thicket Bow" "Great White Claw" "Corsair Sword" "Harbinger Bow" "Vaal Axe" "Platinum Kris" "Opal Wand" "Imperial Claw" "Terror Claw" "Jewelled Foil" "Vaal Rapier" "Piledriver"
+    SetBackgroundColor 60 60 0 # Rare - Best Rare
     SetBorderColor 255 255 119 # Rare - Best Rare
     SetFontSize 38
 
@@ -278,6 +289,7 @@ Show # ItemLevel 83+ Rares - Craft Bases - Armour
     ItemLevel >= 83
     Rarity = Rare
     BaseType "Astral Plate" "Royal Burgonet" "Fossilised Spirit Shield"
+    SetBackgroundColor 60 60 0 # Rare - Best Rare
     SetBorderColor 255 255 119 # Rare - Best Rare
     SetFontSize 38
 
@@ -292,6 +304,7 @@ Show # ItemLevel 83+ Rares - Jewelery
     ItemLevel >= 83
     Rarity = Rare
     Class "Amulets" "Rings" "Belts"
+    SetBackgroundColor 60 60 0 # Rare - Best Rare
     SetBorderColor 255 255 119 # Rare - Best Rare
     SetFontSize 38
 
@@ -310,21 +323,22 @@ Show # Misc - Chromatic Orb Recipe - 4x1
     Width = 1
     Height = 4
     SocketGroup "RGB"
-    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+    SetBorderColor 27 162 155 # Chromatic Orb Recipe
+    SetFontSize 28
 
 Show # Misc - Chromatic Orb Recipe - 3x1
     Rarity <= Magic
     Width = 1
     Height = 3
     SocketGroup "RGB"
-    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+    SetBorderColor 27 162 155 # Chromatic Orb Recipe
 
 Show # Misc - Chromatic Orb Recipe - 2x2
     Rarity <= Magic
     Width = 2
     Height = 2
     SocketGroup "RGB"
-    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+    SetBorderColor 27 162 155 # Chromatic Orb Recipe
 
 Show # Misc - Chromatic Orb Recipe - 3x2
     Rarity <= Magic
@@ -476,7 +490,7 @@ Hide # Amulets, Rings, Belts - 68+ - Normal
     SetBackgroundColor 0 0 0 190 # Dim background
     SetFontSize 28
 
-Show # Amulets, Rings, Belts - 68+ - Magic
+Hide # Amulets, Rings, Belts - 68+ - Magic
     ItemLevel >= 68
     Rarity = Magic
     Class "Rings" "Amulets" "Belts"
@@ -526,24 +540,25 @@ Show # Chisel Recipe - Rare
 # Add a border to flasks that are near the current level or have 15%+ quality
 Show # Flasks - Utility
     Class "Utility Flask"
-    SetBorderColor 88 0 179 # Utility/Hybrid/Quality flask
+    SetBorderColor 255 0 255 # Utility Flask
     SetFontSize 30
 
 Show # Flasks - Quality - 20%
     Quality = 20
+    Rarity = Normal
     Class "Flask"
-    SetBackgroundColor 44 0 90 # Quality Flasks 20%
-    SetBorderColor 88 0 179 # Utility/Hybrid/Quality flask
+    SetBackgroundColor 6 40 38 # Quality Flasks 20%
+    SetBorderColor 27 162 155 # Quality Flask
 
 Show # Flasks - Quality - 10%
     Quality >= 10
     Class "Flask"
-    SetBorderColor 88 0 179 # Utility/Hybrid/Quality flask
+    SetBorderColor 27 162 155 # Quality Flask
 
 Show # Flasks - Hybrid - Hallowed
     ItemLevel < 68
     BaseType "Hallowed Hybrid Flask"
-    SetBorderColor 88 0 179 # Utility/Hybrid/Quality flask
+    SetBorderColor 27 162 155 # Quality Flask
 
 Hide # Flasks - Hybrid - Other
     Class "Hybrid Flask"
@@ -551,72 +566,72 @@ Hide # Flasks - Hybrid - Other
 Show # Flasks - Mana - ilvl < 15
     ItemLevel < 15
     Class "Mana Flask"
-    SetBorderColor 88 0 222 # Mana flask
+    SetBorderColor 0 0 255 # Mana flask
 
 Show # Flasks - Life - ilvl < 15
     ItemLevel < 15
     Class "Life Flask"
-    SetBorderColor 83 0 110 # Life flask
+    SetBorderColor 220 20 60 # Life flask
 
 Show # Flasks - Mana - ilvl < 26
     ItemLevel < 26
     DropLevel > 10
     Class "Mana Flask"
-    SetBorderColor 88 0 222 # Mana flask
+    SetBorderColor 0 0 255 # Mana flask
 
 Show # Flasks - Life - ilvl < 26
     ItemLevel < 26
     DropLevel > 10
     Class "Life Flask"
-    SetBorderColor 83 0 110 # Life flask
+    SetBorderColor 220 20 60 # Life flask
 
 Show # Flasks - Mana - ilvl < 34
     ItemLevel < 34
     DropLevel > 22
     Class "Mana Flask"
-    SetBorderColor 88 0 222 # Mana flask
+    SetBorderColor 0 0 255 # Mana flask
 
 Show # Flasks - Life - ilvl < 34
     ItemLevel < 34
     DropLevel > 22
     Class "Life Flask"
-    SetBorderColor 83 0 110 # Life flask
+    SetBorderColor 220 20 60 # Life flask
 
 Show # Flasks - Mana - ilvl < 43
     ItemLevel < 43
     DropLevel > 34
     Class "Mana Flask"
-    SetBorderColor 88 0 222 # Mana flask
+    SetBorderColor 0 0 255 # Mana flask
 
 Show # Flasks - Life - ilvl < 43
     ItemLevel < 43
     DropLevel > 34
     Class "Life Flask"
-    SetBorderColor 83 0 110 # Life flask
+    SetBorderColor 220 20 60 # Life flask
 
 Show # Flasks - Mana - ilvl < 55
     ItemLevel < 55
     DropLevel > 40
     Class "Mana Flask"
-    SetBorderColor 88 0 222 # Mana flask
+    SetBorderColor 0 0 255 # Mana flask
 
 Show # Flasks - Life - ilvl < 55
     ItemLevel < 55
     DropLevel > 40
     Class "Life Flask"
-    SetBorderColor 83 0 110 # Life flask
+    SetBorderColor 220 20 60 # Life flask
 
 Show # Flasks - Mana - Divine+ - (under 70)
     ItemLevel < 67
     DropLevel > 58
     Class "Mana Flask"
-    SetBorderColor 88 0 222 # Mana flask
+    SetBorderColor 0 0 255 # Mana flask
 
 Show # Flasks - Life - Divine+ - (under 70)
     ItemLevel < 67
     DropLevel > 58
     Class "Life Flask"
-    SetBorderColor 83 0 110 # Life flask
+    SetBorderColor 220 20 60 # Life flask
 
 Show # Flasks - Mana - Divine+ - (over 70)
     DropLevel > 58
@@ -812,7 +827,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - 3/4 Lin
     BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -896,7 +911,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - 3/4 Lin
     BaseType "Pinnacle Tower Shield"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -980,7 +995,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - 3/4 Lin
     BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -1064,7 +1079,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - 3/4 Lin
     BaseType "Imperial Buckler"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -1148,7 +1163,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - 3/4 Lin
     BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -1232,7 +1247,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - 3/4 Lin
     BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -1316,7 +1331,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - 3/4
     BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -1400,7 +1415,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - 3/4
     BaseType "Supreme Spiked Shield"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -1484,7 +1499,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - 3/4
     BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -1568,7 +1583,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - 3/4
     BaseType "Archon Kite Shield"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -1652,7 +1667,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - 3/4
     BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -1736,7 +1751,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - 3/4
     BaseType "Elegant Round Shield"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - 3/4 Sockets
+Hide # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal - 77+ - 3/4 Sockets
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -1821,7 +1836,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal - 77+
     BaseType "Runic Hatchet"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal - 77+ - 3/4 Sockets - Runic Hatchet
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal - 77+ - 3/4 Sockets - Runic Hatchet
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -1906,7 +1921,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 7
     BaseType "Tiger Hook"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - 3/4 Sockets - Tiger Hook
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - 3/4 Sockets - Tiger Hook
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -1920,7 +1935,7 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77
     BaseType "Tiger Hook"
     SetFontSize 28
 
-Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Tiger Hook
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Tiger Hook
     ItemLevel >= 77
     Rarity = Magic
     LinkedSockets >= 3
@@ -1969,7 +1984,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 7
     BaseType "Corsair Sword"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - 3/4 Sockets - Corsair Sword
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal - 77+ - 3/4 Sockets - Corsair Sword
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -2004,7 +2019,7 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77
     BaseType "Corsair Sword"
     SetFontSize 28
 
-Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Corsair Sword
+Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic - 77+ - 3/4 Linked Sockets - Corsair Sword
     ItemLevel >= 77
     Rarity = Magic
     LinkedSockets >= 3
@@ -2075,7 +2090,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77
     BaseType "Coronal Maul"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - 3/4 Sockets - Coronal Maul
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - 3/4 Sockets - Coronal Maul
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -2138,7 +2153,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77
     BaseType "Piledriver"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - 3/4 Sockets - Piledriver
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 77+ - 3/4 Sockets - Piledriver
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -2244,7 +2259,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Li
     BaseType "Maraketh Bow"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Sockets - Maraketh Bow
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Sockets - Maraketh Bow
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -2307,7 +2322,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Li
     BaseType "Thicket Bow"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Sockets - Thicket Bow
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Sockets - Thicket Bow
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -2391,7 +2406,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Li
     BaseType "Harbinger Bow"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Sockets - Harbinger Bow
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 77+ - 3/4 Sockets - Harbinger Bow
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -2497,7 +2512,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - 
     BaseType "Dragoon Sword"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Sockets - Dragoon Sword
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Sockets - Dragoon Sword
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -2560,7 +2575,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - 
     BaseType "Vaal Rapier"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Sockets - Vaal Rapier
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Sockets - Vaal Rapier
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -2644,7 +2659,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - 
     BaseType "Jewelled Foil"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Sockets - Jewelled Foil
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Thrusting One Hand Swords - Normal - 77+ - 3/4 Sockets - Jewelled Foil
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -2758,7 +2773,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4
     BaseType "Sai"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Sockets - Sai
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Sockets - Sai
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -2825,7 +2840,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4
     BaseType "Ambusher"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Sockets - Ambusher
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Sockets - Ambusher
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -2909,7 +2924,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4
     BaseType "Platinum Kris"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Sockets - Platinum Kris
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 77+ - 3/4 Sockets - Platinum Kris
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -3015,7 +3030,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 77
     BaseType "Behemoth Mace"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 77+ - 3/4 Sockets - Behemoth Mace
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 77+ - 3/4 Sockets - Behemoth Mace
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -3100,7 +3115,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+
     BaseType "Fleshripper"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - 3/4 Sockets - Fleshripper
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - 3/4 Sockets - Fleshripper
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -3163,7 +3178,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+
     BaseType "Vaal Axe"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - 3/4 Sockets - Vaal Axe
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 77+ - 3/4 Sockets - Vaal Axe
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -3269,7 +3284,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 7
     BaseType "Exquisite Blade"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - 3/4 Sockets - Exquisite Blade
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - 3/4 Sockets - Exquisite Blade
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -3332,7 +3347,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 7
     BaseType "Reaver Sword"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - 3/4 Sockets - Reaver Sword
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 77+ - 3/4 Sockets - Reaver Sword
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -3438,7 +3453,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 L
     BaseType "Gemini Claw"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Gemini Claw
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Gemini Claw
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -3501,7 +3516,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 L
     BaseType "Great White Claw"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Great White Claw
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Great White Claw
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -3585,7 +3600,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 L
     BaseType "Imperial Claw"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Imperial Claw
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Imperial Claw
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -3669,7 +3684,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 L
     BaseType "Terror Claw"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Terror Claw
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 77+ - 3/4 Sockets - Terror Claw
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -3775,7 +3790,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 77+ - 3/
     BaseType "Sambar Sceptre"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 77+ - 3/4 Sockets - Sambar Sceptre
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 77+ - 3/4 Sockets - Sambar Sceptre
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -3860,7 +3875,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 77+ - 3/4 
     BaseType "Eclipse Staff"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 77+ - 3/4 Sockets - Eclipse Staff
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 77+ - 3/4 Sockets - Eclipse Staff
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 4
@@ -3945,7 +3960,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 L
     BaseType "Profane Wand"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Sockets - Profane Wand
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Sockets - Profane Wand
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -4008,7 +4023,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 L
     BaseType "Imbued Wand"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Sockets - Imbued Wand
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Sockets - Imbued Wand
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -4092,7 +4107,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 L
     BaseType "Opal Wand"
     SetFontSize 28
 
-Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Sockets - Opal Wand
+Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 77+ - 3/4 Sockets - Opal Wand
     ItemLevel >= 77
     Rarity = Normal
     Sockets >= 3
@@ -4586,21 +4601,22 @@ Show # Misc - Chromatic Orb Recipe - Rare - 4x1
     Width = 1
     Height = 4
     SocketGroup "RGB"
-    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
+    SetFontSize 28
 
 Show # Misc - Chromatic Orb Recipe - Rare - 3x1
     Rarity = Rare
     Width = 1
     Height = 3
     SocketGroup "RGB"
-    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+    SetBorderColor 27 162 155 # Chromatic Orb Recipe
 
 Show # Misc - Chromatic Orb Recipe - Rare - 2x2
     Rarity = Rare
     Width = 2
     Height = 2
     SocketGroup "RGB"
-    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe
+    SetBorderColor 27 162 155 # Chromatic Orb Recipe
 
 Show # Misc - Chromatic Orb Recipe - Rare - 3x2
     Rarity = Rare
