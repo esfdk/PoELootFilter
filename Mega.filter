@@ -1,5 +1,5 @@
 ﻿# Script edited with Filtration - https://github.com/ben-wallis/Filtration
-# Megajohn's item filter, v. 1.00
+# Megajohn's item filter, v. 2.3
 # Based on Sayya's item filter, v. 1.23 (7/2/2015) and One Filter to Rule Them All v2.3.3 by Muldini
 # ##############################################################################
 # ## Overview ##################################################################
@@ -84,13 +84,17 @@ Show # Specials - Sacrificial Garb
 
 # Section: ### Currency #######################################################
 
-#Disabled Block Start
-#Show # Currency - Perandus Coin
-#    BaseType "Silver Coin"
-#    SetTextColor 128 0 200 # Prophecy
-#    SetBorderColor 128 0 200 # Prophecy
-#    SetFontSize 38
-#Disabled Block End
+Show # Currency - Silver Coin
+    BaseType "Silver Coin"
+    SetTextColor 192 192 192 # Silver Coin
+    SetBorderColor 162 0 255 # Prophecy
+    SetFontSize 38
+
+Show # Currency - Prophecy
+    BaseType "Prophecy"
+    SetTextColor 128 0 200 # Prophecy
+    SetBorderColor 162 0 255 # Prophecy
+    SetFontSize 40
 
 Show # Currency - Perandus Coin
     BaseType "Perandus Coin"
@@ -187,6 +191,26 @@ Show # Uniques - CatchAll
 
 # Section: ### Maps ###########################################################
 
+Show # Maps - Fragments - Mortal Fragments
+	Class "Map Fragments"
+	BaseType "Mortal Hope" "Mortal Grief" "Mortal Rage" "Mortal Ignorance"
+	SetBorderColor 255 40 0 # Maps - Mortal Fragments
+	SetTextColor 255 40 0 # Maps - Mortal Fragments
+	SetFontSize 45
+	PlayAlertSound 6 300
+	
+Show # Maps - Fragments - Sacrifice
+	Class "Map Fragments"
+	BaseType "Sacrifice at Dusk" "Sacrifice at Midnight" "Sacrifice at Dawn" "Sacrifice at Noon"
+	SetBorderColor 150 0 0 # Maps - Sacrifice Fragments
+	SetFontSize 38
+
+Show # Map - Fragments - Prophecy Keys
+	Class "Map Fragments"
+	BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
+	SetBorderColor 162 0 255 # Prophecy
+	SetFontSize 40
+	
 Show # Maps - High tier
     DropLevel >= 79
     Class "Map"
@@ -222,13 +246,13 @@ Show # Jewels - Magic
 
 Show # Divination Cards - Very Valuable
     Class "Divination Card"
-    BaseType "The Brittle Emperor" "The Doctor" "The Hunger" "The Wind" "The Avenger" "The Celestial Justicar" "The Fiend" "The King's Heart" "The Pact" "The Watcher" "The Queen" "The Last One Standing" "The Artist" "Wealth and Power" "House of Mirrors" "The Dragon's Heart" "Pride Before the Fall" "The Vast" "Bowyer's Dream" "Hunter's Reward" "The Thaumaturgist" "The Warlord" "The Offering" "Lost Worlds" "The Ethereal"
+    BaseType "The Brittle Emperor" "The Doctor" "The Hunger" "The Wind" "The Avenger" "The Celestial Justicar" "The Fiend" "The King's Heart" "The Pact" "The Watcher" "The Queen" "The Last One Standing" "The Artist" "Wealth and Power" "House of Mirrors" "The Dragon's Heart" "Pride Before the Fall" "The Vast" "Bowyer's Dream" "Hunter's Reward" "The Thaumaturgist" "The Warlord" "The Offering" "Lost Worlds" "The Ethereal" "The Cursed King" "Lysah's Respite" "Emperor of Purity"
     SetBorderColor 175 96 37 # Divination Card - Very Valuable
     SetFontSize 44
 
 Show # Divination Cards - Valuable
     Class "Divination Card"
-    BaseType "The Hoarder" "The Drunken Aristocrat" "The Pack Leader" "The Sun" "The Gladiator" "Abandoned Wealth" "The Incantation" "Time-Lost Relic" "The Dark Mage" "The Road to Power" "The Chains that Bind" "The Betrayal" "The Trial" "Last Hope" "The Enlightened" "The Fletcher" "The Surveyor" "The Dapper Prodigy" "Tranquillity" "Earth Drinker"
+    BaseType "The Hoarder" "The Drunken Aristocrat" "The Pack Leader" "The Sun" "The Gladiator" "Abandoned Wealth" "The Incantation" "Time-Lost Relic" "The Dark Mage" "The Road to Power" "The Chains that Bind" "The Betrayal" "The Trial" "Last Hope" "The Enlightened" "The Fletcher" "The Surveyor" "The Dapper Prodigy" "Tranquillity" "Earth Drinker" "The Harvester" "The Stormcaller" "The Jester" "The Web"
     SetBorderColor 175 96 37 # Divination Card - Valuable
     SetFontSize 42
 
