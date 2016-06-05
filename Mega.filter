@@ -46,11 +46,11 @@ Show # Specials - Labyrinth - Labyrinth keys
     BaseType "Treasure Key" "Golden Key" "Silver Key"
     SetBorderColor 150 0 0 # Special drops
     SetFontSize 44
-	
+
 Show # Specials - Labyrinth - Trinkets
-	BaseType "Sand of Eternity" "Orb of Elemental Essence" "Rod of Detonation" "Cube Of Absorption" "Bane of the Loyal" "Heart of the Gargoyle" "Cogs of Disruption" "Portal Shredder"
-	SetFontSize 44
-	
+    BaseType "Sand of Eternity" "Orb of Elemental Essence" "Rod of Detonation" "Cube Of Absorption" "Bane of the Loyal" "Heart of the Gargoyle" "Cogs of Disruption" "Portal Shredder"
+    SetFontSize 44
+
 Show # Specials - Quest Items
     Class "Quest"
     SetFontSize 40
@@ -96,7 +96,6 @@ Show # Currency - Silver Coin
 
 Show # Currency - Prophecy
     BaseType "Prophecy"
-    SetTextColor 128 0 200 # Prophecy
     SetBorderColor 162 0 255 # Prophecy
     SetFontSize 40
 
@@ -196,25 +195,25 @@ Show # Uniques - CatchAll
 # Section: ### Maps ###########################################################
 
 Show # Maps - Fragments - Mortal Fragments
-	Class "Map Fragments"
-	BaseType "Mortal Hope" "Mortal Grief" "Mortal Rage" "Mortal Ignorance"
-	SetBorderColor 255 40 0 # Maps - Mortal Fragments
-	SetTextColor 255 40 0 # Maps - Mortal Fragments
-	SetFontSize 45
-	PlayAlertSound 6 300
-	
+    Class "Map Fragments"
+    BaseType "Mortal Hope" "Mortal Grief" "Mortal Rage" "Mortal Ignorance"
+    SetTextColor 255 40 0 # Maps - Mortal Fragments
+    SetBorderColor 255 40 0 # Maps - Mortal Fragments
+    SetFontSize 45
+    PlayAlertSound 6 300
+
 Show # Maps - Fragments - Sacrifice
-	Class "Map Fragments"
-	BaseType "Sacrifice at Dusk" "Sacrifice at Midnight" "Sacrifice at Dawn" "Sacrifice at Noon"
-	SetBorderColor 150 0 0 # Maps - Sacrifice Fragments
-	SetFontSize 38
+    Class "Map Fragments"
+    BaseType "Sacrifice at Dusk" "Sacrifice at Midnight" "Sacrifice at Dawn" "Sacrifice at Noon"
+    SetBorderColor 150 0 0 # Maps - Sacrifice Fragments
+    SetFontSize 38
 
 Show # Map - Fragments - Prophecy Keys
-	Class "Map Fragments"
-	BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
-	SetBorderColor 162 0 255 # Prophecy
-	SetFontSize 40
-	
+    Class "Map Fragments"
+    BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
+    SetBorderColor 162 0 255 # Prophecy
+    SetFontSize 40
+
 Show # Maps - High tier
     DropLevel >= 79
     Class "Map"
@@ -568,7 +567,7 @@ Show # Chisel Recipe - Rare
 # Add a border to flasks that are near the current level or have 15%+ quality
 Show # Flasks - Utility
     Class "Utility Flask"
-    SetBorderColor 255 0 255 # Utility Flask
+    SetBorderColor 255 0 255 # Flask - Utility
     SetFontSize 30
 
 Show # Flasks - Quality - 20%
@@ -576,17 +575,17 @@ Show # Flasks - Quality - 20%
     Rarity = Normal
     Class "Flask"
     SetBackgroundColor 6 40 38 # Quality Flasks 20%
-    SetBorderColor 27 162 155 # Quality Flask
+    SetBorderColor 27 162 155 # Flask - Quality
 
 Show # Flasks - Quality - 10%
     Quality >= 10
     Class "Flask"
-    SetBorderColor 27 162 155 # Quality Flask
+    SetBorderColor 27 162 155 # Flask - Quality
 
 Show # Flasks - Hybrid - Hallowed
     ItemLevel < 68
     BaseType "Hallowed Hybrid Flask"
-    SetBorderColor 27 162 155 # Quality Flask
+    SetBorderColor 162 0 255 # Flask - Hybrid
 
 Hide # Flasks - Hybrid - Other
     Class "Hybrid Flask"
@@ -594,72 +593,72 @@ Hide # Flasks - Hybrid - Other
 Show # Flasks - Mana - ilvl < 15
     ItemLevel < 15
     Class "Mana Flask"
-    SetBorderColor 0 0 255 # Mana flask
+    SetBorderColor 0 0 255 # Flask - Mana
 
 Show # Flasks - Life - ilvl < 15
     ItemLevel < 15
     Class "Life Flask"
-    SetBorderColor 220 20 60 # Life flask
+    SetBorderColor 220 20 60 # Flask - Life
 
 Show # Flasks - Mana - ilvl < 26
     ItemLevel < 26
     DropLevel > 10
     Class "Mana Flask"
-    SetBorderColor 0 0 255 # Mana flask
+    SetBorderColor 0 0 255 # Flask - Mana
 
 Show # Flasks - Life - ilvl < 26
     ItemLevel < 26
     DropLevel > 10
     Class "Life Flask"
-    SetBorderColor 220 20 60 # Life flask
+    SetBorderColor 220 20 60 # Flask - Life
 
 Show # Flasks - Mana - ilvl < 34
     ItemLevel < 34
     DropLevel > 22
     Class "Mana Flask"
-    SetBorderColor 0 0 255 # Mana flask
+    SetBorderColor 0 0 255 # Flask - Mana
 
 Show # Flasks - Life - ilvl < 34
     ItemLevel < 34
     DropLevel > 22
     Class "Life Flask"
-    SetBorderColor 220 20 60 # Life flask
+    SetBorderColor 220 20 60 # Flask - Life
 
 Show # Flasks - Mana - ilvl < 43
     ItemLevel < 43
     DropLevel > 34
     Class "Mana Flask"
-    SetBorderColor 0 0 255 # Mana flask
+    SetBorderColor 0 0 255 # Flask - Mana
 
 Show # Flasks - Life - ilvl < 43
     ItemLevel < 43
     DropLevel > 34
     Class "Life Flask"
-    SetBorderColor 220 20 60 # Life flask
+    SetBorderColor 220 20 60 # Flask - Life
 
 Show # Flasks - Mana - ilvl < 55
     ItemLevel < 55
     DropLevel > 40
     Class "Mana Flask"
-    SetBorderColor 0 0 255 # Mana flask
+    SetBorderColor 0 0 255 # Flask - Mana
 
 Show # Flasks - Life - ilvl < 55
     ItemLevel < 55
     DropLevel > 40
     Class "Life Flask"
-    SetBorderColor 220 20 60 # Life flask
+    SetBorderColor 220 20 60 # Flask - Life
 
 Show # Flasks - Mana - Divine+ - (under 70)
     ItemLevel < 67
     DropLevel > 58
     Class "Mana Flask"
-    SetBorderColor 0 0 255 # Mana flask
+    SetBorderColor 0 0 255 # Flask - Mana
 
 Show # Flasks - Life - Divine+ - (under 70)
     ItemLevel < 67
     DropLevel > 58
     Class "Life Flask"
-    SetBorderColor 220 20 60 # Life flask
+    SetBorderColor 220 20 60 # Flask - Life
 
 Show # Flasks - Mana - Divine+ - (over 70)
     DropLevel > 58
