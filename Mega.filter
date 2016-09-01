@@ -48,12 +48,18 @@ Show # Specials - Labyrinth - Labyrinth keys
     SetFontSize 44
 
 Show # Specials - Labyrinth - Trinkets
-    BaseType "Sand of Eternity" "Orb of Elemental Essence" "Rod of Detonation" "Cube Of Absorption" "Bane of the Loyal" "Heart of the Gargoyle" "Cogs of Disruption" "Portal Shredder"
+    BaseType "Sand of Eternity" "Orb of Elemental Dispersion" "Rod of Detonation" "Cube Of Absorption" "Bane of the Loyal" "Heart of the Gargoyle" "Cogs of Disruption" "Portal Shredder"
     SetFontSize 44
 
-Show # Specials - Quest Items
+Show # Specials - Quest Items - Shaper's Orb
     Class "Quest"
-    SetFontSize 40
+    BaseType "Shaper's Orb"
+    SetBorderColor 0 128 0
+    SetFontSize 42
+
+Show # Specials - Quest Items - Other
+    Class "Quest"
+    SetFontSize 42
 
 # Tabula Rasa Exception, show it as a regular unique
 Show # Specials - Tabula Rasa
@@ -88,6 +94,36 @@ Show # Specials - Sacrificial Garb
 
 # Section: ### Currency #######################################################
 
+Show # Currency - Sextants/Seals - Master
+    Class "Currency"
+    BaseType "Master Cartographer's Sextant" "Master Cartographer's Seal"
+    SetBorderColor 255 40 0 # Maps - High-Tier
+    SetFontSize 40
+
+Show # Currency - Sextants - Journeyman
+    Class "Currency"
+    BaseType "Journeyman Cartographer's Sextant" "Journeyman Cartographer's Seal"
+    SetBorderColor 255 215 0 # Maps - Mid-Tier
+    SetFontSize 40
+
+Show # Currency - Sextants - Apprentice
+    Class "Currency"
+    BaseType "Apprentice Cartographer's Sextant" "Apprentice Cartographer's Seal"
+    SetBorderColor 0 128 0 # Maps - Low-Tier
+    SetFontSize 40
+
+Show # Currency - Essence - Remnant
+    Class "Currency"
+    BaseType "Remnant of Corruption"
+    SetBorderColor 255 165 0 # Perandus Coin
+    SetFontSize 38
+
+Show # Currency - Essence - Other
+    Class "Currency"
+    BaseType "Essence"
+    SetBorderColor 255 165 0 # Perandus Coin
+    SetFontSize 38
+
 Show # Currency - Silver Coin
     BaseType "Silver Coin"
     SetTextColor 192 192 192 # Silver Coin
@@ -95,6 +131,7 @@ Show # Currency - Silver Coin
     SetFontSize 38
 
 Show # Currency - Prophecy
+    Class "Currency"
     BaseType "Prophecy"
     SetBorderColor 162 0 255 # Prophecy
     SetFontSize 40
@@ -111,7 +148,7 @@ Show # Currency - Extremely Valuable
     PlayAlertSound 7 300
 
 Show # Currency - Very Valuable
-    BaseType "Divine Orb" "Eternal Orb" "Exalted Orb"
+    BaseType "Divine Orb" "Eternal Orb" "Exalted Orb" "Unshaping Orb"
     SetBorderColor 175 96 37 # Currency - Valuable
     SetFontSize 43
     PlayAlertSound 7 300
@@ -120,6 +157,7 @@ Show # Currency - Valuable
     BaseType "Regal Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Regret"
     SetBorderColor 175 96 37 # Currency - Valuable
     SetFontSize 40
+    PlayAlertSound 4 200
 
 Show # Currency - Above Average
     BaseType "Cartographer's Chisel" "Orb of Alchemy" "Orb of Fusing" "Orb of Scouring" "Vaal Orb" "Blessed Orb"
@@ -194,7 +232,7 @@ Show # Uniques - CatchAll
 
 # Section: ### Maps ###########################################################
 
-Show # Maps - Fragments - Mortal Fragments
+Show # Maps - Fragments - Mortal
     Class "Map Fragments"
     BaseType "Mortal Hope" "Mortal Grief" "Mortal Rage" "Mortal Ignorance"
     SetTextColor 255 40 0 # Maps - Mortal Fragments
@@ -213,6 +251,13 @@ Show # Map - Fragments - Prophecy Keys
     BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
     SetBorderColor 162 0 255 # Prophecy
     SetFontSize 40
+
+Show # Map - Fragments - Shaper
+    Class "Map Fragments"
+    BaseType "Fragment of the Minotaur" "Fragment of the Phoenix" "Fragment of the Chimera" "Fragment of the Hydra"
+    SetBorderColor 255 40 0 # Maps - Shaper Fragments
+    SetFontSize 42
+    PlayAlertSound 6 300
 
 Show # Maps - High tier
     DropLevel >= 79
@@ -247,6 +292,12 @@ Show # Jewels - Magic
 
 # Section: ### Divination Cards ###############################################
 
+Show # Divination Cards - Unknown Value
+    Class "Divination Card"
+    BaseType "The Oath" "The Scavenger" "The Void" "Mawr Blaidd"
+    SetBorderColor 175 96 37 # Divination Card - Unknown Value
+    SetFontSize 44
+
 Show # Divination Cards - Very Valuable
     Class "Divination Card"
     BaseType "The Brittle Emperor" "The Doctor" "The Hunger" "The Wind" "The Avenger" "The Celestial Justicar" "The Fiend" "The King's Heart" "The Pact" "The Watcher" "The Queen" "The Last One Standing" "The Artist" "Wealth and Power" "House of Mirrors" "The Dragon's Heart" "Pride Before the Fall" "The Vast" "Bowyer's Dream" "Hunter's Reward" "The Thaumaturgist" "The Warlord" "The Offering" "Lost Worlds" "The Ethereal" "The Cursed King" "Lysah's Respite" "Emperor of Purity"
@@ -265,6 +316,14 @@ Show # Divination Cards - CatchAll
 
 # Section: ### Very High Itemlevel Rares ######################################
 
+Show # ItemLevel 84+ Rares - Atlas of World Armour
+    ItemLevel >= 84
+    Rarity = Rare
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetBackgroundColor 60 60 0 # Rare - Best Rare
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 38
+
 Show # ItemLevel 84+ Rares - T1 Armour
     ItemLevel >= 84
     Rarity = Rare
@@ -272,6 +331,13 @@ Show # ItemLevel 84+ Rares - T1 Armour
     SetBackgroundColor 60 60 0 # Rare - Best Rare
     SetBorderColor 255 255 119 # Rare - Best Rare
     SetFontSize 38
+
+Show # ItemLevel 77+ Rares - Atlas of World Armour
+    ItemLevel >= 77
+    Rarity = Rare
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetFontSize 36
 
 Show # ItemLevel 77+ Rares - T1 Armour
     ItemLevel >= 77
@@ -448,11 +514,13 @@ Show # Misc - Chromatic Orb Recipe - Large
 #    SetFontSize 30
 #Disabled Block End
 
-Show # Chance - Sorcerer Boots
-    Rarity = Normal
-    BaseType "Sorcerer Boots"
-    SetBorderColor 54 100 146 # Chance
-    SetFontSize 30
+#Disabled Block Start
+#Show # Chance - Sorcerer Boots
+#    Rarity = Normal
+#    BaseType "Sorcerer Boots"
+#    SetBorderColor 54 100 146 # Chance
+#    SetFontSize 30
+#Disabled Block End
 
 # Section: ### Amulets, Rings, Belts ##########################################
 
@@ -797,6 +865,90 @@ Hide # Hide Maelstr�m Staff Exception
     SetFontSize 26
 
 # Section: ### Normal & Magic Gear - Endgame ##################################
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 84
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 84
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 84
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 32
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 84
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 30
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 77
+    Rarity = Normal
+    Sockets < 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 77
+    Rarity = Normal
+    LinkedSockets >= 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 77
+    Rarity = Normal
+    Sockets >= 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 77
+    Rarity = Magic
+    Sockets < 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 77
+    Rarity = Magic
+    LinkedSockets >= 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 28
+
+Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
+    ItemLevel >= 77
+    Rarity = Magic
+    Sockets >= 4
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 28
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal - 84+ - No Sockets
     ItemLevel >= 84
@@ -4185,6 +4337,12 @@ Hide # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 77+ - 3/4 So
 
 # Section: ### Best Rares #####################################################
 
+# Atlas of Worlds ###
+Show # Gear - Rare - Endgame - Atlas of Worlds
+    Rarity = Rare
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetBorderColor 255 255 119 # Rare - Best Rare
+
 # Armour ###
 Show # Gear - Rare - Endgame - Armour - STR - Body Armours - Glorious Plate
     Rarity = Rare
@@ -4669,13 +4827,13 @@ Show # Rares - DropLevel <= 45
     ItemLevel >= 60
     DropLevel <= 45
     Rarity = Rare
-    SetFontSize 26
+    SetFontSize 28
 
 Show # Rares - DropLevel <= 60
     ItemLevel >= 60
     DropLevel <= 60
     Rarity = Rare
-    SetFontSize 28
+    SetFontSize 30
 
 Show # Rares - CatchAll
     ItemLevel >= 60
@@ -4686,6 +4844,12 @@ Show # Rares - CatchAll
     Rarity = Rare
 
 # Section: ### Normal & Magic Gear - Progression ##############################
+
+Show # Gear - Progression - Atlas of Worlds
+    ItemLevel <= 30
+    Rarity <= Magic
+    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetFontSize 28
 
 Show # Gear - Progression - Armour - STR - Lowlevel - Helmets
     ItemLevel <= 30
