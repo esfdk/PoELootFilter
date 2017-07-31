@@ -1,25 +1,27 @@
 ﻿# Script edited with Filtration - https://github.com/ben-wallis/Filtration
-# Megajohn's item filter, v. 3.0
-# Based on Sayya's item filter, v. 1.23 (7/2/2015) and One Filter to Rule Them All v2.3.3 by Muldini
+# Megajohn's item filter, v. 4.0
+# Based on (aka mostly stolen from) item filters by Sayya, Muldini and Neversink
 # ##############################################################################
 # ## Overview ##################################################################
 # ##############################################################################
 # ## To navigate between filter sections, copy one of the
 # ## following lines - including "##" - and search for it.
-# ## Overview
+# ## Exceptions
 # ## Specials
 # ## Currency
+# ## Essence
+# ## Breach
 # ## Gems
-# ## Uniques
-# ## Maps
-# ## Jewels
 # ## Divination Cards
+# ## Maps
+# ## Uniques
+# ## Jewels
+# ## Atlas of World Bases
 # ## High Itemlevel Rares
 # ## Chromatic Orb Recipe - Normal & Magic
-# ## Chance
-# ## Amulets, Rings, Belts
 # ## Chisel Recipe
 # ## Flasks
+# ## Amulets, Rings, Belts
 # ## Link Exceptions
 # ## Hide Obsolete Gear
 # ## Character Gear Exceptions
@@ -31,6 +33,20 @@
 # ## /Overview #################################################################
 # ##############################################################################
 
+# Section: ### Exceptions #####################################################
+
+Show # Legacy League - Leaguestone
+    Class "Leaguestone"
+    SetBorderColor 229 160 12 # Legacy
+    SetFontSize 36
+
+Show # Legacy League - Reliquary
+    Class "Misc Map Items"
+    BaseType "Ancient Reliquary Key"
+    SetBorderColor 229 160 12 # Legacy
+    SetFontSize 40
+    PlayAlertSound 4 200
+
 # Section: ### Specials #######################################################
 
 Show # Specials - Fishing Rod
@@ -38,29 +54,36 @@ Show # Specials - Fishing Rod
     SetTextColor 0 255 150 # Fishing Rod
     SetBorderColor 0 255 150 # Fishing Rod
     SetFontSize 45
-    PlayAlertSound 5 300
+    PlayAlertSound 7 300
 
 Show # Specials - Hideout Doodads & Microtransactions
     Class "Hideout Doodads" "Microtransactions"
 
 Show # Specials - Labyrinth - Labyrinth keys
     BaseType "Treasure Key" "Golden Key" "Silver Key"
-    SetBorderColor 150 0 0 # Special drops
-    SetFontSize 44
+    SetTextColor 74 230 58 # Labyrinth, Quest, Shaper Orbs
+    SetBorderColor 74 230 58 # Labyrinth, Quest, Shaper Orbs
+    SetFontSize 42
 
 Show # Specials - Labyrinth - Trinkets
     BaseType "Sand of Eternity" "Orb of Elemental Dispersion" "Rod of Detonation" "Cube Of Absorption" "Bane of the Loyal" "Heart of the Gargoyle" "Cogs of Disruption" "Portal Shredder"
-    SetFontSize 44
+    SetTextColor 74 230 58 # Labyrinth, Quest, Shaper Orbs
+    SetBorderColor 74 230 58 # Labyrinth, Quest, Shaper Orbs
+    SetFontSize 40
 
 Show # Specials - Quest Items - Shaper's Orb
     Class "Quest"
     BaseType "Shaper's Orb"
-    SetBorderColor 0 128 0
-    SetFontSize 42
+    SetTextColor 74 230 58 # Labyrinth, Quest, Shaper Orbs
+    SetBorderColor 74 230 58 # Labyrinth, Quest, Shaper Orbs
+    SetFontSize 44
+    PlayAlertSound 1 200
 
 Show # Specials - Quest Items - Other
     Class "Quest"
-    SetFontSize 42
+    SetTextColor 74 230 58 # Labyrinth, Quest, Shaper Orbs
+    SetBorderColor 74 230 58 # Labyrinth, Quest, Shaper Orbs
+    SetFontSize 40
 
 # Tabula Rasa Exception, show it as a regular unique
 Show # Specials - Tabula Rasa
@@ -75,14 +98,15 @@ Show # Specials - 6L
     LinkedSockets = 6
     SetBackgroundColor 0 0 0 # Contrast background
     SetBorderColor 127 127 127 # 6S/5L/6L border
-    SetFontSize 40
+    SetFontSize 45
     PlayAlertSound 2 200
 
 Show # Specials - 6S
     Sockets = 6
     SetBackgroundColor 0 0 0 # Contrast background
     SetBorderColor 127 127 127 # 6S/5L/6L border
-    SetFontSize 38
+    SetFontSize 42
+    PlayAlertSound 2 200
 
 Show # Specials - 5L
     LinkedSockets = 5
@@ -90,112 +114,169 @@ Show # Specials - 5L
     SetBorderColor 127 127 127 # 6S/5L/6L border
     SetFontSize 38
 
-Show # Specials - Sacrificial Garb
-    BaseType "Sacrificial Garb"
-
 # Section: ### Currency #######################################################
 
-Show # Currency - Sextants/Seals - Master
-    Class "Currency"
-    BaseType "Master Cartographer's Sextant" "Master Cartographer's Seal"
-    SetBorderColor 255 40 0 # Maps - High-Tier
-    SetFontSize 36
-
-Show # Currency - Sextants - Journeyman
-    Class "Currency"
-    BaseType "Journeyman Cartographer's Sextant" "Journeyman Cartographer's Seal"
-    SetBorderColor 255 215 0 # Maps - Mid-Tier
-    SetFontSize 36
-
-Show # Currency - Sextants - Apprentice
-    Class "Currency"
-    BaseType "Apprentice Cartographer's Sextant" "Apprentice Cartographer's Seal"
-    SetBorderColor 0 128 0 # Maps - Low-Tier
-    SetFontSize 36
-
-Show # Currency - Breach Splinter
-    Class "Currency"
-    BaseType "Splinter of" "Blessing of"
-    SetBorderColor 220 14 222 # Breach
-    SetFontSize 36
-
-Show # Currency - Essence - Other
-    Class "Currency"
-    BaseType "Essence" "Remnant of Corruption"
-    SetBorderColor 13 224 219 # Essence
-    SetFontSize 36
-
-Show # Currency - Silver Coin
-    BaseType "Silver Coin"
-    SetTextColor 192 192 192 # Silver Coin
-    SetBorderColor 162 0 255 # Prophecy
-    SetFontSize 36
-
-Show # Currency - Prophecy
-    Class "Currency"
-    BaseType "Prophecy"
-    SetBorderColor 162 0 255 # Prophecy
-    SetFontSize 40
-
-Show # Currency - Perandus Coin
-    BaseType "Perandus Coin"
-    SetBorderColor 255 165 0 # Perandus Coin
-    SetFontSize 36
-
-Show # Currency - Extremely Valuable
-    BaseType "Mirror of Kalandra" "Albino Rhoa Feather"
-    SetBorderColor 175 96 37 # Currency - Valuable
+Show # Currency - Tier 1
+    BaseType "Mirror of Kalandra" "Albino Rhoa Feather" "Divine Orb" "Eternal Orb" "Exalted Orb" "Unshaping Orb"
+    SetBackgroundColor 0 0 0 # Currency - Tier 1
+    SetBorderColor 175 96 37 # Currency - Tier 1
     SetFontSize 45
-    PlayAlertSound 7 300
+    PlayAlertSound 7 250
 
-Show # Currency - Very Valuable
-    BaseType "Divine Orb" "Eternal Orb" "Exalted Orb" "Unshaping Orb"
-    SetBorderColor 175 96 37 # Currency - Valuable
-    SetFontSize 43
-    PlayAlertSound 7 200
+Show # Currency - Tier 1.5
+    BaseType "Master Cartographer's Sextant" "Master Cartographer's Seal" "Journeyman Cartographer's Sextant" "Journeyman Cartographer's Seal"
+    SetBackgroundColor 0 0 0 # Currency - Tier 1.5
+    SetBorderColor 175 96 37 # Currency - Tier 1.5
+    SetFontSize 45
+    PlayAlertSound 4 175
 
-Show # Currency - Valuable
-    BaseType "Regal Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Regret"
-    SetBorderColor 175 96 37 # Currency - Valuable
-    SetFontSize 38
+Show # Currency - Tier 2
+    BaseType "Regal Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Regret" "Apprentice Cartographer's Sextant" "Apprentice Cartographer's Seal" "Stacked Deck" "Vaal Orb"
+    SetBackgroundColor 0 0 0 # Currency - Tier 2
+    SetBorderColor 175 96 37 # Currency - Tier 2
+    SetFontSize 42
     PlayAlertSound 4 125
 
-Show # Currency - Above Average
-    BaseType "Cartographer's Chisel" "Orb of Alchemy" "Orb of Fusing" "Orb of Scouring" "Vaal Orb" "Blessed Orb"
-    SetBorderColor 170 158 130 # Currency - Average
-    SetFontSize 36
+Show # Currency - Tier 3
+    BaseType "Cartographer's Chisel" "Orb of Alchemy" "Orb of Fusing" "Orb of Scouring" "Blessed Orb" "Prophecy"
+    SetBackgroundColor 0 0 0 # Currency - Tier 3
+    SetBorderColor 170 158 130 # Currency - Tier 3
+    SetFontSize 42
+    PlayAlertSound 1 100
 
-Show # Currency - Average
-    BaseType "Chromatic Orb" "Glassblower's Bauble" "Jeweller's Orb" "Orb of Chance"
-    SetFontSize 36
+Show # Currency - Tier 4
+    BaseType "Chromatic Orb" "Glassblower's Bauble" "Jeweller's Orb" "Orb of Chance" "Silver Coin" "Orb of Alteration"
+    SetBackgroundColor 0 0 0 # Currency - Tier 4
+    SetFontSize 38
 
-Show # Currency - Below Average
-    BaseType "Scroll of Wisdom" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Orb of Alteration"
+Show # Currency - Tier 5
+    BaseType "Blacksmith's Whetstone" "Orb of Transmutation" "Alchemy Shard"
+    SetBackgroundColor 0 0 0 # Currency - Tier 5
+    SetFontSize 34
+
+Show # Currency - Tier 6
+    Class "Currency"
+    BaseType "Armourer's Scrap" "Orb of Augmentation" "Alteration Shard"
+    SetBackgroundColor 0 0 0 # Currency - Tier 6
     SetFontSize 30
+
+Show # Currency - Tier 7
+    Class "Currency"
+    BaseType "Scroll of Wisdom" "Portal Scroll"
+    SetBackgroundColor 0 0 0 # Currency - Tier 7
+    SetFontSize 28
+
+Show # Currency - Perandus
+    Class "Currency"
+    BaseType "Perandus Coin"
+    SetTextColor 255 178 135 # Currency - Perandus
+    SetBorderColor 255 178 135 # Currency - Perandus
+    SetFontSize 38
 
 Show # Currency - CatchAll
     Class "Currency"
     SetFontSize 32
 
+# Section: ### Essence ########################################################
+
+Show # Essence - Tier 1,2, and corrupted Essences
+    Class "Currency"
+    BaseType "Shrieking Essence of" "Essence of Hysteria" "Essence of Insanity" "Essence of Horror" "Essence of Delirium" "Deafening Essence of" "Remnant of Corruption"
+    SetBackgroundColor 0 0 0 # Essence - Tier 1,2, and corrupted Essences
+    SetBorderColor 13 224 219 # Essence - Tier 1,2, and corrupted Essences
+    SetFontSize 42
+    PlayAlertSound 2 200
+
+Show
+    Class "Currency"
+    BaseType "Screaming Essence of"
+    SetBackgroundColor 0 0 0 # Essence - Tier 3
+    SetBorderColor 13 224 219 # Essence - Tier 3
+    SetFontSize 40
+
+Show
+    Class "Currency"
+    BaseType "Wailing Essence of"
+    SetBackgroundColor 0 0 0 # Essence - Tier 4
+    SetBorderColor 13 224 219 # Essence - Tier 4
+    SetFontSize 38
+
+Show
+    Class "Currency"
+    BaseType "Weeping Essence of"
+    SetBackgroundColor 0 0 0 # Essence - Tier 5
+    SetBorderColor 13 224 219 # Essence - Tier 5
+    SetFontSize 36
+
+Show
+    Class "Currency"
+    BaseType "Muttering Essence of"
+    SetBackgroundColor 0 0 0 # Essence - Tier 6
+    SetBorderColor 13 224 219 # Essence - Tier 6
+    SetFontSize 36
+
+Show
+    Class "Currency"
+    BaseType "Whispering Essence of"
+    SetBackgroundColor 0 0 0 # Essence - Tier 7
+    SetBorderColor 13 224 219 # Essence - Tier 7
+    SetFontSize 34
+
+# Section: ### Breach #########################################################
+
+Show # Breach - Splinter
+    Class "Currency"
+    BaseType "Splinter of"
+    SetBorderColor 220 14 222 # Breach
+    SetFontSize 36
+
+Show # Breach - Blessing
+    Class "Currency"
+    BaseType "Blessing of"
+    SetBorderColor 220 14 222 # Breach
+    SetFontSize 45
+    PlayAlertSound 2 200
+
+Show
+    Class "Misc Map Items"
+    BaseType "Breachstone"
+    SetBorderColor 220 14 222 # Breach
+    SetFontSize 45
+
 # Section: ### Gems ###########################################################
 
-Show # Gems - Quality
+Show # Gems - Quality - High Quality
+    Quality = 20
+    Class "Gem"
+    SetBackgroundColor 0 0 0 # Gems - Quality - High Quality
+    SetBorderColor 30 150 180 # Gems - Quality - High Quality
+    SetFontSize 42
+    PlayAlertSound 2 200
+
+Show # Gems - Quality - Mid Quality
+    Quality > 10
+    Class "Gem"
+    SetBorderColor 30 150 180 # Gems - Quality - Mid Quality
+    SetFontSize 36
+
+Show # Gems - Quality - Low Quality
     Quality > 0
     Class "Gem"
-    SetBorderColor 27 162 155 # Gems - Valuable
-    SetFontSize 36
+    SetBorderColor 30 150 180 # Gems - Quality - Low Quality
+    SetFontSize 32
 
-Show # Gems - Valuable
+Show # Gems - Tier 1
     Class "Gem"
-    BaseType "Portal" "Empower" "Enhance" "Enlighten"
-    SetBorderColor 27 162 155 # Gems - Valuable
-    SetFontSize 36
+    BaseType "Portal" "Empower" "Enlighten" "Vaal Haste" "Vaal Discipline" "Item Quantity" "Vaal Breach"
+    SetBorderColor 30 150 180 # Gems - Tier 1
+    SetFontSize 42
+    PlayAlertSound 2 150
 
-Show # Gems - Vaal
+Show # Gems - Tier 2
     Class "Gem"
-    BaseType "Vaal"
-    SetBorderColor 150 0 2 # Gems - Vaal
-    SetFontSize 34
+    BaseType "Enhance" "Detonate Mines" "Added Chaos Damage" "Vaal"
+    SetBorderColor 30 150 180 # Gems - Tier 2
+    SetFontSize 38
 
 Show # Gems - Support
     Class "Support Skill Gems"
@@ -203,53 +284,67 @@ Show # Gems - Support
 
 Show # Gems - Active
     Class "Active Skill Gems"
-    SetFontSize 28
+    SetFontSize 30
 
 Show # Gems - Active
     Class "Gems"
-    SetFontSize 28
+    SetFontSize 26
 
-# Section: ### Uniques ########################################################
+# Section: ### Divination Cards ###############################################
 
-Show # Uniques - Extremely Valuable Uniques
-    BaseType "Occultist's Vestment" "Glorious Plate" "Prophecy Wand" "Desert Brigandine" "Sorcerer Boots" "Golden Bracers" "Golden Obi" "Legion Gloves" "Fishing Rod" "Vaal Axe" "Golden Caligae" "Golden Wreath" "Sapphire Flask" "Citrine Amulet" "Jasper Chopper" "Crusader Gloves" "Despot Axe" "Golden Hoop" "Jet Amulet" "Golden Flame"
-    Rarity = Unique
-    SetBorderColor 175 96 37 # Unique
+Show # Divination Cards - Exceptions
+    Class "Divination Card"
+    BaseType "The Wolf's Shadow"
+
+Show # Divination Cards - Tier 1
+    Class "Divination"
+    BaseType "Abandoned Wealth" "Bowyer's Dream" "House of Mirrors" "Hunter's Reward" "Last Hope" "Mawr Blaidd" "Polymath" "Spark and the Flame" "The Artist" "The Celestial Justicar" "The Doctor" "The Dragon's Heart" "The Ethereal" "The Fiend" "The Immortal" "The Last One Standing" "The Offering" "The Polymath" "The Queen" "The Saint's Treasure" "The Sephirot" "The Spark and the Flame" "The Thaumaturgist" "The Valkyrie" "The Vast" "Wealth and Power"
+    SetBorderColor 175 96 37 # Divination Card - Tier 1
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show # Divination Cards - Tier 2
+    Class "Divination"
+    BaseType "Chaotic Disposition" "Lucky Deck" "Pride Before the Fall" "Saint's Treasure" "The Brittle Emperor" "The Cartographer" "The Cursed King" "The Dapper Prodigy" "The Enlightened" "The Fletcher" "The Hoarder" "The Hunger" "The King's Heart" "The Standoff" "The Union" "The Void" "Time-Lost Relic"
+    SetBorderColor 175 96 37 # Divination Card - Tier 2
+    SetFontSize 42
+    PlayAlertSound 2 200
+
+Show # Divination Cards - Tier 3
+    Class "Divination Card"
+    BaseType "Emperor of Purity" "Heterochromia" "Humility" "Jack in the Box" "Merciless Armament" "Scholar of the Seas" "Standoff" "The Aesthete" "The Body" "The Chains that Bind" "The Dark Mage" "The Formless Sea" "The Inventor" "The Porcupine" "The Risk" "The Road to Power" "The Stormcaller" "The Trial" "The Valley of Steel Boxes" "The Warlord" "The Watcher" "The Wind" "The Wolf" "The Wolven King's Bite" "The Wretched" "Valley of Steel Boxes" "Vinia's Token" "Wolven King's Bite" "Wretched"
+    SetBorderColor 175 96 37 # Divination Card - Tier 3
     SetFontSize 40
-    PlayAlertSound 5 200
 
-Show # Uniques - Very Valuable Uniques
-    BaseType "Citrine Amulet" "Ancient Greaves" "Champion Kite Shield" "Penetrating Arrow Quiver" "Sanctified Life Flask" "Sanctified Mana Flask" "Serpentscale Boots" "Siege Axe" "Slaughter Knife" "Spine Bow" "Steelhead" "Trapper Boots"
-    Rarity = Unique
-    SetBorderColor 175 96 37 # Unique
-    SetFontSize 38
-    PlayAlertSound 5 150
+Show # Divination Cards - Tier 5
+    Class "Divination Card"
+    BaseType "Carrion Crow" "Cartographer's Delight" "Dying Anguish" "Hermit" "King's Blade" "Metalsmith's Gift" "Other Cheek" "Prosperity" "The Lunaris Priestess" "The Oath" "The Rabid Rhoa" "The Surgeon" "Thunderous Skies"
+    SetFontSize 32
 
-Show # Uniques - CatchAll
-    Rarity = Unique
-    SetBorderColor 175 96 37 # Unique
+Show # Divination Cards - Tier 4
+    Class "Divination Card"
     SetFontSize 36
-    PlayAlertSound 5 150
 
 # Section: ### Maps ###########################################################
 
-Show
-    Class "Leaguestone"
-    SetBorderColor 229 160 12 # Legacy
-    SetFontSize 36
+Show # Maps - Unique - Tier 1
+    Class "Maps"
+    BaseType "Chateau Map" "Museum Map" "Courtyard Map"
+    Rarity = Unique
+    SetBorderColor 0 0 0 # Unique - Tier 1
+    SetFontSize 45
+    PlayAlertSound 7 200
 
-Show
-    Class "Misc Map Items"
-    BaseType "Ancient Reliquary Key"
-    SetBorderColor 229 160 12 # Legacy
-    SetFontSize 40
-    PlayAlertSound 1 200
+Show # Maps - Unique - Others
+    Class "Maps"
+    Rarity = Unique
+    SetBorderColor 175 96 37 # Unique
+    SetFontSize 42
+    PlayAlertSound 5 150
 
-Show
-    Class "Misc Map Items"
-    BaseType "Breachstone"
-    SetBorderColor 220 14 222 # Breach
-    SetFontSize 36
+Show # Maps - Offering to the Goddess
+    BaseType "Offering to the Goddess"
+    SetFontSize 42
 
 Show # Maps - Fragments - Mortal
     Class "Map Fragments"
@@ -263,38 +358,281 @@ Show # Maps - Fragments - Sacrifice
     Class "Map Fragments"
     BaseType "Sacrifice at Dusk" "Sacrifice at Midnight" "Sacrifice at Dawn" "Sacrifice at Noon"
     SetBorderColor 150 0 0 # Maps - Sacrifice Fragments
-    SetFontSize 36
+    SetFontSize 40
 
 Show # Map - Fragments - Prophecy Keys
     Class "Map Fragments"
     BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
     SetBorderColor 162 0 255 # Prophecy
-    SetFontSize 36
+    SetFontSize 40
 
 Show # Map - Fragments - Shaper
     Class "Map Fragments"
     BaseType "Fragment of the Minotaur" "Fragment of the Phoenix" "Fragment of the Chimera" "Fragment of the Hydra"
+    SetBackgroundColor 0 0 0 # Maps - Shaper Fragments
     SetBorderColor 255 40 0 # Maps - Shaper Fragments
-    SetFontSize 36
+    SetFontSize 45
     PlayAlertSound 6 200
 
-Show # Maps - High tier
-    DropLevel >= 78
-    Class "Map"
-    SetBorderColor 255 40 0 # Maps - High-Tier
-    SetFontSize 40
-    PlayAlertSound 6 150
+Show # Maps - Tier 16
+    DropLevel >= 83
+    Class "Maps"
+    SetBackgroundColor 0 0 0 # Maps - High Tier
+    SetBorderColor 255 40 0 # Maps - High Tier
+    SetFontSize 45
+    PlayAlertSound 6 200
 
-Show # Maps - Mid tier
+Show # Maps - Tier 15
+    DropLevel >= 82
+    Class "Maps"
+    SetBackgroundColor 0 0 0 # Maps - High Tier
+    SetBorderColor 255 40 0 # Maps - High Tier
+    SetFontSize 45
+    PlayAlertSound 6 200
+
+Show # Maps - Tier 14
+    DropLevel >= 81
+    Class "Maps"
+    SetBackgroundColor 0 0 0 # Maps - High Tier
+    SetBorderColor 255 40 0 # Maps - High Tier
+    SetFontSize 45
+    PlayAlertSound 6 200
+
+Show # Maps - Tier 13
+    DropLevel >= 80
+    Class "Maps"
+    SetBackgroundColor 0 0 0 # Maps - High Tier
+    SetBorderColor 255 40 0 # Maps - High Tier
+    SetFontSize 44
+    PlayAlertSound 6 200
+
+Show # Maps - Tier 12
+    DropLevel >= 79
+    Class "Maps"
+    SetBackgroundColor 0 0 0 # Maps - High Tier
+    SetBorderColor 255 40 0 # Maps - High Tier
+    SetFontSize 43
+    PlayAlertSound 2 150
+
+Show # Maps - Tier 11
+    DropLevel >= 78
+    Class "Maps"
+    SetBackgroundColor 0 0 0 # Maps - High Tier
+    SetBorderColor 255 40 0 # Maps - High Tier
+    SetFontSize 42
+    PlayAlertSound 2 150
+
+Show # Maps - Tier 10
+    DropLevel >= 77
+    Class "Maps"
+    SetBackgroundColor 0 0 0 # Maps - Mid Tier
+    SetFontSize 40
+
+Show # Maps - Tier 9 - OnLevel
+    DropLevel >= 76
+    Class "Maps"
+    ItemLevel < 83
+    SetBackgroundColor 0 0 0 # Maps - Mid Tier
+    SetFontSize 40
+
+Show # Maps - Tier 9 - Shaped
+    DropLevel >= 76
+    Class "Maps"
+    BaseType "Shaped"
+    SetBackgroundColor 0 0 0 # Maps - Mid Tier
+    SetFontSize 40
+
+Show # Maps - Tier 9
+    DropLevel >= 76
+    Class "Maps"
+    SetTextColor 150 150 150 # Maps - Outleveled
+    SetBackgroundColor 0 0 0 185 # Maps - Outleveled
+    SetBorderColor 150 150 150 # Maps - Outleveled
+    SetFontSize 36
+
+Show # Maps - Tier 8 - OnLevel
+    DropLevel >= 75
+    Class "Maps"
+    ItemLevel < 82
+    SetBackgroundColor 0 0 0 # Maps - Mid Tier
+    SetFontSize 40
+
+Show # Maps - Tier 8 - Shaped
+    DropLevel >= 75
+    Class "Maps"
+    BaseType "Shaped"
+    SetBackgroundColor 0 0 0 # Maps - Mid Tier
+    SetFontSize 40
+
+Show # Maps - Tier 8 - Shaped
+    DropLevel >= 75
+    Class "Maps"
+    SetTextColor 150 150 150 # Maps - Outleveled
+    SetBackgroundColor 0 0 0 185 # Maps - Outleveled
+    SetBorderColor 150 150 150 # Maps - Outleveled
+    SetFontSize 36
+
+Show # Maps - Tier 7 - OnLevel
+    DropLevel >= 74
+    Class "Maps"
+    ItemLevel < 81
+    SetBackgroundColor 0 0 0 # Maps - Mid Tier
+    SetFontSize 40
+
+Show # Maps - Tier 7 - Shaped
+    DropLevel >= 74
+    Class "Maps"
+    BaseType "Shaped"
+    SetBackgroundColor 0 0 0 # Maps - Mid Tier
+    SetFontSize 40
+
+Show # Maps - Tier 7
+    DropLevel >= 74
+    Class "Maps"
+    SetTextColor 150 150 150 # Maps - Outleveled
+    SetBackgroundColor 0 0 0 185 # Maps - Outleveled
+    SetBorderColor 150 150 150 # Maps - Outleveled
+    SetFontSize 36
+
+Show # Maps - Tier 6 - OnLevel
     DropLevel >= 73
-    Class "Map"
-    SetBorderColor 255 215 0 # Maps - Mid-Tier
+    Class "Maps"
+    ItemLevel < 80
+    SetBackgroundColor 0 0 0 # Maps - Mid Tier
+    SetFontSize 40
+
+Show # Maps - Tier 6 - Shaped
+    DropLevel >= 73
+    Class "Maps"
+    BaseType "Shaped"
+    SetBackgroundColor 0 0 0 # Maps - Mid Tier
+    SetFontSize 40
+
+Show # Maps - Tier 6
+    DropLevel >= 73
+    Class "Maps"
+    SetTextColor 150 150 150 # Maps - Outleveled
+    SetBackgroundColor 0 0 0 185 # Maps - Outleveled
+    SetBorderColor 150 150 150 # Maps - Outleveled
+    SetFontSize 36
+
+Show # Maps - Tier 5 - OnLevel
+    DropLevel >= 72
+    Class "Maps"
+    ItemLevel < 79
+    SetBackgroundColor 0 0 0 185 # Maps - Low Tier
     SetFontSize 38
 
-Show # Maps - Low tier
-    Class "Map"
-    SetBorderColor 0 128 0 # Maps - Low-Tier
+Show # Maps - Tier
+    DropLevel >= 72
+    Class "Maps"
+    SetTextColor 150 150 150 # Maps - Outleveled
+    SetBackgroundColor 0 0 0 185 # Maps - Outleveled
+    SetBorderColor 150 150 150 # Maps - Outleveled
     SetFontSize 36
+
+Show # Maps - Tier 4 - OnLevel
+    DropLevel >= 71
+    Class "Maps"
+    ItemLevel < 78
+    SetBackgroundColor 0 0 0 185 # Maps - Low Tier
+    SetFontSize 38
+
+Show # Maps - Tier 4
+    DropLevel >= 71
+    Class "Maps"
+    SetTextColor 150 150 150 # Maps - Outleveled
+    SetBackgroundColor 0 0 0 185 # Maps - Outleveled
+    SetBorderColor 150 150 150 # Maps - Outleveled
+    SetFontSize 36
+
+Show # Maps - Tier 3 - OnLevel
+    DropLevel >= 70
+    Class "Maps"
+    ItemLevel < 77
+    SetBackgroundColor 0 0 0 185 # Maps - Low Tier
+    SetFontSize 38
+
+Show # Maps - Tier 3
+    DropLevel >= 70
+    Class "Maps"
+    SetTextColor 150 150 150 # Maps - Outleveled
+    SetBackgroundColor 0 0 0 185 # Maps - Outleveled
+    SetBorderColor 150 150 150 # Maps - Outleveled
+    SetFontSize 36
+
+Show # Maps - Tier 2 - OnLevel
+    DropLevel = 69
+    Class "Maps"
+    ItemLevel < 76
+    SetBackgroundColor 0 0 0 185 # Maps - Low Tier
+    SetFontSize 38
+
+Show # Maps - Tier 2
+    DropLevel = 69
+    Class "Maps"
+    SetTextColor 150 150 150 # Maps - Outleveled
+    SetBackgroundColor 0 0 0 185 # Maps - Outleveled
+    SetBorderColor 150 150 150 # Maps - Outleveled
+    SetFontSize 36
+
+Show # Maps - Tier 1 - OnLevel
+    DropLevel < 69
+    Class "Maps"
+    ItemLevel < 75
+    SetBackgroundColor 0 0 0 185 # Maps - Low Tier
+    SetFontSize 38
+
+Show # Maps - Tier 1
+    DropLevel < 69
+    Class "Maps"
+    SetTextColor 150 150 150 # Maps - Outleveled
+    SetBackgroundColor 0 0 0 185 # Maps - Outleveled
+    SetBorderColor 150 150 150 # Maps - Outleveled
+    SetFontSize 36
+
+Show # Safetyline
+    Class "Maps"
+
+# Section: ### Uniques ########################################################
+
+Show # Uniques - Tier 1
+    BaseType "Clutching Talisman" "Crusader Boots" "Cutlass" "Ezomyte Tower Shield" "Glorious Plate" "Greatwolf Talisman" "Hubris Circlet" "Jewelled Foil" "Legion Gloves" "Occultist's Vestment" "Prophecy Wand" "Rawhide Boots" "Ritual Sceptre" "Rotfeather Talisman" "Royal Axe" "Ruby Flask" "Sapphire Flask" "Silver Flask" "Sorcerer Boots" "Topaz Flask" "Void Axe" "Wereclaw Talisman" "Wyrmscale Doublet"
+    Rarity = Unique
+    SetTextColor 0 0 0 # Unique - Tier 1
+    SetBackgroundColor 175 96 37 # Unique - Tier 1
+    SetBorderColor 0 0 0 # Unique - Tier 1
+    SetFontSize 45
+    PlayAlertSound 7 200
+
+Show # Uniques - Tier 2
+    BaseType "Arcanist Gloves" "Assassin's Garb" "Bismuth Flask" "Carnal Sceptre" "Clasped Mitts" "Crystal Belt" "Deicide Mask" "Gladiator Plate" "Gold Ring" "Highborn Staff" "Imperial Maul" "Imperial Staff" "Jingling Spirit Shield" "Sacrificial Garb" "Sacrificial Garb" "Siege Axe" "Stibnite Flask" "Trapper Boots"
+    Rarity = Unique
+    SetTextColor 0 0 0 # Unique - Tier 2
+    SetBackgroundColor 175 96 37 # Unique - Tier 2
+    SetBorderColor 0 0 0 # Unique - Tier 2
+    SetFontSize 42
+    PlayAlertSound 5 150
+
+Show # Uniques - Multi - Base
+    BaseType "Ebony Tower Shield" "Goathide Boots" "Leather Belt" "Onyx Amulet" "Two-Stone Ring"
+    Rarity = Unique
+    SetBorderColor 175 96 37 # Unique - Multi-base
+    SetFontSize 38
+    PlayAlertSound 5 150
+
+Show # Uniques - Fated
+    BaseType "Coral Amulet" "Coral Ring" "Crude Bow" "Death Bow" "Fire Arrow Quiver" "Gilded Sallet" "Goathide Gloves" "Iron Hat" "Iron Ring" "Iron Staff" "Jade Amulet" "Jade Hatchet" "Long Bow" "Ornate Sword" "Painted Buckler" "Plank Kite Shield" "Plate Vest" "Royal Bow" "Scholar Boots" "Serrated Arrow Quiver" "Sledgehammer" "Spiraled Wand" "Vine Circlet" "War Buckler" "Woodsplitter"
+    Rarity = Unique
+    SetBorderColor 100 37 255 200 # Unique - Fated
+    SetFontSize 40
+    PlayAlertSound 5 150
+
+Show # Uniques - CatchAll
+    Rarity = Unique
+    SetBorderColor 175 96 37 # Unique
+    SetFontSize 36
+    PlayAlertSound 5 150
 
 # Section: ### Jewels #########################################################
 
@@ -309,110 +647,112 @@ Show # Jewels - Magic
     SetBorderColor 136 136 255 # Jewels - Magic
     SetFontSize 34
 
-# Section: ### Divination Cards ###############################################
+# Section: ### Atlas of World Bases ###########################################
 
-#Disabled Block Start
-#Show # Divination Cards - Very Valuable
-#    Class "Divination Card"
-#    BaseType "Mawr Blaidd"
-#    SetBorderColor 175 96 37 # Divination Card - Unknown Value
-#    SetFontSize 38
-#Disabled Block End
+Show # Atlas Bases - Very valuable - 84+
+    BaseType "Steel Ring" "Opal Ring" "Crystal Belt"
+    Rarity <= Rare
+    ItemLevel >= 84
+    SetTextColor 255 190 0 # Rare - Best Rare
+    SetBackgroundColor 0 0 0 # Rare - Best Rare
+    SetBorderColor 255 125 0 # Atlas Bases
+    SetFontSize 45
+    PlayAlertSound 2 200
 
-Show # Divination Cards - Very Valuable
-    Class "Divination Card"
-    BaseType "The Brittle Emperor" "The Doctor" "The Hunger" "The Wind" "The Avenger" "The Celestial Justicar" "The Fiend" "The King's Heart" "The Pact" "The Watcher" "The Queen" "The Last One Standing" "The Artist" "Wealth and Power" "House of Mirrors" "The Dragon's Heart" "Pride Before the Fall" "The Vast" "Bowyer's Dream" "Hunter's Reward" "The Thaumaturgist" "The Warlord" "The Offering" "Lost Worlds" "The Ethereal" "The Cursed King" "Lysah's Respite" "Emperor of Purity" "The Void" "Mawr Blaidd"
-    SetBorderColor 175 96 37 # Divination Card - Very Valuable
-    SetFontSize 36
+Show # Atlas Bases - Very valuable
+    BaseType "Steel Ring" "Opal Ring" "Crystal Belt"
+    Rarity <= Rare
+    SetTextColor 255 190 0 # Rare - Best Rare
+    SetBorderColor 255 125 0 # Atlas Bases
+    SetFontSize 42
+    PlayAlertSound 2 200
 
-Show # Divination Cards - Valuable
-    Class "Divination Card"
-    BaseType "The Hoarder" "The Drunken Aristocrat" "The Pack Leader" "The Sun" "The Gladiator" "Abandoned Wealth" "The Incantation" "Time-Lost Relic" "The Dark Mage" "The Road to Power" "The Chains that Bind" "The Betrayal" "The Trial" "Last Hope" "The Enlightened" "The Fletcher" "The Surveyor" "The Dapper Prodigy" "Tranquillity" "Earth Drinker" "The Harvester" "The Stormcaller" "The Jester" "The Web" "The Scavenger" "Atziri's Arsenal"
-    SetBorderColor 175 96 37 # Divination Card - Valuable
-    SetFontSize 34
+Show # Atlas Bases - ilvl 84+
+    BaseType "Blue Pearl Amulet" "Marble Amulet" "Vanguard Belt" "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    Rarity <= Rare
+    ItemLevel >= 84
+    SetTextColor 255 190 0 # Rare - Best Rare
+    SetBackgroundColor 0 0 0 # Rare - Best Rare
+    SetBorderColor 255 125 0 # Atlas Bases
+    SetFontSize 42
 
-Show # Divination Cards - CatchAll
-    Class "Divination Card"
-    SetFontSize 34
+Show # Atlas Bases - ilvl 75+
+    BaseType "Blue Pearl Amulet" "Marble Amulet" "Vanguard Belt" "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    Rarity = Rare
+    ItemLevel >= 75
+    SetTextColor 255 190 0 # Rare - Best Rare
+    SetBorderColor 255 125 0 # Atlas Bases
+    SetFontSize 42
+
+Show # Atlas Bases - Low ilevel
+    BaseType "Blue Pearl Amulet" "Marble Amulet" "Vanguard Belt" "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    Rarity <= Rare
+    SetBorderColor 255 125 0 # Atlas Bases
+    SetFontSize 38
 
 # Section: ### Very High Itemlevel Rares ######################################
-
-Show # ItemLevel 84+ Rares - Atlas of World Armour
-    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
-    Rarity = Rare
-    ItemLevel >= 84
-    SetBackgroundColor 60 60 0 # Rare - Best Rare
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 36
-
-Show # ItemLevel 77+ Rares - Atlas of World Armour
-    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
-    Rarity = Rare
-    ItemLevel >= 77
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 34
 
 Show # ItemLevel 84+ Rares - T1 Armour
     BaseType "Glorious Plate" "Assassin's Garb" "Vaal Regalia" "Carnal Armour" "Saintly Chainmail" "Triumphant Lamellar" "Titan Greaves" "Slink Boots" "Sorcerer Boots" "Murder Boots" "Crusader Boots" "Dragonscale Boots" "Titan Gauntlets" "Slink Gloves" "Sorcerer Gloves" "Murder Mitts" "Crusader Gloves" "Dragonscale Gauntlets" "Eternal Burgonet" "Lion Pelt" "Hubris Circlet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Pinnacle Tower Shield" "Imperial Buckler" "Titanium Spirit Shield" "Supreme Spiked Shield" "Archon Kite Shield" "Elegant Round Shield"
     Rarity = Rare
     ItemLevel >= 84
-    SetBackgroundColor 60 60 0 # Rare - Best Rare
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 36
+    SetTextColor 255 190 0 # Rare - Best Rare
+    SetBorderColor 255 125 0 # Rare - Best Rare
+    SetFontSize 40
 
 Show # ItemLevel 77+ Rares - T1 Armour
     BaseType "Glorious Plate" "Assassin's Garb" "Vaal Regalia" "Carnal Armour" "Saintly Chainmail" "Triumphant Lamellar" "Titan Greaves" "Slink Boots" "Sorcerer Boots" "Murder Boots" "Crusader Boots" "Dragonscale Boots" "Titan Gauntlets" "Slink Gloves" "Sorcerer Gloves" "Murder Mitts" "Crusader Gloves" "Dragonscale Gauntlets" "Eternal Burgonet" "Lion Pelt" "Hubris Circlet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Pinnacle Tower Shield" "Imperial Buckler" "Titanium Spirit Shield" "Supreme Spiked Shield" "Archon Kite Shield" "Elegant Round Shield"
     Rarity = Rare
     ItemLevel >= 77
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 34
+    SetBorderColor 255 125 0 # Rare - Best Rare
+    SetFontSize 36
 
 Show # ItemLevel 83+ Rares - T1 Weapon
     Class "Claws" "Daggers" "Wands" "One Hand Swords" "Thrusting One Hand Swords" "One Hand Axes" "One Hand Maces" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Sceptres"
     BaseType "Maraketh Bow" "Gemini Claw" "Sai" "Runic Hatchet" "Behemoth Mace" "Tiger Hook" "Sambar Sceptre" "Eclipse Staff" "Dragoon Sword" "Fleshripper" "Coronal Maul" "Exquisite Blade" "Profane Wand"
     Rarity = Rare
     ItemLevel >= 83
-    SetBackgroundColor 60 60 0 # Rare - Best Rare
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 36
+    SetTextColor 255 190 0 # Rare - Best Rare
+    SetBorderColor 255 125 0 # Rare - Best Rare
+    SetFontSize 40
 
 Show # ItemLevel 83+ Rares - Craft Bases - Weapon
     BaseType "Imbued Wand" "Ambusher" "Reaver Sword" "Thicket Bow" "Great White Claw" "Corsair Sword" "Harbinger Bow" "Vaal Axe" "Platinum Kris" "Opal Wand" "Imperial Claw" "Terror Claw" "Jewelled Foil" "Vaal Rapier" "Piledriver"
     Rarity = Rare
     ItemLevel >= 83
-    SetBackgroundColor 60 60 0 # Rare - Best Rare
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 36
+    SetTextColor 255 190 0 # Rare - Best Rare
+    SetBorderColor 255 125 0 # Rare - Best Rare
+    SetFontSize 40
 
 Show # ItemLevel 83+ Rares - Craft Bases - Armour
     BaseType "Astral Plate" "Royal Burgonet" "Fossilised Spirit Shield"
     Rarity = Rare
     ItemLevel >= 83
-    SetBackgroundColor 60 60 0 # Rare - Best Rare
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 36
+    SetTextColor 255 190 0 # Rare - Best Rare
+    SetBorderColor 255 125 0 # Rare - Best Rare
+    SetFontSize 40
 
 Show # ItemLevel 77+ Rares - Craft Bases - Armour
     BaseType "Astral Plate" "Royal Burgonet" "Fossilised Spirit Shield"
     Rarity = Rare
     ItemLevel >= 77
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 34
+    SetBorderColor 255 125 0 # Rare - Best Rare
+    SetFontSize 36
 
 Show # ItemLevel 83+ Rares - Jewelery
     Class "Amulets" "Rings" "Belts"
     Rarity = Rare
     ItemLevel >= 83
-    SetBackgroundColor 60 60 0 # Rare - Best Rare
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 36
+    SetTextColor 255 190 0 # Rare - Best Rare
+    SetBorderColor 255 125 0 # Rare - Best Rare
+    SetFontSize 40
 
 Show # ItemLevel 77+ Rares - Jewelery
     Class "Amulets" "Rings" "Belts"
     Rarity = Rare
     ItemLevel >= 77
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 34
+    SetBorderColor 255 125 0 # Rare - Best Rare
+    SetFontSize 36
 
 # Section: ### Chromatic Orb Recipe - Normal & Magic ##########################
 
@@ -423,7 +763,7 @@ Show # Misc - Chromatic Orb Recipe - 4x1
     Width = 1
     Rarity <= Magic
     SetBorderColor 27 162 155 # Chromatic Orb Recipe
-    SetFontSize 28
+    SetFontSize 32
 
 Show # Misc - Chromatic Orb Recipe - 3x1
     SocketGroup "RGB"
@@ -431,7 +771,7 @@ Show # Misc - Chromatic Orb Recipe - 3x1
     Width = 1
     Rarity <= Magic
     SetBorderColor 27 162 155 # Chromatic Orb Recipe
-    SetFontSize 34
+    SetFontSize 36
 
 Show # Misc - Chromatic Orb Recipe - 2x2
     SocketGroup "RGB"
@@ -439,7 +779,7 @@ Show # Misc - Chromatic Orb Recipe - 2x2
     Width = 2
     Rarity <= Magic
     SetBorderColor 27 162 155 # Chromatic Orb Recipe
-    SetFontSize 34
+    SetFontSize 36
 
 Show # Misc - Chromatic Orb Recipe - 3x2
     SocketGroup "RGB"
@@ -447,7 +787,7 @@ Show # Misc - Chromatic Orb Recipe - 3x2
     Width = 2
     Rarity <= Magic
     SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
-    SetFontSize 28
+    SetFontSize 32
 
 Show # Misc - Chromatic Orb Recipe - Large
     SocketGroup "RGB"
@@ -456,216 +796,26 @@ Show # Misc - Chromatic Orb Recipe - Large
     SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
     SetFontSize 24
 
-#Disabled Block Start
-#Show # Misc - Chromatic Orb Recipe - Large
-#    SocketGroup "RGB"
-#    Rarity <= Magic
-#    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
-#    SetFontSize 24
-#Disabled Block End
-
-# Section: ### Chance #########################################################
-
-#Disabled Block Start
-#Show # Chance - Spine Bow
-#    BaseType "Spine Bow"
-#    Rarity = Normal
-#    SetBorderColor 54 100 146 # Chance
-#    SetFontSize 30
-#Disabled Block End
-
-#Disabled Block Start
-#Show # Chance - Judgement Staff
-#    BaseType "Judgement Staff"
-#    Rarity = Normal
-#    SetBorderColor 54 100 146 # Chance
-#    SetFontSize 30
-#Disabled Block End
-
-#Disabled Block Start
-#Show # Chance - Gavel
-#    BaseType "Gavel"
-#    Rarity = Normal
-#    SetBorderColor 54 100 146 # Chance
-#    SetFontSize 30
-#Disabled Block End
-
-#Disabled Block Start
-#Show # Chance - Imperial Bow
-#    BaseType "Imperial Bow"
-#    Rarity = Normal
-#    SetBorderColor 54 100 146 # Chance
-#    SetFontSize 30
-#Disabled Block End
-
-#Disabled Block Start
-#Show # Chance - Penetrating Arrow Quiver
-#    BaseType "Penetrating Arrow Quiver"
-#    Rarity = Normal
-#    SetBorderColor 54 100 146 # Chance
-#    SetFontSize 30
-#Disabled Block End
-
-#Disabled Block Start
-#Show # Chance - Occultist's Vestment
-#    BaseType "Occultist's Vestment"
-#    Rarity = Normal
-#    SetTextColor 200 200 200 # Chance
-#    SetBorderColor 54 100 146 # Chance
-#    SetFontSize 30
-#Disabled Block End
-
-#Disabled Block Start
-#Show # Chance - Prophecy Wand
-#    BaseType "Prophecy Wand"
-#    Rarity = Normal
-#    SetBorderColor 54 100 146 # Chance
-#    SetFontSize 30
-#Disabled Block End
-
-#Disabled Block Start
-#Show # Chance - Desert Brigandine
-#    BaseType "Desert Brigandine"
-#    Rarity = Normal
-#    SetBorderColor 54 100 146 # Chance
-#    SetFontSize 30
-#Disabled Block End
-
-#Disabled Block Start
-#Show # Chance - Sorcerer Boots
-#    BaseType "Sorcerer Boots"
-#    Rarity = Normal
-#    SetBorderColor 54 100 146 # Chance
-#    SetFontSize 30
-#Disabled Block End
-
-# Section: ### Amulets, Rings, Belts ##########################################
-
-Show
-    BaseType "Talisman"
-    SetBorderColor 109 200 130 # Talisman
-    SetFontSize 36
-
-Hide # Amulets, Rings, Belts - Normal/Magic - Scarcely used amulet bases
-    BaseType "Coral Amulet" "Paua Amulet"
-    Rarity <= Magic
-    ItemLevel >= 45
-    SetBackgroundColor 0 0 0 127 # Dim background
-    SetFontSize 28
-
-Hide # Amulets, Rings, Belts - Normal/Magic - Scarcely used ring bases
-    BaseType "Iron Ring" "Paua Ring"
-    Rarity <= Magic
-    ItemLevel >= 45
-    SetBackgroundColor 0 0 0 127 # Dim background
-    SetFontSize 28
-
-Hide # Amulets, Rings, Belts - Normal/Magic - Scarcely used belt bases
-    BaseType "Cloth Belt" "Studded Belt" "Heavy Belt"
-    Rarity <= Magic
-    ItemLevel >= 45
-    SetBackgroundColor 0 0 0 190 # Dim background
-    SetFontSize 28
-
-Show # Amulets, Rings, Belts - Rare - Scarcely used amulet bases
-    BaseType "Cloth Belt" "Studded Belt" "Heavy Belt"
-    Rarity = Rare
-    SetFontSize 34
-
-Show # Amulets, Rings, Belts - Rare - Scarcely used ring bases
-    BaseType "Iron Ring" "Paua Ring"
-    Rarity = Rare
-    SetFontSize 34
-
-Show # Amulets, Rings, Belts - Rare - Scarcely used belt bases
-    BaseType "Coral Amulet" "Paua Amulet"
-    Rarity = Rare
-    SetFontSize 34
-
-Show # Amulets, Rings, Belts - Rare
-    Class "Rings" "Amulets" "Belts"
-    Rarity = Rare
-    SetBorderColor 255 255 119 # Rare - Best Rare
-    SetFontSize 36
-
-Show # Amulets, Rings, Belts - 84+ - Normal
-    Class "Rings" "Amulets" "Belts"
-    Rarity = Normal
-    ItemLevel >= 84
-    SetTextColor 240 240 240 # Amulets, Rings, Belts - Normal 84+
-    SetBorderColor 240 240 240 # Amulets, Rings, Belts - Normal 84+
-    SetFontSize 30
-
-Show # Amulets, Rings, Belts - 84+ - Magic
-    Class "Rings" "Amulets" "Belts"
-    Rarity = Magic
-    ItemLevel >= 84
-    SetTextColor 140 190 255 # Amulets, Rings, Belts - Magic 84+
-    SetBorderColor 140 190 255 # Amulets, Rings, Belts - Magic 84+
-    SetFontSize 30
-
-Hide # Amulets, Rings, Belts - 68+ - Normal
-    Class "Rings" "Amulets" "Belts"
-    Rarity = Normal
-    ItemLevel >= 68
-    SetBackgroundColor 0 0 0 190 # Dim background
-    SetFontSize 28
-
-Hide # Amulets, Rings, Belts - 68+ - Magic
-    Class "Rings" "Amulets" "Belts"
-    Rarity = Magic
-    ItemLevel >= 68
-    SetBackgroundColor 0 0 0 127 # Dim background
-    SetFontSize 28
-
-Show # Amulets, Rings, Belts - <68 - Normal
-    Class "Rings" "Amulets" "Belts"
-    Rarity = Normal
-    ItemLevel < 68
-    SetFontSize 28
-
-Show # Amulets, Rings, Belts - <68 - Magic
-    Class "Rings" "Amulets" "Belts"
-    Rarity = Magic
-    ItemLevel < 68
-    SetFontSize 28
-
-Show # Amulets, Rings, Belts - CatchAll
-    Class "Rings" "Amulets" "Belts"
-    Rarity >= Normal
-    SetFontSize 28
-
 # Section: ### Chisel Recipe ##################################################
 
 Show # Chisel Recipe - Normal
     BaseType "Gavel" "Stone Hammer" "Rock Breaker"
     Rarity = Normal
     SetBorderColor 127 127 127 # Chisel Recipe
-    SetFontSize 28
+    SetFontSize 30
 
 Show # Chisel Recipe - Magic
-    Quality >= 12
+    Quality >= 16
     BaseType "Gavel" "Stone Hammer" "Rock Breaker"
     Rarity = Magic
     SetBorderColor 127 127 127 # Chisel Recipe
-    SetFontSize 28
+    SetFontSize 30
 
 Show # Chisel Recipe - Rare
-    Quality >= 16
+    Quality >= 20
     BaseType "Gavel" "Stone Hammer" "Rock Breaker"
     Rarity = Rare
     SetBorderColor 127 127 127 # Chisel Recipe
-    SetFontSize 28
-
-# Section: ### Warband identified items #######################################
-
-Show # Warbands
-    Identified True
-    Corrupted False
-    Class "Dagger" "Wand" "One Hand" "Bow" "Stave" "Two Hand" "Sceptre" "Claws" "Helm" "Boots" "Gloves"
-    Rarity = Magic
-    SetBackgroundColor 0 0 0 220
-    SetBorderColor 150 0 0 # Special drops
     SetFontSize 30
 
 # Section: ### Flasks #########################################################
@@ -674,17 +824,16 @@ Show # Flasks - Quality - 20%
     Quality = 20
     Class "Flask"
     Rarity = Normal
-    SetBackgroundColor 6 40 38 # Quality Flasks 20%
-    SetBorderColor 27 162 155 # Flask - Quality
+    SetBackgroundColor 0 0 0 # Flask - Quality - 20%
+    SetBorderColor 27 162 155 # Flask - Quality - 20%
+    SetFontSize 36
 
-# Add a border to flasks that are near the current level or have 15%+ quality
 Show # Flasks - Utility
     Class "Utility Flask"
     SetBorderColor 255 0 255 # Flask - Utility
-    SetFontSize 30
 
 Show # Flasks - Quality - 10%
-    Quality >= 10
+    Quality >= 15
     Class "Flask"
     SetBorderColor 27 162 155 # Flask - Quality
 
@@ -772,28 +921,107 @@ Show # Flasks - Mana - Divine+ - (under 70)
     Class "Mana Flask"
     ItemLevel < 70
     SetBorderColor 0 0 255 # Flask - Mana
-    SetFontSize 30
 
 Show # Flasks - Life - Divine+ - (under 70)
     DropLevel > 58
     Class "Life Flask"
     ItemLevel < 70
     SetBorderColor 220 20 60 # Flask - Life
-    SetFontSize 30
 
 Show # Flasks - Mana - Divine+ - (over 70)
     DropLevel > 58
     Class "Mana Flask"
-    SetFontSize 25
+    SetFontSize 26
 
 Show # Flasks - Life - Divine+ - (over 70)
     DropLevel > 58
     Class "Life Flask"
-    SetFontSize 25
+    SetFontSize 26
 
 Hide # Flasks - Other
     Class "Flask"
     SetBackgroundColor 0 0 0 127 # Dim background
+    SetFontSize 28
+
+# Section: ### Amulets, Rings, Belts ##########################################
+
+Show
+    BaseType "Talisman"
+    SetBorderColor 109 200 130 # Talisman
+    SetFontSize 36
+
+Hide # Amulets, Rings, Belts - Normal/Magic - Scarcely used amulet bases
+    BaseType "Coral Amulet" "Paua Amulet"
+    Rarity <= Magic
+    ItemLevel >= 45
+    SetBackgroundColor 0 0 0 127 # Dim background
+    SetFontSize 28
+
+Hide # Amulets, Rings, Belts - Normal/Magic - Scarcely used ring bases
+    BaseType "Iron Ring" "Paua Ring"
+    Rarity <= Magic
+    ItemLevel >= 45
+    SetBackgroundColor 0 0 0 127 # Dim background
+    SetFontSize 28
+
+Hide # Amulets, Rings, Belts - Normal/Magic - Scarcely used belt bases
+    BaseType "Cloth Belt" "Studded Belt" "Heavy Belt"
+    Rarity <= Magic
+    ItemLevel >= 45
+    SetBackgroundColor 0 0 0 190 # Dim background
+    SetFontSize 28
+
+Show # Amulets, Rings, Belts - Rare
+    Class "Rings" "Amulets" "Belts"
+    Rarity = Rare
+    SetBorderColor 255 255 119 # Rare - Highlighted
+    SetFontSize 36
+
+Show # Amulets, Rings, Belts - 84+ - Normal
+    Class "Rings" "Amulets" "Belts"
+    Rarity = Normal
+    ItemLevel >= 84
+    SetTextColor 240 240 240 # Amulets, Rings, Belts - Normal 84+
+    SetBorderColor 240 240 240 # Amulets, Rings, Belts - Normal 84+
+    SetFontSize 30
+
+Show # Amulets, Rings, Belts - 84+ - Magic
+    Class "Rings" "Amulets" "Belts"
+    Rarity = Magic
+    ItemLevel >= 84
+    SetTextColor 140 190 255 # Amulets, Rings, Belts - Magic 84+
+    SetBorderColor 140 190 255 # Amulets, Rings, Belts - Magic 84+
+    SetFontSize 30
+
+Hide # Amulets, Rings, Belts - 68+ - Normal
+    Class "Rings" "Amulets" "Belts"
+    Rarity = Normal
+    ItemLevel >= 68
+    SetBackgroundColor 0 0 0 190 # Dim background
+    SetFontSize 28
+
+Hide # Amulets, Rings, Belts - 68+ - Magic
+    Class "Rings" "Amulets" "Belts"
+    Rarity = Magic
+    ItemLevel >= 68
+    SetBackgroundColor 0 0 0 127 # Dim background
+    SetFontSize 28
+
+Show # Amulets, Rings, Belts - <68 - Normal
+    Class "Rings" "Amulets" "Belts"
+    Rarity = Normal
+    ItemLevel < 68
+    SetFontSize 28
+
+Show # Amulets, Rings, Belts - <68 - Magic
+    Class "Rings" "Amulets" "Belts"
+    Rarity = Magic
+    ItemLevel < 68
+    SetFontSize 28
+
+Show # Amulets, Rings, Belts - CatchAll
+    Class "Rings" "Amulets" "Belts"
+    Rarity >= Normal
     SetFontSize 28
 
 # Section: ### Link Exceptions ################################################
@@ -923,130 +1151,116 @@ Hide # Hide Maelstr�m Staff Exception
 
 # Section: ### Normal & Magic Gear - Endgame ##################################
 
-Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
-    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
-    Rarity = Normal
-    ItemLevel >= 84
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
-    SetFontSize 30
-
-Show # Gear - Endgame (T1 + Craft Bases) - Atlas of Worlds
-    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
-    Rarity = Magic
-    ItemLevel >= 84
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
-    SetFontSize 30
-
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Normal
     BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
     Rarity = Normal
     ItemLevel >= 84
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR - Magic
     BaseType "Glorious Plate" "Astral Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet"
     Rarity = Magic
     ItemLevel >= 84
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Shields - STR - Normal
     BaseType "Pinnacle Tower Shield" "Imperial Buckler" "Supreme Spiked Shield" "Archon Kite Shield" "Elegant Round Shield"
     Rarity = Normal
     ItemLevel >= 84
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Shields - STR - Magic
     BaseType "Pinnacle Tower Shield" "Imperial Buckler" "Supreme Spiked Shield" "Archon Kite Shield" "Elegant Round Shield"
     Rarity = Magic
     ItemLevel >= 84
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Normal
     BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
     Rarity = Normal
     ItemLevel >= 84
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX - Magic
     BaseType "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt"
     Rarity = Magic
     ItemLevel >= 84
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Normal
     BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
     Rarity = Normal
     ItemLevel >= 84
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - INT - Magic
     BaseType "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet"
     Rarity = Magic
     ItemLevel >= 84
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Shields - INT - Normal
     BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
     Rarity = Normal
     ItemLevel >= 84
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Shields - INT - Magic
     BaseType "Titanium Spirit Shield" "Fossilised Spirit Shield"
     Rarity = Magic
     ItemLevel >= 84
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Normal
     BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
     Rarity = Normal
     ItemLevel >= 84
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/INT - Magic
     BaseType "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask"
     Rarity = Magic
     ItemLevel >= 84
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Normal
     BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
     Rarity = Normal
     ItemLevel >= 84
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - STR/INT - Magic
     BaseType "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown"
     Rarity = Magic
     ItemLevel >= 84
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Normal
     BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
     Rarity = Normal
     ItemLevel >= 84
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Armour - DEX/STR - Magic
     BaseType "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet"
     Rarity = Magic
     ItemLevel >= 84
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # One Hand Axe ###
@@ -1054,14 +1268,14 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Normal
     BaseType "Runic Hatchet"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Axes - Magic
     BaseType "Runic Hatchet"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # One Hand Sword ###
@@ -1069,14 +1283,14 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Normal
     BaseType "Tiger Hook" "Corsair Sword" "Eternal Sword" "Midnight Blade" "Jewelled Foil" "Dragoon Sword" "Vaal Rapier"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Swords - Magic
     BaseType "Tiger Hook" "Corsair Sword" "Eternal Sword" "Midnight Blade" "Jewelled Foil" "Dragoon Sword" "Vaal Rapier"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # Two Hand Mace ###
@@ -1084,14 +1298,14 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Normal - 83
     BaseType "Coronal Maul" "Piledriver"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Maces - Magic - 83+
     BaseType "Coronal Maul" "Piledriver"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # Bows ###
@@ -1099,14 +1313,14 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Normal - 83+
     BaseType "Maraketh Bow" "Thicket Bow" "Harbinger Bow"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Bows - Magic - 83+
     BaseType "Maraketh Bow" "Thicket Bow" "Harbinger Bow"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # Daggers ###
@@ -1115,7 +1329,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Normal - 83+
     BaseType "Sai" "Ambusher" "Platinum Kris"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+
@@ -1123,7 +1337,7 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Daggers - Magic - 83+
     BaseType "Sai" "Ambusher" "Platinum Kris"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # One Hand Mace ###
@@ -1131,14 +1345,14 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Normal - 83
     BaseType "Behemoth Mace"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - One Hand Maces - Magic - 83+
     BaseType "Behemoth Mace"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # Two Hand Axe ###
@@ -1146,14 +1360,14 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Normal - 83+
     BaseType "Fleshripper" "Vaal Axe"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Axes - Magic - 83+
     BaseType "Fleshripper" "Vaal Axe"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # Two Hand Sword ###
@@ -1161,14 +1375,14 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Normal - 8
     BaseType "Exquisite Blade" "Reaver Sword"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Two Hand Swords - Magic - 83+
     BaseType "Exquisite Blade" "Reaver Sword"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # Claws ###
@@ -1176,14 +1390,14 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Normal - 83+
     BaseType "Gemini Claw" "Great White Claw" "Imperial Claw" "Imperial Claw"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Claws - Magic - 83+
     BaseType "Gemini Claw" "Great White Claw" "Imperial Claw" "Imperial Claw"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # Sceptre ###
@@ -1191,14 +1405,14 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Normal - 83+
     BaseType "Sambar Sceptre"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Sceptres - Magic - 83+
     BaseType "Sambar Sceptre"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # Staff ###
@@ -1206,14 +1420,14 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Normal - 83+
     BaseType "Eclipse Staff"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Staves - Magic - 83+
     BaseType "Eclipse Staff"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # Wands ###
@@ -1221,47 +1435,41 @@ Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Normal - 83+
     BaseType "Profane Wand" "Imbued Wand" "Opal Wand"
     Rarity = Normal
     ItemLevel >= 83
-	SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
+    SetTextColor 240 240 240 # Armour and Weapons - Normal 84+
     SetFontSize 30
 
 Show # Gear - Endgame (T1 + Craft Bases) - Weapon - Wands - Magic - 83+
     BaseType "Profane Wand" "Imbued Wand" "Opal Wand"
     Rarity = Magic
     ItemLevel >= 83
-	SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
+    SetTextColor 140 190 255 # Armour and Weapons- Magic 84+
     SetFontSize 30
 
 # Section: ### Best Rares #####################################################
-
-# Atlas of Worlds ###
-Show # Gear - Rare - Endgame - Atlas of Worlds
-    BaseType "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
-    Rarity = Rare
-    SetBorderColor 255 255 119 # Rare - Best Rare
 
 # Armour ###
 Show # Gear - Rare - Endgame - Armour
     BaseType "Glorious Plate" "Astral Plate" "Eternal Burgonet" "Royal Burgonet" "Titan Gauntlets" "Vaal Gauntlets" "Assassin's Garb" "Vaal Regalia" "Carnal Armour" "Saintly Chainmail" "Triumphant Lamellar" "Lion Pelt" "Hubris Circlet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Slink Gloves" "Sorcerer Gloves" "Murder Mitts" "Crusader Gloves" "Dragonscale Gauntlets" "Titan Greaves" "Slink Boots" "Sorcerer Boots" "Murder Boots" "Titanium Spirit Shield" "Dragonscale Boots" "Crusader Boots"
     Rarity = Rare
-    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetBorderColor 255 255 119 # Rare - Highlighted
 
 Show # Gear - Rare - Progression - Armour - 71
     BaseType "Sadist Garb"
     Rarity = Rare
     ItemLevel <= 71
-    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetBorderColor 255 255 119 # Rare - Highlighted
 
 Show # Gear - Rare - Progression - Armour - 70
     BaseType "Saint's Hauberk" "Sinner Tricorne" "Stealth Gloves"
     Rarity = Rare
     ItemLevel <= 70
-    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetBorderColor 255 255 119 # Rare - Highlighted
 
 Show # Gear - Rare - Progression - Armour - 69
     BaseType "General's Brigandine" "Mind Cage" "Arcanist Gloves" "Stealth Boots" "Assassin's Boots"
     Rarity = Rare
     ItemLevel <= 69
-    SetBorderColor 255 255 119 # Rare - Best Rare
+    SetBorderColor 255 255 119 # Rare - Highlighted
 
 # Section: ### Chromatic Orb Recipe - Rare ####################################
 
@@ -1272,7 +1480,7 @@ Show # Misc - Chromatic Orb Recipe - Rare - 4x1
     Width = 1
     Rarity = Rare
     SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
-    SetFontSize 28
+    SetFontSize 32
 
 Show # Misc - Chromatic Orb Recipe - Rare - 3x1
     SocketGroup "RGB"
@@ -1280,6 +1488,7 @@ Show # Misc - Chromatic Orb Recipe - Rare - 3x1
     Width = 1
     Rarity = Rare
     SetBorderColor 27 162 155 # Chromatic Orb Recipe
+    SetFontSize 36
 
 Show # Misc - Chromatic Orb Recipe - Rare - 2x2
     SocketGroup "RGB"
@@ -1287,6 +1496,7 @@ Show # Misc - Chromatic Orb Recipe - Rare - 2x2
     Width = 2
     Rarity = Rare
     SetBorderColor 27 162 155 # Chromatic Orb Recipe
+    SetFontSize 36
 
 Show # Misc - Chromatic Orb Recipe - Rare - 3x2
     SocketGroup "RGB"
@@ -1294,7 +1504,7 @@ Show # Misc - Chromatic Orb Recipe - Rare - 3x2
     Width = 2
     Rarity = Rare
     SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
-    SetFontSize 28
+    SetFontSize 32
 
 # Section: ### Rares - CatchAll ###############################################
 
@@ -1310,7 +1520,7 @@ Show # Rares - DropLevel <= 60
     SetBackgroundColor 209 4 4 127 # Rare - Bad Rare
     SetFontSize 28
 
-Show # Rares - DropLevel <= 60
+Show # Rares - DropLevel <= 68
     DropLevel <= 68
     Rarity = Rare
     ItemLevel >= 68
