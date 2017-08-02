@@ -14,7 +14,7 @@
             <Keywords name="Operators"></Keywords>
             <Keywords name="Comment"> 1 2 0#</Keywords>
             <Keywords name="Words1">Class BaseType Hide Rarity ItemLevel Quality LinkedSockets Sockets SocketGroup DropLevel Width Height Identified</Keywords>
-            <Keywords name="Words2">SetTextColor SetBorderColor SetBackgroundColor SetFontSize PlayAlertSound</Keywords>
+            <Keywords name="Words2">SetTextColor SetBorderColor SetBackgroundColor SetFontSize PlayAlertSound PlayAlertSoundPositional</Keywords>
             <Keywords name="Words3">Show Hide</Keywords>
             <Keywords name="Words4"></Keywords>
         </KeywordLists>
