@@ -415,7 +415,7 @@ Show # Divination Cards - Exceptions
 
 Show # Divination Cards - Tier 1
     Class "Divination"
-    BaseType "Abandoned Wealth" "Bowyer's Dream" "House of Mirrors" "Hunter's Reward" "Mawr Blaidd" "Polymath" "Pride Before the Fall" "Spark and the Flame" "The Artist" "The Brittle Emperor" "The Celestial Justicar" "The Dapper Prodigy" "The Doctor" "The Dragon's Heart" "The Enlightened" "The Fiend" "The Formless Sea" "The Hunger" "The Immortal" "The King's Heart" "The Last One Standing" "The Offering" "The Polymath" "The Queen" "The Saint's Treasure" "The Spark and the Flame" "The Thaumaturgist" "The Vast" "Wealth and Power"
+    BaseType "Abandoned Wealth" "House of Mirrors" "Hunter's Reward" "Mawr Blaidd" "Polymath" "Pride Before the Fall" "Spark and the Flame" "The Brittle Emperor" "The Celestial Justicar" "The Doctor" "The Dragon's Heart" "The Fiend" "The Formless Sea" "The Hunger" "The Immortal" "The King's Heart" "The Last One Standing" "The Offering" "The Polymath" "The Queen" "The Spark and the Flame" "The Wolf" "The Wolven King's Bite" "Wealth and Power"
     SetTextColor 0 0 0 # Divination Card - Tier 1
     SetBackgroundColor 14 186 255 # Divination Card - Tier 1
     SetBorderColor 0 0 0 # Divination Card - Tier 1
@@ -424,7 +424,7 @@ Show # Divination Cards - Tier 1
 
 Show # Divination Cards - Tier 2
     Class "Divination"
-    BaseType "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "Last Hope" "Saint's Treasure" "The Cartographer" "The Ethereal" "The Hoarder" "The Sephirot" "The Soul" "The Valkyrie" "The Void" "The Wolf" "The Wolven King's Bite"
+    BaseType "Bowyer's Dream" "Chaotic Disposition" "Emperor of Purity" "Heterochromia" "Last Hope" "Saint's Treasure" "The Artist" "The Cartographer" "The Dapper Prodigy" "The Enlightened" "The Ethereal" "The Hoarder" "The Saint's Treasure" "The Sephirot" "The Soul" "The Standoff" "The Thaumaturgist" "The Valkyrie" "The Vast" "The Void"
     SetBackgroundColor 112 56 30 # Divination Card - Tier 2
     SetBorderColor 0 0 0 # Divination Card - Tier 2
     SetFontSize 42
@@ -432,7 +432,7 @@ Show # Divination Cards - Tier 2
 
 Show # Divination Cards - Tier 3
     Class "Divination Card"
-    BaseType "Earth Drinker" "Humility" "Jack in the Box" "Lucky Deck" "Merciless Armament" "Rats" "Standoff" "The Body" "The Chains that Bind" "The Cursed King" "The Dark Mage" "The Forsaken" "The Gladiator" "The Inventor" "The Jester" "The Porcupine" "The Risk" "The Scavenger" "The Standoff" "The Stormcaller" "The Sun" "The Trial" "The Tyrant" "The Valley of Steel Boxes" "The Warlord" "The Watcher" "The Wind" "The Wretched" "Time-Lost Relic" "Valley of Steel Boxes" "Vinia's Token" "Wolven King's Bite" "Wretched"
+    BaseType "Earth Drinker" "Humility" "Jack in the Box" "Lucky Deck" "Rats" "Standoff" "The Body" "The Chains that Bind" "The Cursed King" "The Dark Mage" "The Fletcher" "The Forsaken" "The Inventor" "The Jester" "The Porcupine" "The Risk" "The Scavenger" "The Stormcaller" "The Trial" "The Valley of Steel Boxes" "The Warlord" "The Wretched" "Time-Lost Relic" "Valley of Steel Boxes" "Vinia's Token" "Wolven King's Bite" "Wretched"
     SetBorderColor 175 96 37 # Divination Card - Tier 3
     SetFontSize 40
     PlayAlertSound 1 75
@@ -727,7 +727,7 @@ Show # Safetyline
 # Section: ### Uniques ########################################################
 
 Show # Uniques - Tier 1
-    BaseType "Clasped Mitts" "Close Helmet" "Clutching Talisman" "Crusader Boots" "Cutlass" "Eternal Sword" "Ezomyte Tower Shield" "Full Wyrmscale" "Gladiator Plate" "Glorious Plate" "Greatwolf Talisman" "Imperial Maul" "Legion Gloves" "Occultist's Vestment" "Prophecy Wand" "Rawhide Boots" "Ritual Sceptre" "Rotfeather Talisman" "Royal Axe" "Ruby Flask" "Sapphire Flask" "Siege Axe" "Sorcerer Boots" "Topaz Flask" "Void Axe"
+    BaseType "Callous Mask" "Carnal Sceptre" "Clasped Mitts" "Close Helmet" "Clutching Talisman" "Crusader Boots" "Cutlass" "Ezomyte Burgonet" "Ezomyte Tower Shield" "Full Wyrmscale" "Glorious Plate" "Grand Mana Flask" "Greatwolf Talisman" "Imperial Maul" "Legion Gloves" "Occultist's Vestment" "Prophecy Wand" "Raven Mask" "Rawhide Boots" "Ritual Sceptre" "Rotfeather Talisman" "Royal Axe" "Ruby Flask" "Sapphire Flask" "Siege Axe" "Topaz Flask" "Varnished Coat" "Void Axe" "Wereclaw Talisman"
     Rarity = Unique
     SetTextColor 175 96 37 # Unique - Tier 1
     SetBackgroundColor 255 255 255 # Unique - Tier 1
@@ -736,7 +736,7 @@ Show # Uniques - Tier 1
     PlayAlertSound 6 250
 
 Show # Uniques - Tier 2
-    BaseType "Abyssal Axe" "Ancient Gauntlets" "Arcanist Gloves" "Arcanist Slippers" "Assassin's Garb" "Auric Mace" "Bismuth Flask" "Carnal Sceptre" "Champion Kite Shield" "Citrine Amulet" "Cloth Belt Piece" "Corrugated Buckler" "Crystal Belt" "Deicide Mask" "Despot Axe" "Exquisite Leather" "Ezomyte Burgonet" "Highborn Staff" "Imperial Skean" "Imperial Staff" "Jewelled Foil" "Jingling Spirit Shield" "Meatgrinder" "Mosaic Kite Shield" "Nightmare Bascinet" "Opal Wand" "Pinnacle Tower Shield" "Rawhide Tower Shield" "Sacrificial Garb" "Sacrificial Garb" "Stibnite Flask" "Terror Maul" "Ursine Pelt" "Vaal Mask" "Vaal Sceptre" "Vanguard Belt" "Varnished Coat" "War Sword" "Wereclaw Talisman" "Wyrmscale Doublet" "Zealot Gloves" "Maelstr"
+    BaseType "Abyssal Axe" "Ancient Gauntlets" "Arcanist Gloves" "Arcanist Slippers" "Bismuth Flask" "Cedar Tower Shield" "Citadel Bow" "Crystal Belt" "Deicide Mask" "Eternal Sword" "Exquisite Leather" "Gladiator Plate" "Imperial Staff" "Ironscale Gauntlets" "Jewelled Foil" "Jingling Spirit Shield" "Maelstr" "Nightmare Bascinet" "Opal Wand" "Rawhide Tower Shield" "Royal Burgonet" "Sacrificial Garb" "Sacrificial Garb" "Sanctified Life Flask" "Sanctified Mana Flask" "Sorcerer Boots" "Steelhead" "Stibnite Flask" "Terror Maul" "Ursine Pelt" "Vaal Sceptre" "Wyrmscale Doublet" "Zealot Gloves"
     Rarity = Unique
     SetTextColor 0 0 0 # Unique - Tier 2
     SetBackgroundColor 175 96 37 # Unique - Tier 2
@@ -745,7 +745,7 @@ Show # Uniques - Tier 2
     PlayAlertSound 3 150
 
 Show # Uniques - Multi - Base
-    BaseType "Ebony Tower Shield" "Goathide Boots" "Onyx Amulet"
+    BaseType "Citrine Amulet" "Ebony Tower Shield" "Goathide Boots" "Gold Amulet" "Imperial Claw" "Onyx Amulet"
     Rarity = Unique
     SetTextColor 0 0 0 # Unique - Multi-base
     SetBackgroundColor 175 96 37 # Unique - Multi-base
