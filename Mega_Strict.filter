@@ -212,19 +212,19 @@ Show # Currency - Tier 4
     SetBorderColor 170 158 130 # Currency - Tier 4
     SetFontSize 38
 	
-Show # Currency - Tier 5
+Hide # Currency - Tier 5
     Class "Currency"
     BaseType "Blacksmith's Whetstone" "Orb of Transmutation" 
     SetBackgroundColor 0 0 0 # Currency - Tier 5
     SetFontSize 36
 
-Show # Currency - Tier 6
+Hide # Currency - Tier 6
     Class "Currency"
     BaseType "Armourer's Scrap" "Orb of Augmentation" "Alteration Shard"
     SetBackgroundColor 0 0 0 # Currency - Tier 6
     SetFontSize 32
 
-Show # Currency - Tier 7
+Hide # Currency - Tier 7
     Class "Currency"
     BaseType "Scroll of Wisdom" "Portal Scroll" "Transmutation Shard"
     SetBackgroundColor 0 0 0 # Currency - Tier 7
@@ -328,7 +328,7 @@ Show # Currency - CatchAll
 Show # Gems - Quality - High Quality
     Quality = 20
     Class "Gem"
-    SetTextColor 0 0 0 # Gems - Quality - High Quality
+	SetTextColor 0 0 0 # Gems - Quality - High Quality
     SetBackgroundColor 30 150 180 # Gems - Quality - High Quality
     SetBorderColor 30 150 180 # Gems - Quality - High Quality
     SetFontSize 42
@@ -360,15 +360,15 @@ Show # Gems - Tier 2
     SetFontSize 38
     PlayAlertSound 1 75
 
-Show # Gems - Support
+Hide # Gems - Support
     Class "Support Skill Gems"
     SetFontSize 30
 
-Show # Gems - Active
+Hide # Gems - Active
     Class "Active Skill Gems"
     SetFontSize 30
 
-Show # Gems - Active
+Show # Gems
     Class "Gems"
     SetFontSize 26
 
@@ -469,6 +469,14 @@ Show # Map - Fragments - Shaper
     SetFontSize 45
     PlayAlertSound 4 200
 
+#Hide # Maps - Override
+#	DropLevel <= 74
+#	Class "Maps"
+#	SetTextColor 150 150 150 # Maps - Outleveled
+#    SetBackgroundColor 0 0 0 185 # Maps - Outleveled
+#    SetBorderColor 150 150 150 # Maps - Outleveled
+#    SetFontSize 36
+	
 Show # Maps - Tier 16
     DropLevel >= 83
     Class "Maps"
@@ -730,7 +738,7 @@ Show # Uniques - CatchAll
     SetBorderColor 175 96 37 # Unique
     SetFontSize 36
     PlayAlertSound 5 100
-	
+
 # Section: ### Jewels #########################################################
 
 Show # Jewels - Rare
@@ -741,7 +749,7 @@ Show # Jewels - Rare
     SetBorderColor 255 255 0 # Jewels - Rare
     SetFontSize 40
 
-Show # Jewels - Magic
+Hide # Jewels - Magic
     Class "Jewel"
     SetTextColor 0 100 255 # Jewels - Magic
     SetBackgroundColor 0 20 40 # Jewels - Magic
@@ -841,7 +849,7 @@ Show # ItemLevel 83+ Rares - Craft Bases - Armour
     SetFontSize 40
 
 Show # ItemLevel 77+ Rares - Craft Bases - Armour
-    BaseType "Royal Burgonet" "Fossilised Spirit Shield"
+    BaseType "Astral Plate" "Royal Burgonet" "Fossilised Spirit Shield"
     Rarity = Rare
     ItemLevel >= 77
     SetBorderColor 255 125 0 # Rare - Best Rare
@@ -865,13 +873,13 @@ Show # ItemLevel 77+ Rares - Jewelery
 # Section: ### Chromatic Orb Recipe - Normal & Magic ##########################
 
 # Chromatic Orb Recipe / Lower font size for large RGBs
-Show # Misc - Chromatic Orb Recipe - 4x1
-    SocketGroup "RGB"
-    Height = 4
-    Width = 1
-    Rarity <= Magic
-    SetBorderColor 27 162 155 # Chromatic Orb Recipe
-    SetFontSize 32
+#Show # Misc - Chromatic Orb Recipe - 4x1
+#    SocketGroup "RGB"
+#    Height = 4
+#    Width = 1
+#    Rarity <= Magic
+#    SetBorderColor 27 162 155 # Chromatic Orb Recipe
+#    SetFontSize 32
 
 Show # Misc - Chromatic Orb Recipe - 3x1
     SocketGroup "RGB"
@@ -881,50 +889,50 @@ Show # Misc - Chromatic Orb Recipe - 3x1
     SetBorderColor 27 162 155 # Chromatic Orb Recipe
     SetFontSize 36
 
-Show # Misc - Chromatic Orb Recipe - 2x2
-    SocketGroup "RGB"
-    Height = 2
-    Width = 2
-    Rarity <= Magic
-    SetBorderColor 27 162 155 # Chromatic Orb Recipe
-    SetFontSize 36
+#Show # Misc - Chromatic Orb Recipe - 2x2
+#    SocketGroup "RGB"
+#    Height = 2
+#    Width = 2
+#    Rarity <= Magic
+#    SetBorderColor 27 162 155 # Chromatic Orb Recipe
+#    SetFontSize 36
 
-Show # Misc - Chromatic Orb Recipe - 3x2
-    SocketGroup "RGB"
-    Height = 3
-    Width = 2
-    Rarity <= Magic
-    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
-    SetFontSize 32
+#Show # Misc - Chromatic Orb Recipe - 3x2
+#    SocketGroup "RGB"
+#    Height = 3
+#    Width = 2
+#    Rarity <= Magic
+#    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
+#    SetFontSize 32
 
-Show # Misc - Chromatic Orb Recipe - Large
-    SocketGroup "RGB"
-    Rarity <= Magic
-    ItemLevel < 68
-    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
-    SetFontSize 24
+#Show # Misc - Chromatic Orb Recipe - Large
+    #SocketGroup "RGB"
+    #Rarity <= Magic
+    #ItemLevel < 68
+    #SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
+    #SetFontSize 24
 
 # Section: ### Chisel Recipe ##################################################
 
-Show # Chisel Recipe - Normal
-    BaseType "Gavel" "Stone Hammer" "Rock Breaker"
-    Rarity = Normal
-    SetBorderColor 127 127 127 # Chisel Recipe
-    SetFontSize 30
+#Show # Chisel Recipe - Normal
+#    BaseType "Gavel" "Stone Hammer" "Rock Breaker"
+#    Rarity = Normal
+#    SetBorderColor 127 127 127 # Chisel Recipe
+#    SetFontSize 30
 
-Show # Chisel Recipe - Magic
-    Quality >= 16
-    BaseType "Gavel" "Stone Hammer" "Rock Breaker"
-    Rarity = Magic
-    SetBorderColor 127 127 127 # Chisel Recipe
-    SetFontSize 30
+#Show # Chisel Recipe - Magic
+#    Quality >= 16
+#    BaseType "Gavel" "Stone Hammer" "Rock Breaker"
+#    Rarity = Magic
+#    SetBorderColor 127 127 127 # Chisel Recipe
+#    SetFontSize 30
 
-Show # Chisel Recipe - Rare
-    Quality >= 20
-    BaseType "Gavel" "Stone Hammer" "Rock Breaker"
-    Rarity = Rare
-    SetBorderColor 127 127 127 # Chisel Recipe
-    SetFontSize 30
+#Show # Chisel Recipe - Rare
+#    Quality >= 20
+#    BaseType "Gavel" "Stone Hammer" "Rock Breaker"
+#    Rarity = Rare
+#    SetBorderColor 127 127 127 # Chisel Recipe
+#    SetFontSize 30
 
 # Section: ### Flasks #########################################################
 
@@ -936,19 +944,19 @@ Show # Flasks - Quality - 20%
     SetBorderColor 27 162 155 # Flask - Quality - 20%
     SetFontSize 36
 
-Show # Flasks - Utility
-    Class "Utility Flask"
-    SetBorderColor 255 0 255 # Flask - Utility
-
-Show # Flasks - Quality - 10%
-    Quality >= 15
-    Class "Flask"
-    SetBorderColor 27 162 155 # Flask - Quality
-
-Show # Flasks - Hybrid - Hallowed
-    BaseType "Hallowed Hybrid Flask"
-    ItemLevel < 68
-    SetBorderColor 162 0 255 # Flask - Hybrid
+#Show # Flasks - Utility
+#    Class "Utility Flask"
+#    SetBorderColor 255 0 255 # Flask - Utility
+#
+#Show # Flasks - Quality - 10%
+#    Quality >= 15
+#    Class "Flask"
+#    SetBorderColor 27 162 155 # Flask - Quality
+#
+#Show # Flasks - Hybrid - Hallowed
+#    BaseType "Hallowed Hybrid Flask"
+#    ItemLevel < 68
+#    SetBorderColor 162 0 255 # Flask - Hybrid
 
 Hide # Flasks - Hybrid - Other
     Class "Hybrid Flask"
@@ -1025,13 +1033,13 @@ Show # Flasks - Life - Divine+ - (under 67)
     ItemLevel < 67
     SetBorderColor 220 20 60 # Flask - Life
 
-Show # Flasks - Mana - Divine+ - (under 75)
+Hide # Flasks - Mana - Divine+ - (under 75)
     DropLevel > 58
     Class "Mana Flask"
     ItemLevel < 75
     SetBorderColor 0 0 255 # Flask - Mana
 
-Show # Flasks - Life - Divine+ - (under 75)
+Hide # Flasks - Life - Divine+ - (under 75)
     DropLevel > 58
     Class "Life Flask"
     ItemLevel < 75
@@ -1094,7 +1102,7 @@ Show # Amulets, Rings, Belts - 84+ - Normal
     SetBorderColor 240 240 240 # Amulets, Rings, Belts - Normal 84+
     SetFontSize 30
 
-Show # Amulets, Rings, Belts - 84+ - Magic
+Hide # Amulets, Rings, Belts - 84+ - Magic
     Class "Rings" "Amulets" "Belts"
     Rarity = Magic
     ItemLevel >= 84
@@ -1561,7 +1569,7 @@ Show # Gear - Rare - Endgame - Armour
     BaseType "Eternal Burgonet" "Royal Burgonet" "Titan Gauntlets" "Vaal Gauntlets" "Lion Pelt" "Hubris Circlet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Slink Gloves" "Sorcerer Gloves" "Murder Mitts" "Crusader Gloves" "Dragonscale Gauntlets" "Titan Greaves" "Slink Boots" "Sorcerer Boots" "Murder Boots" "Titanium Spirit Shield" "Dragonscale Boots" "Crusader Boots"
     Rarity = Rare
     SetBorderColor 255 255 119 # Rare - Highlighted
-
+	
 Show # Gear - Rare - Progression - Armour - 70
     BaseType "Sinner Tricorne" "Stealth Gloves"
     Rarity = Rare
@@ -1577,37 +1585,37 @@ Show # Gear - Rare - Progression - Armour - 69
 # Section: ### Chromatic Orb Recipe - Rare ####################################
 
 # Chromatic Orb Recipe / Lower font size for large RGBs
-Show # Misc - Chromatic Orb Recipe - Rare - 4x1
-    SocketGroup "RGB"
-    Height = 4
-    Width = 1
-    Rarity = Rare
-    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
-    SetFontSize 32
-
-Show # Misc - Chromatic Orb Recipe - Rare - 3x1
-    SocketGroup "RGB"
-    Height = 3
-    Width = 1
-    Rarity = Rare
-    SetBorderColor 27 162 155 # Chromatic Orb Recipe
-    SetFontSize 36
-
-Show # Misc - Chromatic Orb Recipe - Rare - 2x2
-    SocketGroup "RGB"
-    Height = 2
-    Width = 2
-    Rarity = Rare
-    SetBorderColor 27 162 155 # Chromatic Orb Recipe
-    SetFontSize 36
-
-Show # Misc - Chromatic Orb Recipe - Rare - 3x2
-    SocketGroup "RGB"
-    Height = 3
-    Width = 2
-    Rarity = Rare
-    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
-    SetFontSize 32
+#Show # Misc - Chromatic Orb Recipe - Rare - 4x1
+#    SocketGroup "RGB"
+#    Height = 4
+#    Width = 1
+#    Rarity = Rare
+#    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
+#    SetFontSize 32
+#
+#Show # Misc - Chromatic Orb Recipe - Rare - 3x1
+#    SocketGroup "RGB"
+#    Height = 3
+#    Width = 1
+#    Rarity = Rare
+#    SetBorderColor 27 162 155 # Chromatic Orb Recipe
+#    SetFontSize 36
+#
+#Show # Misc - Chromatic Orb Recipe - Rare - 2x2
+#    SocketGroup "RGB"
+#    Height = 2
+#    Width = 2
+#    Rarity = Rare
+#    SetBorderColor 27 162 155 # Chromatic Orb Recipe
+#    SetFontSize 36
+#
+#Show # Misc - Chromatic Orb Recipe - Rare - 3x2
+#    SocketGroup "RGB"
+#    Height = 3
+#    Width = 2
+#    Rarity = Rare
+#    SetBorderColor 27 162 155 205 # Chromatic Orb Recipe - Large
+#    SetFontSize 32
 
 # Section: ### Rares - CatchAll ###############################################
 
@@ -1616,7 +1624,7 @@ Show # Rares - Staves & Wands
     Rarity = Rare
     SetFontSize 32
 
-Show # Rares - DropLevel <= 60
+Hide # Rares - DropLevel <= 60
     DropLevel <= 60
     Rarity = Rare
     ItemLevel >= 68
@@ -1629,7 +1637,7 @@ Show # Rares - DropLevel <= 68
     ItemLevel >= 68
     SetFontSize 30
 
-Show # Rares - DropLevel <= 45
+Hide # Rares - DropLevel <= 45
     DropLevel <= 45
     Rarity = Rare
     ItemLevel >= 60
